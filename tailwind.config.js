@@ -9,7 +9,7 @@ export default {
 					200: '#FF7811',
 					300: '#FFA42C'
 				},
-				primary: {
+				hippBlue: {
 					DEFAULT: '#205cc2',
 					100: '#ECF3F7'
 				},
@@ -35,5 +35,5 @@ export default {
 			}
 		}
 	},
-	plugins: []
+	plugins: [require('flowbite/plugin')]
 };

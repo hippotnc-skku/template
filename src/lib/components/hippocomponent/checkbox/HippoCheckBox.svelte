@@ -7,7 +7,7 @@
 	<input
 		{...$$restProps}
 		type="checkbox"
-		class="w-4 h-4 text-hippNavy bg-gray-100 border-gray-300 rounded focus:ring-0 focus:ring-offset-0"
+		class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 rounded-xl focus:ring-0 focus:ring-offset-0"
 		{name}
 		bind:checked
 		on:click
