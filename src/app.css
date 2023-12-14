@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	margin: 0;
+	/* 1 */
+	line-height: inherit;
+	/* 2 */
+
+	--tw-bg-opacity: 1;
+	background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+table {
+	text-indent: 0;
+
+	border-color: inherit;
+
+	border-collapse: collapse;
+}
+
 .hamburger {
 	cursor: pointer;
 	width: 24px;
