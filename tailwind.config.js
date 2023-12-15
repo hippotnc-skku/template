@@ -11,13 +11,20 @@ export default {
 				},
 				hippBlue: {
 					DEFAULT: '#205cc2',
-					100: '#ECF3F7'
+					100: '#ECF3F7',
+					200: '#3561AC'
 				},
 				hippRed: {
-					DEFAULT: '#DB0F26'
+					DEFAULT: '#DB0F26',
+					100: '#F15D5D'
 				},
 				hippNavy: {
 					DEFAULT: '#1E2666'
+				},
+				hippGray: {
+					DEFAULT: '#373838',
+					100: '#F8F8F8',
+					200: '#BCBCBC'
 				}
 			},
 			boxShadow: {

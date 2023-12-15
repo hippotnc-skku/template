@@ -4,7 +4,6 @@ const TIMEOUT = 3000;
 
 function createNotificationStore(timeout) {
 	const _notifications = writable([]);
-
 	function send(message, type = 'default', timeout) {
 		let notification = get(_notifications);
 		if (notification.length == 0) {
