@@ -22,7 +22,7 @@
 		red: 'hover:bg-red-400',
 		yellow: 'hover:bg-yellow-400',
 		purple: 'hover:bg-purple-400',
-		custom: ''
+		custom: 'hover:bg-[#F5F5F5]'
 	};
 
 	const stripColors = {
@@ -43,6 +43,8 @@
 		getContext('striped') && stripColors[color],
 		$$props.class
 	);
+
+	console.log($$props.class)
 </script>
 
 <tr {...$$restProps} class={trClass} on:click on:contextmenu>

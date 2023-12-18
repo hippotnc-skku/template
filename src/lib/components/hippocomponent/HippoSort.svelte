@@ -26,7 +26,7 @@
 	};
 </script>
 
-<div class="flex justify-center items-center">
+<div class="flex items-center">
 	<div>{title}</div>
 	<div class="flex flex-col justify-center ml-2.5 pb-1.5">
 		{#key data.sort_order}
