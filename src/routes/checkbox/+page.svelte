@@ -35,7 +35,6 @@
     const farDistance = `<HippoCheckBox\n id="id" class="text-black" name="name"\n distance="ml-4" value=1 checked size="w-8 h-8"\n on:change={onChange}>\n 체크박스 \n</HippoCheckBox>`
 
 
-    const importElement =  `\n            import {HippoCheckBox} from "$lib/components/hippocomponent"\n          `
 </script>
 
 <div class="flex flex-col">
@@ -48,12 +47,6 @@
     </div>
   </HippoWhiteFrame>
 
-  <div class="flex justify-center mt-5">
-    <HippoWhiteFrame class="text-center py-4 w-[80%] flex justify-center">
-      <pre class="text-lg font-bold text-start flex">
-          &lt;script&gt;{importElement}&ltscript&gt</pre>
-    </HippoWhiteFrame>
-  </div>
 
   <div class="space-y-3 mt-10">
     <div class="flex items-center justify-around">

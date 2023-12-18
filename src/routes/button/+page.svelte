@@ -32,8 +32,6 @@
     notifications.success('클릭 됐습니다.', 1000)
   }
 
-  const importElement =  `\n          import {HippoButton} from "$lib/components/hippocomponent"\n        `
-
 </script>
 
 <div class="flex justify-center">
@@ -47,12 +45,6 @@
   </HippoWhiteFrame>
 </div>
 
-<div class="flex justify-center mt-5">
-  <HippoWhiteFrame class="text-center py-4 w-[80%]">
-    <pre class="text-lg font-bold text-start flex justify-center">
-        &lt;script&gt;{importElement}&ltscript&gt</pre>
-  </HippoWhiteFrame>
-</div>
 
 <div class="space-y-3 mt-10">
     {#each buttonCode as bc, i}

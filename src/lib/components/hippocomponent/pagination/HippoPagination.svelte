@@ -14,14 +14,16 @@
 	// 이전(한 페이지)으로 가기
 	const previous = () => {
 		if (Number(activeUrl) === 1) return;
-		$page.url.searchParams.set('page', (Number(activeUrl) - 1).toString());
-		goto(`${$page.url.pathname}${$page.url.search}`, { invalidateAll: true });
+		let query = new URLSearchParams($page.url.searchParams.toString())
+		query.set('page',  (Number(activeUrl) - 1).toString())
+		goto(`${$page.url.pathname}?${query}`);
 	};
 	// 다음(한 페이지)으로 가기
 	const next = () => {
 		if (Number(activeUrl) === Math.ceil(totalCount / perPage)) return;
-		$page.url.searchParams.set('page', (Number(activeUrl) + 1).toString());
-		goto(`${$page.url.pathname}${$page.url.search}`, { invalidateAll: true });
+		let query = new URLSearchParams($page.url.searchParams.toString())
+		query.set('page',  (Number(activeUrl) + 1).toString())
+		goto(`${$page.url.pathname}?${query}`);
 	};
 
 	// 페이지 갱신시에도 항상 5개의 페이지 번호가 있게끔 하기 (ex: 1,2,3,4,5)

@@ -29,8 +29,8 @@
  
   buttonCode.forEach((c,i) => c.push(`<HippoButton\n class="${c[0]} rounded-lg text-${c[1]} px-3 py-2"\n on:click={clicked}>\n 버튼 ${i+1} \n</HippoButton>`))
 
-  function clicked() {
-    notifications.success('클릭 됐습니다.', 1000)
+  function clicked(e) {
+    notifications.success(`${e}클릭 됐습니다.`, 1000)
   }
 
   const tableHeader = [
@@ -40,6 +40,7 @@
     {name: 'Price', key: 'Price', sort: true},
     {name: 'Last', key: 'Last', sort: true}
   ]
+
 </script>
 
 <div class="flex justify-center">
@@ -53,6 +54,7 @@
   </HippoWhiteFrame>
 </div>
 
+<!-- Table -->
 <HippoWhiteFrame class="px-6 py-10 mt-10">
   <Table hoverable={true}>
     <TableHead>
@@ -67,21 +69,21 @@
       {/each}
     </TableHead>
     <TableBody tableBodyClass="divide-y">
-      <TableBodyRow color='custom' class="cursor-pointer">
+      <TableBodyRow color='custom' class="cursor-pointer" on:click={() => clicked(1)}>
         <TableBodyCell>Apple MacBook Pro 17"</TableBodyCell>
         <TableBodyCell>Sliver</TableBodyCell>
         <TableBodyCell>Laptop</TableBodyCell>
         <TableBodyCell>$2999</TableBodyCell>
         <TableBodyCell>$2999</TableBodyCell>
       </TableBodyRow>
-      <TableBodyRow color='custom' class="cursor-pointer">
+      <TableBodyRow color='custom' class="cursor-pointer" on:click={() => clicked(2)}>
         <TableBodyCell>Microsoft Surface Pro</TableBodyCell>
         <TableBodyCell>White</TableBodyCell>
         <TableBodyCell>Laptop PC</TableBodyCell>
         <TableBodyCell>$1999</TableBodyCell>
         <TableBodyCell>$2999</TableBodyCell>
       </TableBodyRow>
-      <TableBodyRow color='custom' class="cursor-pointer">
+      <TableBodyRow color='custom' class="cursor-pointer" on:click={() => clicked(3)}>
         <TableBodyCell>Magic Mouse 2</TableBodyCell>
         <TableBodyCell>Black</TableBodyCell>
         <TableBodyCell>Accessories</TableBodyCell>

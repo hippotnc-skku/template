@@ -63,18 +63,6 @@
       {name: 'tenth', value : 10},
     ]
 
-    const importElement =  `\n  import {HippoButton} from "$lib/components/hippocomponent"\n`
-    const optionsElement = `  options = [
-          {name: 'first', value : 1},
-          {name: 'second', value : 2},
-          {name: 'third', value : 3},
-          {name: 'fourth', value : 4},
-          {name: 'fifth', value : 5},
-          {name: 'sixth', value : 6},
-          {name: 'senvth', value : 7},
-          {name: 'eighth', value : 8},
-          {name: 'ninth', value : 9},
-          {name: 'tenth', value : 10}]\n`
 </script>
 
 <div class="flex justify-center">
@@ -88,14 +76,6 @@
   </HippoWhiteFrame>
 </div>
 
-<div class="flex justify-center mt-5">
-  <HippoWhiteFrame class="text-center py-4 w-[80%]">
-    <div class="mx-auto w-[50%]">
-      <pre class="text-lg font-bold text-start">&lt;script&gt;{importElement}</pre>
-      <pre class="text-lg font-bold text-start">{optionsElement}&ltscript&gt</pre>
-    </div>
-  </HippoWhiteFrame>
-</div>
 
 <div class="space-y-3 mt-10 px-10">
   <div class="flex items-center justify-between">
