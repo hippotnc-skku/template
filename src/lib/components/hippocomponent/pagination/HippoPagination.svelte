@@ -16,14 +16,14 @@
 		if (Number(activeUrl) === 1) return;
 		let query = new URLSearchParams($page.url.searchParams.toString())
 		query.set('page',  (Number(activeUrl) - 1).toString())
-		goto(`${$page.url.pathname}?${query}`);
+		goto(`${$page.url.pathname}?${query}`, { invalidateAll: true });
 	};
 	// 다음(한 페이지)으로 가기
 	const next = () => {
 		if (Number(activeUrl) === Math.ceil(totalCount / perPage)) return;
 		let query = new URLSearchParams($page.url.searchParams.toString())
 		query.set('page',  (Number(activeUrl) + 1).toString())
-		goto(`${$page.url.pathname}?${query}`);
+		goto(`${$page.url.pathname}?${query}`, { invalidateAll: true });
 	};
 
 	// 페이지 갱신시에도 항상 5개의 페이지 번호가 있게끔 하기 (ex: 1,2,3,4,5)
