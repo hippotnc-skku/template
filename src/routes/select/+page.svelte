@@ -63,6 +63,13 @@
       {name: 'tenth', value : 10},
     ]
 
+    function copyCode(id){
+    let text = document.getElementById(id).innerText
+    window.navigator.clipboard.writeText(text).then(() => {
+      notifications.success('복사되었습니다.', 1000)
+    })
+  }
+
 </script>
 
 <div class="flex justify-center">
@@ -74,6 +81,20 @@
       그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id="id")
     </div>
   </HippoWhiteFrame>
+</div>
+
+<div class="flex flex-col items-center mt-10">
+  <div>
+    <div class="flex justify-between bg-gray-200 font-semibold">
+      <div class="bg-gray-300 py-2 px-3">Code</div>
+      <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode("script")}>Copy</button>
+    </div>
+    <div class="py-5 px-4 bg-white">
+      <pre id="script"><code>&ltscript&gt</code>
+    <code>import &#123HippoSelect&#125 from "$lib/components/hippocomponent";</code>
+<code>&lt/script&gt</code></pre>
+      </div>
+  </div>
 </div>
 
 
@@ -88,13 +109,25 @@
         {/each}
       </HippoSelect>
     </div>
-    <HippoWhiteFrame class="px-8 py-4">
-      <main>
-        <pre class="2xl:text-xl">{longSelect}</pre>
-      </main>
-    </HippoWhiteFrame>
+    <div>
+      <div class="flex justify-between bg-gray-200 font-semibold">
+        <div class="bg-gray-300 py-2 px-3">Code</div>
+        <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode(`button`)}>Copy</button>
+      </div>
+      <div class="py-5 px-4 bg-white">
+        <pre id="button" class="text-sm"><code>&ltHippoSelect class="w-96 text-gray-900 border-gray-300"
+  on:change=&#123(e) => onChange(e)&#125&gt</code>
+  <code>&ltoption disabled selected&gt숫자를 선택하세요.&lt/option&gt</code>
+  <code>&#123#each options as option&#125</code>
+    <code>&ltoption value=&#123option.value&#125&gt&#123option.name&#125&lt/option&gt</code>
+  <code>&#123/each&#125</code>
+<code>&lt/HippoSelect&gt</code></pre>
+        </div>
+    </div>
   </div>
 </div>
+
+
 
 <div class="space-y-3 mt-10 px-10">
   <div class="flex items-center justify-between">
