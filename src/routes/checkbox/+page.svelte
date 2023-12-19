@@ -27,13 +27,6 @@
   
     checkboxCode.forEach((c,i) => c.push(`<HippoCheckBox\n id="id" class="${c[0]}" name="name"\n value=1 checked size="w-8 h-8" on:change={onChange}>\n 체크박스 ${i+1}\n</HippoCheckBox>`))
 
-
-    const unchecked = `<HippoCheckBox\n id="id" class="text-black" name="name"\n value=1 checked size="w-8 h-8" on:change={onChange}>\n 체크박스 \n</HippoCheckBox>`
-
-    const small = `<HippoCheckBox\n id="id" class="text-black" name="name"\n value=1 checked size="w-4 h-4" on:change={onChange}>\n 체크박스 \n</HippoCheckBox>`
-
-    const farDistance = `<HippoCheckBox\n id="id" class="text-black" name="name"\n distance="ml-4" value=1 checked size="w-8 h-8"\n on:change={onChange}>\n 체크박스 \n</HippoCheckBox>`
-
     function copyCode(id){
     let text = document.getElementById(id).innerText
     window.navigator.clipboard.writeText(text).then(() => {
@@ -49,7 +42,7 @@
       크기 변환은 size의 width 와 height를(w,h) 조절하시면 됩니다.
     </div>
     <div class="text-lg font-bold">
-      그 이외에 id나 checked등을 넣으시면 적용이됩니다.(ex: id="id")
+      그 이외에 id나 checked등을 넣으시면 적용이됩니다.(ex: id ="id")
     </div>
   </HippoWhiteFrame>
 

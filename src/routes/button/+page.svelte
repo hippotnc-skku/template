@@ -2,8 +2,6 @@
 	import HippoWhiteFrame from "$lib/components/hippocomponent/HippoWhiteFrame.svelte";
   import {HippoButton} from "$lib/components/hippocomponent";
 	import { notifications } from "$lib/components/notification/notifications";
-	import A from "$lib/components/helpers/typography/A.svelte";
-	import { onDestroy } from "svelte";
 
 
   const buttonCode = [
