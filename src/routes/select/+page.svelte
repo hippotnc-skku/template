@@ -2,6 +2,9 @@
   import HippoSelect from "$lib/components/hippocomponent/select/HippoSelect.svelte";
   import { notifications } from "$lib/components/notification/notifications";
   import HippoWhiteFrame from "$lib/components/hippocomponent/HippoWhiteFrame.svelte";
+  import SetupFrame from "$lib/codeboxframe/SetupFrame.svelte";
+	import CodeExampleFrame from "$lib/codeboxframe/CodeExampleFrame.svelte";
+	import CodeBox from "$lib/codeboxframe/CodeBox.svelte";
 
   function onChange(e) {
     notifications.success(`선택한 값은 ${e.target.value}입니다.`, 500)
@@ -53,164 +56,116 @@
 
 </script>
 
+<HippoWhiteFrame class="text-center py-5 w-full space-y-1">
+  <div class="text-lg font-bold">
+    크기 변환은 padding을 조절하시면 됩니다.
+  </div>
+  <div class="text-lg font-bold">
+    그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id ="id")
+  </div>
+</HippoWhiteFrame>
 
-<div class="flex justify-center">
-  <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
-    <div class="text-lg font-bold">
-      크기 변환은 padding을 조절하시면 됩니다.
-    </div>
-    <div class="text-lg font-bold">
-      그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id ="id")
-    </div>
-  </HippoWhiteFrame>
-</div>
-
-<div class="flex flex-col items-center mt-10">
-  <div>
-    <div class="flex justify-between bg-gray-200 font-semibold">
-      <div class="bg-gray-300 py-2 px-3">Code</div>
-      <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode("script")}>Copy</button>
-    </div>
-    <div class="py-5 px-4 bg-white">
-      <pre id="script"><code>&ltscript&gt</code>
-    <code>import &#123HippoSelect&#125 from "$lib/components/hippocomponent";</code>
-    <code>const options = [
-      &#123name: 'first', value : 1&#125,
-      &#123name: 'second', value : 2&#125,
-      &#123name: 'third', value : 3&#125,
-      &#123name: 'fourth', value : 4&#125,
-      &#123name: 'fifth', value : 5&#125,
-      &#123name: 'sixth', value : 6&#125,
-      &#123name: 'senvth', value : 7&#125,
-      &#123name: 'eighth', value : 8&#125,
-      &#123name: 'ninth', value : 9&#125,
-      &#123name: 'tenth', value : 10&#125,
-    ]</code>
-<code>&lt/script&gt</code>
+<SetupFrame id="script">
+  <pre id="script"><code>&lt<span class="script">script</span>&gt</code>
+  <code><span class="import-from">import</span> &#123HippoSelect&#125 <span class="import-from">from</span> "$lib/components/hippocomponent";</code>
+  <code>const options = [
+            &#123 name: 'first', value : 1 &#125,
+            &#123 name: 'second', value : 2 &#125,
+            &#123 name: 'third', value : 3 &#125,
+            &#123 name: 'fourth', value : 4 &#125,
+            &#123 name: 'fifth', value : 5 &#125,
+            &#123 name: 'sixth', value : 6 &#125,
+            &#123 name: 'senvth', value : 7 &#125,
+            &#123 name: 'eighth', value : 8 &#125,
+            &#123 name: 'ninth', value : 9 &#125,
+            &#123 name: 'tenth', value : 10 &#125,
+          ]</code>
+<code>&lt/<span class="script">script</span>&gt</code>
 </pre>
-      </div>
-  </div>
-</div>
+</SetupFrame>
 
+<CodeExampleFrame>
+  <HippoWhiteFrame class="p-5">
+    <div class="text-lg font-bold">길이가 긴 select</div>
+    <HippoSelect class="w-96 text-gray-900 border-gray-300" on:change={(e) => onChange(e)}>
+      <option disabled selected>숫자를 선택하세요.</option>
+      {#each options as option}
+        <option value={option.value}>{option.name}</option>
+      {/each}
+    </HippoSelect>
 
-<div class="space-y-3 mt-10 ">
-  <div class="flex items-center justify-between">
-    <div>
-      <div class="text-lg font-bold">길이가 긴 select</div>
-      <HippoSelect class="w-96 text-gray-900 border-gray-300" on:change={(e) => onChange(e)}>
-        <option disabled selected>숫자를 선택하세요.</option>
-        {#each options as option}
-          <option value={option.value}>{option.name}</option>
-        {/each}
-      </HippoSelect>
-    </div>
-    <div>
-      <div class="flex justify-between bg-gray-200 font-semibold">
-        <div class="bg-gray-300 py-2 px-3">Code</div>
-        <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode(`longselect`)}>Copy</button>
-      </div>
-      <div class="py-5 px-4 bg-white">
-        <pre id="longselect" class="text-sm"><code>&ltHippoSelect class="w-96 text-gray-900 border-gray-300"
-  on:change=&#123(e) => onChange(e)&#125&gt</code>
+    <div class="text-lg font-bold mt-10">길이가 짧은 select</div>
+    <HippoSelect class="w-48 text-gray-900 border-gray-300" on:change={(e) => onChange(e)}>
+      <option disabled selected>숫자를 선택하세요.</option>
+      {#each options as option}
+        <option value={option.value}>{option.name}</option>
+      {/each}
+    </HippoSelect>
+
+    <div class="text-lg font-bold mt-10">첫 요소 선택 select</div>
+    <HippoSelect class="w-96 text-gray-900 border-gray-300" on:change={(e) => onChange(e)}>
+      <option disabled selected>숫자를 선택하세요.</option>
+      {#each options as option}
+        <option selected={option.value === 1} value={option.value}>{option.name}</option>
+      {/each}
+    </HippoSelect>
+  </HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeBox class="mt-10" id="selects">
+  <div class="space-y-10" id="selects">
+    <pre id="longselect" class="text-sm"><code>&lt<span class="component">HippoSelect</span> class="w-96 text-gray-900 border-gray-300"
+      <span class="function-event">on:change=&#123(e) =&gt onChange(e)&#125</span>&gt</code>
   <code>&ltoption disabled selected&gt숫자를 선택하세요.&lt/option&gt</code>
   <code>&#123#each options as option&#125</code>
     <code>&ltoption value=&#123option.value&#125&gt&#123option.name&#125&lt/option&gt</code>
   <code>&#123/each&#125</code>
-<code>&lt/HippoSelect&gt</code></pre>
-        </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="space-y-3 mt-10 ">
-  <div class="flex items-center justify-between">
-    <div>
-      <div class="text-lg font-bold">길이가 짧은 select</div>
-      <HippoSelect class="w-48 text-gray-900 border-gray-300" on:change={(e) => onChange(e)}>
-        <option disabled selected>숫자를 선택하세요.</option>
-        {#each options as option}
-          <option value={option.value}>{option.name}</option>
-        {/each}
-      </HippoSelect>
-    </div>
-    <div>
-      <div class="flex justify-between bg-gray-200 font-semibold">
-        <div class="bg-gray-300 py-2 px-3">Code</div>
-        <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode(`shortselect`)}>Copy</button>
-      </div>
-      <div class="py-5 px-4 bg-white">
-        <pre id="shortselect" class="text-sm"><code>&ltHippoSelect class="w-48 text-gray-900 border-gray-300"
-  on:change=&#123(e) => onChange(e)&#125&gt</code>
+<code>&lt/<span class="component">HippoSelect</span>&gt</code></pre>
+  
+    <pre id="shortselect" class="text-sm"><code>&lt<span class="component">HippoSelect</span> class="w-48 text-gray-900 border-gray-300"
+      <span class="function-event">on:change=&#123(e) =&gt onChange(e)&#125</span>&gt</code>
   <code>&ltoption disabled selected&gt숫자를 선택하세요.&lt/option&gt</code>
   <code>&#123#each options as option&#125</code>
     <code>&ltoption value=&#123option.value&#125&gt&#123option.name&#125&lt/option&gt</code>
   <code>&#123/each&#125</code>
-<code>&lt/HippoSelect&gt</code></pre>
-        </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="space-y-3 mt-10 ">
-  <div class="flex items-center justify-between">
-    <div>
-      <div class="text-lg font-bold">첫 요소 선택 select</div>
-      <HippoSelect class="w-96 text-gray-900 border-gray-300" on:change={(e) => onChange(e)}>
-        <option disabled selected>숫자를 선택하세요.</option>
-        {#each options as option}
-          <option selected={option.value === 1} value={option.value}>{option.name}</option>
-        {/each}
-      </HippoSelect>
-    </div>
-    <div>
-      <div class="flex justify-between bg-gray-200 font-semibold">
-        <div class="bg-gray-300 py-2 px-3">Code</div>
-        <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode(`firstselected`)}>Copy</button>
-      </div>
-      <div class="py-5 px-4 bg-white">
-        <pre id="firstselected" class="text-sm"><code>&ltHippoSelect class="w-96 text-gray-900 border-gray-300"
-  on:change=&#123(e) => onChange(e)&#125&gt</code>
+<code>&lt/<span class="component">HippoSelect</span>&gt</code></pre>
+  
+    <pre id="firstselected" class="text-sm"><code>&lt<span class="component">HippoSelect</span> class="w-96 text-gray-900 border-gray-300"
+      <span class="function-event">on:change=&#123(e) =&gt onChange(e)&#125</span>&gt</code>
   <code>&ltoption disabled selected&gt숫자를 선택하세요.&lt/option&gt</code>
   <code>&#123#each options as option&#125</code>
     <code>&ltoption selected=&#123option.value === 1&#125 
-      value=&#123option.value&#125&gt&#123option.name&#125&lt/option&gt</code>
+              value=&#123option.value&#125&gt&#123option.name&#125&lt/option&gt</code>
   <code>&#123/each&#125</code>
-<code>&lt/HippoSelect&gt</code></pre>
-        </div>
-    </div>
+<code>&lt/<span class="component">HippoSelect</span>&gt</code></pre>
   </div>
-</div>
+</CodeBox>
 
-
-<div class="space-y-10 mt-10">
-  <div class="text-lg font-bold">색깔별</div>
-  {#each selectCode as sc, i}
-    <div class="flex items-center justify-between">
-      <HippoSelect class="w-96 {sc[0]} {sc[1]}" on:change={(e) => onChange(e)}>
-        <option disabled selected>숫자를 선택하세요.</option>
-        {#each options as option}
-          <option value={option.value}>{option.name}</option>
-        {/each}
-      </HippoSelect>
-      <div>
-        <div class="flex justify-between bg-gray-200 font-semibold">
-          <div class="bg-gray-300 py-2 px-3">Code</div>
-          <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode(`select${i+1}`)}>Copy</button>
-        </div>
-        <div class="py-5 px-4 bg-white">
-          <pre id="select{i+1}" class="text-sm"><code>&ltHippoSelect class="w-96 {sc[0]} {sc[1]}"
-    on:change=&#123(e) => onChange(e)&#125&gt</code>
-    <code>&ltoption disabled selected&gt숫자를 선택하세요.&lt/option&gt</code>
-    <code>&#123#each options as option&#125</code>
-      <code>&ltoption value=&#123option.value&#125&gt&#123option.name&#125&lt/option&gt</code>
-    <code>&#123/each&#125</code>
-  <code>&lt/HippoSelect&gt</code></pre>
-          </div>
-      </div>
+<CodeExampleFrame name="Colors">
+  <HippoWhiteFrame class="p-5">
+    <div class="flex flex-wrap gap-5">
+      {#each selectCode as sc, i}
+        <HippoSelect class="w-48 {sc[0]} {sc[1]}" on:change={(e) => onChange(e)}>
+          <option disabled selected>숫자를 선택하세요.</option>
+          {#each options as option}
+            <option value={option.value}>{option.name}</option>
+          {/each}
+        </HippoSelect>
+      {/each}
     </div>
-  {/each}
-</div>
+  </HippoWhiteFrame>
+</CodeExampleFrame>
 
+<CodeBox id="colorselects" class="mt-10">
+  <div class="space-y-10" id="colorselects">
+    {#each selectCode as sc, i}
+    <pre id="select{i+1}" class="text-sm"><code>&lt<span class="component">HippoSelect</span> class="w-48 {sc[0]} {sc[1]}"
+      on:change=&#123(e) =&gt onChange(e)&#125&gt</code>
+  <code>&ltoption disabled selected&gt숫자를 선택하세요.&lt/option&gt</code>
+  <code>&#123#each options as option&#125</code>
+    <code>&ltoption value=&#123option.value&#125&gt&#123option.name&#125&lt/option&gt</code>
+  <code>&#123/each&#125</code>
+<code>&lt/<span class="component">HippoSelect</span>&gt</code></pre>
+    {/each}
+  </div>
+</CodeBox>

@@ -2,6 +2,9 @@
 	import HippoWhiteFrame from "$lib/components/hippocomponent/HippoWhiteFrame.svelte";
   import {HippoButton} from "$lib/components/hippocomponent";
 	import { notifications } from "$lib/components/notification/notifications";
+  import CodeExampleFrame from "$lib/codeboxframe/CodeExampleFrame.svelte";
+	import SetupFrame from "$lib/codeboxframe/SetupFrame.svelte";
+  import CodeBox from "$lib/codeboxframe/CodeBox.svelte";
 
 
   const buttonCode = [
@@ -25,64 +28,43 @@
      ['bg-[#303030]', 'white'],
      ['bg-[#DEDEDE]', 'black']
    ]
- 
-  //  buttonCode.forEach((c,i) => c.push(`<HippoButton\n class="${c[0]} rounded-lg text-${c[1]} px-3 py-2"\n on:click={clicked}>\n 버튼 ${i+1} \n</HippoButton>`))
-  buttonCode.forEach((c,i) => c.push(`<code>&ltHippoButton class="black rounded-lg text-black px-3 py-2"&gt</code><code>버튼</code><code>&ltHippoButton/&gt</code>`))
 
   function clicked() {
     notifications.success('클릭 됐습니다.', 500)
   }
 
-  function copyCode(id){
-    let text = document.getElementById(id).innerText
-    window.navigator.clipboard.writeText(text).then(() => {
-      notifications.success('복사되었습니다.', 1000)
-    })
-  }
-
 </script>
 
-<div class="flex justify-center">
-  <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
-    <div class="text-lg font-bold">
-      크기 변환은 padding을 조절하시면 됩니다.
-    </div>
-    <div class="text-lg font-bold">
-      그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id="id")
-    </div>
-  </HippoWhiteFrame>
-</div>
-
-<div class="flex flex-col items-center mt-10">
-  <div>
-    <div class="flex justify-between bg-gray-200 font-semibold">
-      <div class="bg-gray-300 py-2 px-3">Code</div>
-      <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode("script")}>Copy</button>
-    </div>
-    <div class="py-5 px-4 bg-white">
-      <pre id="script"><code>&ltscript&gt</code>
-    <code>import &#123HippoButton&#125 from "$lib/components/hippocomponent";</code>
-<code>&lt/script&gt</code></pre>
-      </div>
+<HippoWhiteFrame class="text-center py-5 w-full space-y-1">
+  <div class="text-lg font-bold">
+    크기 변환은 padding을 조절하시면 됩니다.
   </div>
-</div>
+  <div class="text-lg font-bold">
+    그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id="id")
+  </div>
+</HippoWhiteFrame>
 
-<div class="space-y-10 mt-10">
+<SetupFrame id="script">
+  <pre id="script"><code>&lt<span class="script">script</span>&gt</code>
+    <code><span class="import-from">import</span> &#123 HippoButton &#125 <span class="import-from">from</span> "$lib/components/hippocomponent";</code>
+<code>&lt/<span class="script">script</span>&gt</code></pre>
+</SetupFrame>
+
+<CodeExampleFrame name="Colors">
+  <HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
     {#each buttonCode as bc, i}
-      <div class="flex items-center justify-between">
-        <HippoButton style="background-color: {bc[0]}" class="{bc[0]} text-{bc[1]} px-3 py-2" on:click={clicked}>버튼 {i+1}</HippoButton>
-        
-        <div>
-          <div class="flex justify-between bg-gray-200 font-semibold">
-            <div class="bg-gray-300 py-2 px-3">Code</div>
-            <button class="bg-gray-300 p-2 px-3 hover:text-red-400" on:click={() => copyCode(`button${i+1}`)}>Copy</button>
-          </div>
-          <div class="py-5 px-4 bg-white">
-            <pre id="button{i+1}" class="text-sm"><code>&ltHippoButton class="{bc[0]} text-{bc[1]} px-3 py-2"
-  on:click=&#123clicked&#125&gt</code><code>버튼</code>
-<code>&lt/HippoButton&gt</code></pre>
-            </div>
-        </div>
-      </div>
+      <HippoButton style="background-color: {bc[0]}" class="{bc[0]} text-{bc[1]} px-3 py-2" on:click={clicked}>버튼 {i+1}</HippoButton>
     {/each}
-</div>
+  </HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeBox id="buttons" class="mt-10">
+  <div id="buttons">
+    {#each buttonCode as bc, i}
+    <pre id="button{i+1}" class="mt-5"><code>&lt<span class="component">HippoButton</span> class="{bc[0]} text-{bc[1]} px-3 py-2"
+      <span class="function-event">on:click=&#123clicked&#125</span>&gt</code><code>버튼 {i+1}</code>
+<code>&lt/<span class="component">HippoButton</span>&gt</code></pre>
+    {/each}
+  </div>
+</CodeBox>
+

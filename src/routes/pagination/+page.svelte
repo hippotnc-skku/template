@@ -1,19 +1,13 @@
 <script>
   import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
-import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
-import {HippoPagination, HippoWhiteFrame} from '$lib/components/hippocomponent'
+  import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+  import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
+  import {HippoPagination, HippoWhiteFrame} from '$lib/components/hippocomponent'
 	import HippoInput from '$lib/components/hippocomponent/input/HippoInput.svelte';
 
   let totalCount = 30
   let perPage = 5
 
-  function copyCode(id){
-    let text = document.getElementById(id).innerText
-    window.navigator.clipboard.writeText(text).then(() => {
-      notifications.success('복사되었습니다.', 1000)
-    })
-  }
 </script>
 
 <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
@@ -44,11 +38,11 @@ import {HippoPagination, HippoWhiteFrame} from '$lib/components/hippocomponent'
 </div>
 
 <SetupFrame id="script">
-  <pre id="script"><code>&ltscript&gt</code>
-  <code>import &#123HippoPagination&#125 from "$lib/components/hippocomponent";</code>
+  <pre id="script"><code>&lt<span class="script">script</span>&gt</code>
+  <code><span class="import-from">import</span> &#123 HippoPagination &#125 <span class="import-from">from</span> "$lib/components/hippocomponent";</code>
   <code>let totalCount = 30</code>
   <code>let perPage = 5</code>
-<code>&lt/script&gt</code></pre>
+<code>&lt/<span class="script">script</span>&gt</code></pre>
 </SetupFrame>
 
 <CodeExampleFrame>
@@ -58,5 +52,5 @@ import {HippoPagination, HippoWhiteFrame} from '$lib/components/hippocomponent'
 </CodeExampleFrame>
   
 <CodeBox id="pagination" class="mt-10">
-  <pre id="pagination"><code>&ltHippoPagination &#123totalCount&#125 &#123perPage&#125 /&gt</code></pre>
+  <pre id="pagination"><code>&lt<span class="component">HippoPagination</span> &#123totalCount&#125 &#123perPage&#125 /&gt</code></pre>
 </CodeBox>

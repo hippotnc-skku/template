@@ -33,18 +33,18 @@
 </HippoWhiteFrame>
 
 <SetupFrame id="script">
-    <pre id="script" class="text-sm"><code>&ltscript&gt</code>
-  <code>import &#123 HippoSort &#125 from "$lib/components/hippocomponent";</code>
-  <code>import &#123 Table, TableBody, TableBodyCell,
-    TableBodyRow, TableHead, TableHeadCell &#125 from '$lib/components/helpers';</code>
-    <code>const tableHeader = [
-      &#123name: 'Product name', key: 'Product name', sort: true&#125,
-      &#123name: 'Color', key: 'Color', sort: true&#125,
-      &#123name: 'Category',  sort: false&#125,
-      &#123name: 'Price', key: 'Price', sort: true&#125,
-      &#123name: 'Last', key: 'Last', sort: true&#125
-    ]</code>
-<code>&lt/script&gt</code></pre>
+    <pre id="script" class="text-sm"><code>&lt<span class="script">script</span>&gt</code>
+  <code><span class="import-from">import</span> &#123 HippoSort &#125 <span class="import-from">from</span> "$lib/components/hippocomponent";</code>
+  <code><span class="import-from">import</span> &#123 Table, TableBody, TableBodyCell,
+    TableBodyRow, TableHead, TableHeadCell &#125 <span class="import-from">from</span> '$lib/components/helpers';</code>
+  <code>const tableHeader = [
+        &#123name: 'Product name', key: 'Product name', sort: true&#125,
+        &#123name: 'Color', key: 'Color', sort: true&#125,
+        &#123name: 'Category',  sort: false&#125,
+        &#123name: 'Price', key: 'Price', sort: true&#125,
+        &#123name: 'Last', key: 'Last', sort: true&#125
+      ]</code>
+<code>&lt/<span class="script">script</span>&gt</code></pre>
 </SetupFrame>
 
 
@@ -90,42 +90,42 @@
 </CodeExampleFrame>
 
 <CodeBox class="mt-10" id="default">
-  <pre id="default"><code>&ltTable hoverable={true}&gt</code>
-  <code>&ltTableHead&gt
-    &#123#each tableHeader as th&#125
-      &#123#if th.sort&#125
-        &ltTableHeadCell textClass="text-[#303030] text-[13px] text-start"&gt
-          &ltHippoSort &#123data&#125 key=&#123th.key&#125 title=&#123th.name&#125 /&gt
-        &lt/TableHeadCell&gt
+  <pre id="default"><code>&lt<span class="component">Table</span> hoverable={true}&gt</code>
+  <code>&lt<span class="component">TableHead</span>&gt
+      &#123#each tableHeader as th&#125
+        &#123#if th.sort&#125
+          &lt<span class="component">TableHeadCell</span> textClass="text-[#303030] text-[13px] text-start"&gt
+            &lt<span class="component">HippoSort</span> &#123data&#125 key=&#123th.key&#125 title=&#123th.name&#125 /&gt
+          &lt/<span class="component">TableHeadCell</span>&gt
         &#123:else&#125
-        &ltTableHeadCell textClass="text-[#303030] text-[13px] text-start"&gt&#123th.name&#125&lt/TableHeadCell&gt
-      &#123/if&#125
-    &#123/each&#125
-  &lt/TableHead&gt</code>
-  <code>&ltTableBody tableBodyClass="divide-y"&gt
-    &ltTableBodyRow color='custom' class="cursor-pointer" on:click=&#123() =&gt clicked(1)&#125&gt
-      &ltTableBodyCell&gtApple MacBook Pro 17"&lt/TableBodyCell&gt
-      &ltTableBodyCell&gtSliver&lt/TableBodyCell&gt
-      &ltTableBodyCell&gtLaptop&lt/TableBodyCell&gt
-      &ltTableBodyCell&gt$2999&lt/TableBodyCell&gt
-      &ltTableBodyCell&gt$2999&lt/TableBodyCell&gt
-    &lt/TableBodyRow&gt
-    &ltTableBodyRow color='custom' class="cursor-pointer" on:click=&#123() =&gt clicked(2)&#125&gt
-      &ltTableBodyCell&gtMicrosoft Surface Pro&lt/TableBodyCell&gt
-      &ltTableBodyCell&gtWhite&lt/TableBodyCell&gt
-      &ltTableBodyCell&gtLaptop PC&lt/TableBodyCell&gt
-      &ltTableBodyCell&gt$1999&lt/TableBodyCell&gt
-      &ltTableBodyCell&gt$2999&lt/TableBodyCell&gt
-    &lt/TableBodyRow&gt
-    &ltTableBodyRow color='custom' class="cursor-pointer" on:click=&#123() =&gt clicked(3)&#125&gt
-      &ltTableBodyCell&gtMagic Mouse 2&lt/TableBodyCell&gt
-      &ltTableBodyCell&gtBlack&lt/TableBodyCell&gt
-      &ltTableBodyCell&gtAccessories&lt/TableBodyCell&gt
-      &ltTableBodyCell&gt$99&lt/TableBodyCell&gt
-      &ltTableBodyCell&gt$2999&lt/TableBodyCell&gt
-    &lt/TableBodyRow&gt
-  &lt/TableBody&gt</code>
-<code>&lt/Table&gt</code>
+          &lt<span class="component">TableHeadCell</span> textClass="text-[#303030] text-[13px] text-start"&gt&#123th.name&#125&lt/<span class="component">TableHeadCell</span>&gt
+        &#123/if&#125
+      &#123/each&#125
+    &lt/<span class="component">TableHead</span>&gt</code>
+  <code>&lt<span class="component">TableBody</span> tableBodyClass="divide-y"&gt
+      &lt<span class="component">TableBodyRow</span> color='custom' class="cursor-pointer" <span class="function-event">on:click=&#123() =&gt clicked(1)&#125</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtApple MacBook Pro 17"&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtSliver&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtLaptop&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gt$2999&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gt$2999&lt/<span class="component">TableBodyCell</span>&gt
+      &lt/<span class="component">TableBodyRow</span>&gt
+      &lt<span class="component">TableBodyRow</span> color='custom' class="cursor-pointer" <span class="function-event">on:click=&#123() =&gt clicked(2)&#125</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtMicrosoft Surface Pro&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtWhite&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtLaptop PC&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gt$1999&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gt$2999&lt/<span class="component">TableBodyCell</span>&gt
+      &lt/<span class="component">TableBodyRow</span>&gt
+      &lt<span class="component">TableBodyRow</span> color='custom' class="cursor-pointer" <span class="function-event">on:click=&#123() =&gt clicked(3)&#125</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtMagic Mouse 2&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtBlack&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gtAccessories&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gt$99&lt/<span class="component">TableBodyCell</span>&gt
+        &lt<span class="component">TableBodyCell</span>&gt$2999&lt/<span class="component">TableBodyCell</span>&gt
+      &lt/<span class="component">TableBodyRow</span>&gt
+    &lt/<span class="component">TableBody</span>&gt</code>
+<code>&lt/<span class="component">Table</span>&gt</code>
 </CodeBox>
 
 

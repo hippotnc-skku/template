@@ -84,26 +84,26 @@
 </CodeExampleFrame>
 
 <CodeBox id="default" class="mt-10">
-  <pre id="default" class="text-sm"><code>&lt<span class="componentcolor">HippoCheckBox</span> id="id" class="text-black" name="name"
+  <pre id="default" class="text-sm"><code>&lt<span class="component">HippoCheckBox</span> id="id" class="text-black" name="name"
   value=1 size="w-8 h-8" <span class="function-event">on:change=&#123onChange&#125</span>&gt</code>
   <code>큰 체크</code>
-<code>&lt/<span class="componentcolor">HippoCheckBox</span>&gt</code>
+<code>&lt/<span class="component">HippoCheckBox</span>&gt</code>
 
-<code>&lt<span class="componentcolor">HippoCheckBox</span> id="id"
+<code>&lt<span class="component">HippoCheckBox</span> id="id"
   class="text-black" name="name" value=1 size="w-8 h-8"
   <span class="function-event">on:change=&#123onChange&#125</span>&gt</code><code>작은 체크</code>
-<code>&lt/<span class="componentcolor">HippoCheckBox</span>&gt</code>
+<code>&lt/<span class="component">HippoCheckBox</span>&gt</code>
 
-<code>&lt<span class="componentcolor">HippoCheckBox</span> id="id"
+<code>&lt<span class="component">HippoCheckBox</span> id="id"
   class="text-black" name="name" value=1 size="w-4 h-4"
   distance="ml-4" <span class="function-event">on:change=&#123onChange&#125</span>&gt</code>
   <code>레이블 거리 먼 체크</code>
-<code>&lt/<span class="componentcolor">HippoCheckBox</span>&gt</code></pre>
+<code>&lt/<span class="component">HippoCheckBox</span>&gt</code></pre>
 </CodeBox>
 
 
 
-<CodeExampleFrame>
+<CodeExampleFrame name="Colors">
   <HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
     {#each checkboxCode as cb, i}
       <HippoCheckBox
@@ -123,11 +123,11 @@
 <CodeBox id="checkboxes" class="mt-10">
   <div id="checkboxes">
     {#each checkboxCode as cb, i}
-    <pre class="mt-5"><code>&lt<span class="componentcolor">HippoCheckBox</span> id="id"
+    <pre class="mt-5"><code>&lt<span class="component">HippoCheckBox</span> id="id"
       class="{cb[0]}" name="name"
       value=1 size="w-8 h-8" checked
       <span class="function-event">on:change=&#123onChange&#125</span>&gt</code><code>체크박스 {i+1}</code>
-<code>&lt/<span class="componentcolor">HippoCheckBox</span>&gt</code></pre>
+<code>&lt/<span class="component">HippoCheckBox</span>&gt</code></pre>
     {/each}
   </div>
 </CodeBox>
