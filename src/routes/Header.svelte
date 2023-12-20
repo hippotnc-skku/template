@@ -9,11 +9,11 @@
 	const dispatch = createEventDispatcher();
 
 	function goToDetailPage() {
-		goto('/account/detail');
+		console.log("123")
 	}
 
 	function logout() {
-		goto('/logout');
+		console.log("345")
 	}
 
 	function openCloseSideBar() {
@@ -57,7 +57,7 @@
 
 		<div class="flex items-center justify-end">
 			<div class="lg:px-3.5 xl:pr-10 pl-5">
-				<button class="myAccount font-bold">드롭다운</button>
+				<button class="myAccount font-bold">DropDown</button>
 			</div>
 			<Dropdown triggeredBy=".myAccount">
 				<DropdownItem
