@@ -6,7 +6,7 @@
 
 <div class="flex flex-col items-center">
   <div class="flex justify-center w-full">
-    <HippoWhiteFrame class="text-center py-5 w-[80%] space-y-1">
+    <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
       <div class="text-lg font-bold">
         크기 변환은 padding, width을 조절하시면 됩니다.
       </div>
@@ -17,7 +17,7 @@
   </div>
   
   
-  <div class="flex justify-center mt-5 w-[80%]">
+  <div class="flex justify-center mt-5 w-full">
     <HippoWhiteFrame class="px-4 py-5 w-full">
       <div>
         input 1

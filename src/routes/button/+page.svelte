@@ -30,7 +30,7 @@
   buttonCode.forEach((c,i) => c.push(`<code>&ltHippoButton class="black rounded-lg text-black px-3 py-2"&gt</code><code>버튼</code><code>&ltHippoButton/&gt</code>`))
 
   function clicked() {
-    notifications.success('클릭 됐습니다.', 1000)
+    notifications.success('클릭 됐습니다.', 500)
   }
 
   function copyCode(id){
@@ -43,7 +43,7 @@
 </script>
 
 <div class="flex justify-center">
-  <HippoWhiteFrame class="text-center py-5 w-[80%] space-y-1">
+  <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
     <div class="text-lg font-bold">
       크기 변환은 padding을 조절하시면 됩니다.
     </div>

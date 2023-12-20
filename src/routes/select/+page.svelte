@@ -4,7 +4,7 @@
   import HippoWhiteFrame from "$lib/components/hippocomponent/HippoWhiteFrame.svelte";
 
   function onChange(e) {
-    notifications.success(`선택한 값은 ${e.target.value}입니다.`, 1000)
+    notifications.success(`선택한 값은 ${e.target.value}입니다.`, 500)
   }
    
   const selectCode = [
@@ -55,7 +55,7 @@
 
 
 <div class="flex justify-center">
-  <HippoWhiteFrame class="text-center py-5 w-[80%] space-y-1">
+  <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
     <div class="text-lg font-bold">
       크기 변환은 padding을 조절하시면 됩니다.
     </div>

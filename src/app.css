@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+	font-family: 'NanumSquareNeo-Variable';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+	font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+	font-style: normal;
+}
+
 body {
 	margin: 0;
 	/* 1 */
 	line-height: inherit;
 	/* 2 */
-
+	font-family: 'NanumSquareNeo-Variable';
 	--tw-bg-opacity: 1;
 	background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
@@ -18,6 +26,28 @@ table {
 	border-color: inherit;
 
 	border-collapse: collapse;
+}
+
+code{
+	font-family: 'NanumSquareNeo-Variable';
+	font-size: 13px;
+}
+
+.componentcolor {
+	color: #4EA965;
+	font-weight: 800;
+}
+
+.import-from {
+	color: #C56A91;
+}
+
+.script{
+	color: #2666CB;
+}
+
+.function-event{
+	color: red;
 }
 
 .hamburger {
