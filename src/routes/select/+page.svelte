@@ -67,7 +67,7 @@
 
 <SetupFrame id="script">
   <pre id="script"><code>&lt<span class="script">script</span>&gt</code>
-  <code><span class="import-from">import</span> &#123HippoSelect&#125 <span class="import-from">from</span> "$lib/components/hippocomponent";</code>
+  <code><span class="import-from">import</span> &#123 HippoSelect &#125 <span class="import-from">from</span> "$lib/components/hippocomponent";</code>
   <code>const options = [
             &#123 name: 'first', value : 1 &#125,
             &#123 name: 'second', value : 2 &#125,
@@ -160,7 +160,7 @@
   <div class="space-y-10" id="colorselects">
     {#each selectCode as sc, i}
     <pre id="select{i+1}" class="text-sm"><code>&lt<span class="component">HippoSelect</span> class="w-48 {sc[0]} {sc[1]}"
-      on:change=&#123(e) =&gt onChange(e)&#125&gt</code>
+      <span class="function-event">on:change=&#123(e) =&gt onChange(e)&#125</span>&gt</code>
   <code>&ltoption disabled selected&gt숫자를 선택하세요.&lt/option&gt</code>
   <code>&#123#each options as option&#125</code>
     <code>&ltoption value=&#123option.value&#125&gt&#123option.name&#125&lt/option&gt</code>
