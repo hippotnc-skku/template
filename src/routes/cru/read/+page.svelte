@@ -55,6 +55,10 @@
     function secondFunction()&#123
       console.log("두번째")
     &#125
+
+    function clicked(e)&#123
+      console.log(e)
+    &#125
   </code>
   <code>let totalCount = 30</code>
   <code>let perPage = 5</code>
