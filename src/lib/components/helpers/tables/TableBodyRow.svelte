@@ -44,7 +44,6 @@
 		$$props.class
 	);
 
-	console.log($$props.class)
 </script>
 
 <tr {...$$restProps} class={trClass} on:click on:contextmenu>

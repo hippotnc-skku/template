@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import SideBar from './SideBar.svelte';
 	import Header from './Header.svelte';
 	import Toast from '$lib/components/notification/Toast.svelte';
 	import Popup from '$lib/components/popup.svelte';
 	import Footer from './Footer.svelte';
 	import '../app.css'
+	import Navbar from './Navbar.svelte';
 
 	let showSideBar: string;
 	// 로그인 한 사람의 이름을 가져옴
@@ -24,7 +26,6 @@
 	}
 </script>
 
-<svelte:head />
 <svelte:body
 	class="m-0 font-sans antialiased font-normal text-left leading-default text-base bg-gray-50 text-slate-500"
 />
@@ -36,6 +37,7 @@
 	>
 		<Header on:sideBar={showSideBarFunction} />
 		<div class="md:px-2.5 lg:px-3.5 xl:px-10 pt-[2.5rem] mt-10">
+			<Navbar />
 			<slot />
 		</div>
 		<div class="mt-10">
