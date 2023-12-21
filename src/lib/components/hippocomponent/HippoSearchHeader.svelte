@@ -14,6 +14,7 @@
   export let hasThirdButton: Boolean = false
   export let secondColor: string = 'bg-[#303030] text-white'
   export let thirdColor: string = 'bg-[#303030] text-white'
+  export let placeholder: string = '검색...'
 
   const dispatch =  createEventDispatcher()
 
@@ -59,7 +60,7 @@
     <div class="relative">
       <HippoInput
         bind:value={search}
-        placeholder="검색"
+        {placeholder}
         on:keypress={onKeyPress}
         padding="py-2.5 w-full"
       />

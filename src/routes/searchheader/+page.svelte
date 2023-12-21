@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
+  import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
   import { HippoWhiteFrame, HippoSearchHeader } from '$lib/components/hippocomponent';
 	import { notifications } from '$lib/components/notification/notifications';
 
@@ -54,6 +54,15 @@ import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
       </div>
       <div>
         onThird: function (세번째 버튼 이벤트 함수설정)
+      </div>
+      <div>
+        secondColor: "bg-[#303030] text-white" (두번째 버튼 색선정)
+      </div>
+      <div>
+        thirdColor: "bg-[#303030] text-white" (세번째 버튼 색선정)
+      </div>
+      <div>
+        placeholder: "검색..." (placeholder 선정)
       </div>
     </div>
   </div>
