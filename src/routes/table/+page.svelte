@@ -125,7 +125,7 @@
         &lt<span class="component">TableBodyCell</span>&gt$2999&lt/<span class="component">TableBodyCell</span>&gt
       &lt/<span class="component">TableBodyRow</span>&gt
     &lt/<span class="component">TableBody</span>&gt</code>
-<code>&lt/<span class="component">Table</span>&gt</code>
+<code>&lt/<span class="component">Table</span>&gt</code></pre>
 </CodeBox>
 
 

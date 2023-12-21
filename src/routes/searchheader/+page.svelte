@@ -71,20 +71,19 @@
 <SetupFrame>
   <pre id="script"><code>&lt<span class="script">script</span>&gt</code>
   <code><span class="import-from">import</span> &#123 HippoSearchHeader &#125 <span class="import-from">from</span> "$lib/components/hippocomponent";</code>
-<code>&lt/<span class="script">script</span>&gt</code>
-<code>
-  function firstFunction()&#123
-    console.log("첫번째")
-  &#125
+  <code>
+    function firstFunction()&#123
+      console.log("첫번째")
+    &#125
 
-  function secondFunction()&#123
-    console.log("두번째")
-  &#125
+    function secondFunction()&#123
+      console.log("두번째")
+    &#125
 
-  function thirdFunction()&#123
-    console.log("세번째")
-  &#125
-</code>
+    function thirdFunction()&#123
+      console.log("세번째")
+    &#125
+</code><code>&lt/<span class="script">script</span>&gt</code>
 </pre>
 </SetupFrame>
 
