@@ -4,76 +4,76 @@ export const routes: RouteItem[] = [
 	{
 		title: '버튼',
 		link: '/button',
-		icon: 'fa-solid fa-address-book'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '셀렉트',
 		link: '/select',
-		icon: 'fa-solid fa-address-card'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '인풋',
 		link: '/input',
-		icon: 'fa-regular fa-calendar-days'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '체크박스',
 		link: '/checkbox',
-		icon: 'fa fa-cog'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '페이지네이션',
 		link: '/pagination',
-		icon: 'fa-solid fa-clock-rotate-left'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '컴포넌트프레임',
 		link: '/component_frame',
-		icon: 'fa-solid fa-wallet'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '테이블',
 		link: '/table',
-		icon: 'fa-solid fa-bullhorn'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '검색헤더',
 		link: '/searchheader',
-		icon: 'fa-solid fa-bullhorn'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '로그인폼',
 		link: '/loginform',
-		icon: 'fa-solid fa-bullhorn'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: '아이디 찾기 폼',
 		link: '/findIdform',
-		icon: 'fa-solid fa-bullhorn'
+		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
 		title: 'CRU 프레임',
-		icon: 'fa-solid fa-question',
+		icon: 'fa-solid fa-screwdriver-wrench',
 		items: [
 			{
 				title: '생성프레임',
 				link: '/cru/create',
-				icon: 'fa-solid fa-stethoscope'
+				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
 				title: '조회프레임',
 				link: '/cru/read',
-				icon: 'fa-solid fa-list'
+				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
 				title: '조회상세프레임',
 				link: '/cru/read-detail',
-				icon: 'fa-solid fa-list'
+				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
 				title: '갱신프레임',
 				link: '/cru/update',
-				icon: 'fa-solid fa-list'
+				icon: 'fa-solid fa-screwdriver-wrench'
 			}
 		]
 	}

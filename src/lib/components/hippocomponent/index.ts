@@ -1,5 +1,6 @@
 export { default as HippoButton } from './button/HippoButton.svelte';
 export { default as HippoNavyButton } from './button/HippoNavyButton.svelte';
+export { default as HippoTextButton } from './button/HippoTextButton.svelte';
 export { default as HippoCheckBox } from './checkbox/HippoCheckBox.svelte';
 export { default as HippoInput } from './input/HippoInput.svelte';
 export { default as HippoSelect } from './select/HippoSelect.svelte';

@@ -13,16 +13,16 @@
 
 	// 이전(한 페이지)으로 가기
 	const previous = () => {
-		if (Number(activeUrl) === 1) return;
-		let query = new URLSearchParams($page.url.searchParams.toString())
-		query.set('page',  (Number(activeUrl) - 1).toString())
+		if (Number(activeUrl) - 5 < 1) return;
+		let query = new URLSearchParams($page.url.searchParams.toString());
+		query.set('page', (Number(activeUrl) - 5).toString());
 		goto(`${$page.url.pathname}?${query}`, { invalidateAll: true });
 	};
 	// 다음(한 페이지)으로 가기
 	const next = () => {
-		if (Number(activeUrl) === Math.ceil(totalCount / perPage)) return;
-		let query = new URLSearchParams($page.url.searchParams.toString())
-		query.set('page',  (Number(activeUrl) + 1).toString())
+		if (Number(activeUrl) + 5 > Math.ceil(totalCount / perPage)) return;
+		let query = new URLSearchParams($page.url.searchParams.toString());
+		query.set('page', (Number(activeUrl) + 5).toString());
 		goto(`${$page.url.pathname}?${query}`, { invalidateAll: true });
 	};
 
