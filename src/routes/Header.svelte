@@ -1,19 +1,15 @@
 <script>
+	import { dropdownitems } from './dropdown.ts';
 	import { goto } from '$app/navigation';
 	import { createEventDispatcher } from 'svelte';
-
-	import { Dropdown, DropdownItem, Button } from '$components/helpers';
+	import { Dropdown, DropdownItem } from '$components/helpers';
 	import Logo from '$images/hippo_logo copy.png';
 
 	let innerHeight;
 	const dispatch = createEventDispatcher();
 
-	function goToDetailPage() {
-		console.log("123")
-	}
-
-	function logout() {
-		console.log("345")
+	function itemClicked(link) {
+		goto(link);
 	}
 
 	function openCloseSideBar() {
@@ -57,19 +53,15 @@
 
 		<div class="flex items-center justify-end">
 			<div class="lg:px-3.5 xl:pr-10 pl-5">
-				<button class="myAccount font-bold">DropDown</button>
+				<button class="dropdown font-bold">드롭다운</button>
 			</div>
-			<Dropdown triggeredBy=".myAccount">
-				<DropdownItem
-					defaultClass="font-medium py-2 hover:bg-gray-100 flex justify-center"
-					on:click={goToDetailPage}>상세보기</DropdownItem
-				>
-				<DropdownItem
-					defaultClass="font-medium py-2 hover:bg-gray-100 flex justify-center"
-					on:click={logout}
-				>
-					<button type="button"> 로그아웃 </button>
-				</DropdownItem>
+			<Dropdown triggeredBy=".dropdown">
+				{#each dropdownitems as di}
+					<DropdownItem
+						defaultClass="font-medium py-2 hover:bg-gray-100 flex justify-center"
+						on:click={() => itemClicked(di?.link)}>{di?.title}</DropdownItem
+					>
+				{/each}
 			</Dropdown>
 		</div>
 	</div>

@@ -1,33 +1,42 @@
 <script>
+	import { dropdownitems } from './dropdown.ts';
 	import { page } from '$app/stores';
-	import {routes} from './route'
+	import { routes } from './route';
 
-	let routeLink = routes.map(r => {
-		if(r.items){
-			let rList = r.items.map(rI => {
-				return {title: rI.title, link: rI.link}
+	let routeLink = routes
+		.map((r) => {
+			if (r.items) {
+				let rList = r.items.map((rI) => {
+					return { title: rI.title, link: rI.link };
+				});
+
+				return rList;
+			} else {
+				return { title: r.title, link: r.link };
+			}
+		})
+		.flat();
+	let subTitle = routeLink.filter((r) => $page.url.pathname.includes(r.link))[0]
+		? routeLink.filter((r) => $page.url.pathname.includes(r.link))[0]
+		: dropdownitems.filter((r) => $page.url.pathname.includes(r.link))[0];
+
+	$: {
+		routeLink = routes
+			.map((r) => {
+				if (r.items) {
+					let rList = r.items.map((rI) => {
+						return { title: rI.title, link: rI.link };
+					});
+
+					return rList;
+				} else {
+					return { title: r.title, link: r.link };
+				}
 			})
-
-			return rList
-		}else{
-			return {title: r.title, link: r.link}
-		}
-	}).flat()
-	let subTitle = routeLink.filter(r => $page.url.pathname.includes(r.link))[0]
-
-	$:{
-		routeLink = routes.map(r => {
-		if(r.items){
-			let rList = r.items.map(rI => {
-				return {title: rI.title, link: rI.link}
-			})
-
-			return rList
-		}else{
-			return {title: r.title, link: r.link}
-		}
-		}).flat()
-		subTitle = routeLink.filter(r => $page.url.pathname.includes(r.link))[0]
+			.flat();
+		subTitle = routeLink.filter((r) => $page.url.pathname.includes(r.link))[0]
+			? routeLink.filter((r) => $page.url.pathname.includes(r.link))[0]
+			: dropdownitems.filter((r) => $page.url.pathname.includes(r.link))[0];
 	}
 </script>
 

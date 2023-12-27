@@ -1,9 +1,4 @@
-interface RouteItem {
-	title: string;
-	link?: string;
-	icon: string;
-	items?: RouteItem[];
-}
+import type { RouteItem } from '$lib/interface/templateInterface';
 
 export const routes: RouteItem[] = [
 	{
@@ -44,6 +39,16 @@ export const routes: RouteItem[] = [
 	{
 		title: '검색헤더',
 		link: '/searchheader',
+		icon: 'fa-solid fa-bullhorn'
+	},
+	{
+		title: '로그인폼',
+		link: '/loginform',
+		icon: 'fa-solid fa-bullhorn'
+	},
+	{
+		title: '아이디 찾기 폼',
+		link: '/findIdform',
 		icon: 'fa-solid fa-bullhorn'
 	},
 	{

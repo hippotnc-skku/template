@@ -5,7 +5,7 @@
 	import Toast from '$lib/components/notification/Toast.svelte';
 	import Popup from '$lib/components/popup.svelte';
 	import Footer from './Footer.svelte';
-	import '../app.css'
+	import '../app.css';
 	import Navbar from './Navbar.svelte';
 
 	let showSideBar: string;
@@ -33,10 +33,10 @@
 	<SideBar {showSideBar} on:close={setToFalse} />
 
 	<div
-		class="ease-soft-in-out min-h-screen rounded-xl lg:ml-60 transition-all duration-200 flex flex-col item-center w-full  min-w-[560px] flex flex-col justify-between"
+		class="ease-soft-in-out min-h-screen rounded-xl lg:ml-60 transition-all duration-200 flex flex-col item-center w-full min-w-[560px] flex flex-col justify-between"
 	>
 		<Header on:sideBar={showSideBarFunction} />
-		<div class="md:px-2.5 lg:px-3.5 xl:px-10 pt-[2.5rem] mt-10">
+		<div class="md:px-2.5 lg:px-3.5 xl:px-10 pt-[2.5rem] mt-10 h-full">
 			<Navbar />
 			<slot />
 		</div>
