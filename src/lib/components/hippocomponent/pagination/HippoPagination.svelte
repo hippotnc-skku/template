@@ -15,14 +15,22 @@
 	const previous = () => {
 		if (Number(activeUrl) - 5 < 1) return;
 		let query = new URLSearchParams($page.url.searchParams.toString());
-		query.set('page', (Math.floor((Number(activeUrl) - 5) / 5) * 5 + 1).toString());
+		if (Number(activeUrl) % 5 === 0) {
+			query.set('page', (Math.floor((Number(activeUrl) - 5) / 5) * 5 - 4).toString());
+		} else {
+			query.set('page', (Math.floor((Number(activeUrl) - 5) / 5) * 5 + 1).toString());
+		}
 		goto(`${$page.url.pathname}?${query}`, { invalidateAll: true });
 	};
 	// 다음(한 페이지)으로 가기
 	const next = () => {
 		if (Math.ceil(Number(activeUrl) / 5) >= Math.ceil(Math.ceil(totalCount / perPage) / 5)) return;
 		let query = new URLSearchParams($page.url.searchParams.toString());
-		query.set('page', (Math.floor((Number(activeUrl) + 5) / 5) * 5 + 1).toString());
+		if (Number(activeUrl) % 5 === 0) {
+			query.set('page', (Math.floor((Number(activeUrl) + 5) / 5) * 5 - 4).toString());
+		} else {
+			query.set('page', (Math.floor((Number(activeUrl) + 5) / 5) * 5 + 1).toString());
+		}
 		goto(`${$page.url.pathname}?${query}`, { invalidateAll: true });
 	};
 
