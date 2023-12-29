@@ -418,7 +418,7 @@
 
 <style>
 	.background {
-		background-image: url('src/lib/images/loginImg.png');
+		background-image: url('/src/lib/images/loginImg.png');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: contain;
