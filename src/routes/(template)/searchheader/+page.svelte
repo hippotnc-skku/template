@@ -73,10 +73,9 @@
 <CodeBox class="mt-10" id="single">
 	<pre id="single"><code
 			>&lt<span class="component">HippoSearchHeader</span> <span class="function-event"
-				>on:onFirst=&#123firstFunction&#125&gt</span
+				>on:onFirst=&#123firstFunction&#125/&gt</span
 			></code
-		><code>버튼 </code>
-<code>&lt/<span class="component">HippoSearchHeader</span>&gt</code></pre>
+		></pre>
 </CodeBox>
 
 <CodeExampleFrame name="버튼 2개일 경우">
@@ -99,8 +98,7 @@
 				>on:onFirst=&#123firstFunction&#125</span
 			>
     <span class="function-event">on:onSecond=&#123secondFunction&#125</span>&gt</code
-		><code>버튼 </code>
-<code>&lt/<span class="component">HippoSearchHeader</span>&gt</code></pre>
+		></pre>
 </CodeBox>
 
 <CodeExampleFrame name="버튼 3개일 경우">
@@ -127,10 +125,20 @@
 			>
     <span class="function-event">on:onSecond=&#123secondFunction&#125</span><span
 				class="function-event"> on:onThird=&#123thirdFunction&#125</span
-			>&gt</code
-		><code>버튼 </code>
-<code>&lt/<span class="component">HippoSearchHeader</span>&gt</code></pre>
+			>/&gt</code
+		></pre>
 </CodeBox>
+
+<HippoSearchHeader
+	firstName="히포"
+	secondName="티앤"
+	thirdName="씨이"
+	hasSecondButton={true}
+	hasThirdButton={true}
+	on:onFirst={firstFunction}
+	on:onSecond={secondFunction}
+	on:onThird={thirdFunction}
+/>
 
 <CodeExampleFrame name="버튼이 없는 경우">
 	<HippoWhiteFrame class="px-8 py-6 mt-10">
@@ -139,7 +147,7 @@
 </CodeExampleFrame>
 
 <CodeBox class="mt-10" id="nobutton">
-	<pre id="nobutton"><code>&lt<span class="component">HippoSearchHeader</span>&gt</code><code
-			>버튼</code
-		><code>&lt/<span class="component">HippoSearchHeader</span>&gt</code></pre>
+	<pre id="nobutton"><code
+			>&lt<span class="component">HippoSearchHeader</span> needButtons=&#123false&#125 /&gt</code
+		></pre>
 </CodeBox>
