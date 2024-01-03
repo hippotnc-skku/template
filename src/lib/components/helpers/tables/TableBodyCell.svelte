@@ -2,8 +2,7 @@
 	import classNames from 'classnames';
 	import { getContext } from 'svelte';
 
-	export let tdClass: string =
-		'p-4 whitespace-nowrap font-medium p-2 align-middle bg-transparent';
+	export let tdClass: string = 'p-4 whitespace-nowrap font-medium p-2 align-middle bg-transparent';
 
 	export let color = 'text-black';
 	let tdClassfinal: string;

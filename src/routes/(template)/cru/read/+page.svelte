@@ -87,19 +87,18 @@
 </SetupFrame>
 
 <CodeExampleFrame name="조회프레임">
-	<HippoWhiteFrame class="px-8 py-6">
-		<HippoSearchHeader
-			firstName="히포"
-			secondName="티앤"
-			thirdName="씨이"
-			hasSecondButton={true}
-			on:onFirst={firstFunction}
-			on:onSecond={secondFunction}
-			>버튼
-		</HippoSearchHeader>
-	</HippoWhiteFrame>
-
 	<HippoWhiteFrame class="p-5 mt-8">
+		<div class="p-2">
+			<HippoSearchHeader
+				firstName="히포"
+				secondName="티앤"
+				thirdName="씨이"
+				hasSecondButton={true}
+				on:onFirst={firstFunction}
+				on:onSecond={secondFunction}
+				>버튼
+			</HippoSearchHeader>
+		</div>
 		<Table hoverable="true">
 			<TableHead>
 				{#each tableHeader as th}
@@ -148,18 +147,18 @@
 <CodeBox class="mt-10" id="create">
 	<pre id="create">
 <code>&lt<span class="component">HippoWhiteFrame</span> class="p-5 mt-8" &gt</code>
-  <code
-			>&lt<span class="component">HippoSearchHeader</span
-			> firstName="히포" secondName="티앤" thirdName="씨이"
-        hasSecondButton=&#123true&#125 <span class="function-event"
-				>on:onFirst=&#123firstFunction&#125</span
-			>
-        <span class="function-event">on:onSecond=&#123secondFunction&#125</span>&gt</code
-		><code>버튼 </code>
-  <code>&lt/<span class="component">HippoSearchHeader</span>&gt</code>
-<code>&lt/<span class="component">HippoWhiteFrame</span> &gt</code>
-
-<code>&lt<span class="component">HippoWhiteFrame</span> class="p-5 mt-8" &gt</code>
+<code>	&ltdiv class="p-2"&gt
+		&lt<span class="component">HippoSearchHeader</span>
+					firstName="히포"
+					secondName="티앤"
+					thirdName="씨이"
+					hasSecondButton=&#123true&#125
+					on:onFirst=&#123firstFunction&#125
+					on:onSecond=&#123secondFunction&#125
+					&gt버튼
+		&lt/<span class="component">HippoSearchHeader</span>&gt
+	&lt/div&gt
+</code>
   <code>&lt<span class="component">Table</span> hoverable={true}&gt</code>
     <code
 			>&lt<span class="component">TableHead</span>&gt
