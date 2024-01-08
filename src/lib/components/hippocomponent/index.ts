@@ -8,3 +8,4 @@ export { default as HippoWhiteFrame } from './HippoWhiteFrame.svelte';
 export { default as HippoSort } from './HippoSort.svelte';
 export { default as HippoPagination } from './pagination/HippoPagination.svelte';
 export { default as HippoSearchHeader } from './HippoSearchHeader.svelte';
+export { default as HippoTabs } from './tabs/HippoTabs.svelte';
