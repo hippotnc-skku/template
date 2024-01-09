@@ -38,6 +38,8 @@
 			? routeLink.filter((r) => $page.url.pathname.includes(r.link))[0]
 			: dropdownitems.filter((r) => $page.url.pathname.includes(r.link))[0];
 	}
+
+	console.log(subTitle);
 </script>
 
 <div class="max-w-[2000px] flex items-center justify-start transition-all shadow-none mx-auto">

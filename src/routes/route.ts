@@ -62,26 +62,26 @@ export const routes: RouteItem[] = [
 		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
-		title: 'CRU 프레임',
+		title: '게시판',
 		icon: 'fa-solid fa-screwdriver-wrench',
 		items: [
 			{
-				title: '생성프레임',
+				title: '생성 게시판',
 				link: '/cru/create',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
-				title: '조회프레임',
+				title: '목록 게시판',
 				link: '/cru/read',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
-				title: '조회상세프레임',
-				link: '/cru/read-detail',
+				title: '상세 조회 게시판 1',
+				link: '/cru/detail-readone',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
-				title: '갱신프레임',
+				title: '갱신 게시판',
 				link: '/cru/update',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			}

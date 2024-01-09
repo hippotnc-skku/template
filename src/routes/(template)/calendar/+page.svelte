@@ -62,6 +62,16 @@
 	};
 </script>
 
+<HippoWhiteFrame class="text-center py-5 w-full space-y-1">
+	<div class="text-lg font-bold">자세한 사항은 fullcalendar를 참고하시면 됩니다.</div>
+
+	<a
+		href="https://fullcalendar.io/"
+		target="_blank"
+		class="text-blue-500 underline underline-offset-[5px]">https://fullcalendar.io/</a
+	>
+</HippoWhiteFrame>
+
 <SetupFrame id="script">
 	<pre id="script"><code
 			><span class="import-from">import</span> '$lib/assets/css/full-calendar.css';
