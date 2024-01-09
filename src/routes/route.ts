@@ -86,5 +86,21 @@ export const routes: RouteItem[] = [
 				icon: 'fa-solid fa-screwdriver-wrench'
 			}
 		]
+	},
+	{
+		title: 'Charts',
+		icon: 'fa-solid fa-chart-simple',
+		items: [
+			{
+				title: 'Line Chart',
+				link: '/chart/line',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
+				title: 'Area Chart',
+				link: '/chart/area',
+				icon: 'fa-regular fa-chart-simple'
+			}
+		]
 	}
 ];
