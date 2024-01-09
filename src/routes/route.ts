@@ -47,6 +47,11 @@ export const routes: RouteItem[] = [
 		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
+		title: '캘린더',
+		link: '/calendar',
+		icon: 'fa-solid fa-screwdriver-wrench'
+	},
+	{
 		title: '로그인폼',
 		link: '/loginform',
 		icon: 'fa-solid fa-screwdriver-wrench'
