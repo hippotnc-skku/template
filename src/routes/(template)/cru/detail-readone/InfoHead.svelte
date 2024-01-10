@@ -1,6 +1,6 @@
 <script>
 	import { formatDateKr } from '$lib/api/function.js';
-	import { HippoInput, HippoWhiteFrame } from '$lib/components/hippocomponent';
+	import { HippoInput } from '$lib/components/hippocomponent';
 
 	const family = {
 		id: 1,
@@ -10,6 +10,7 @@
 		registration_code: 1101,
 		phonenum: '032-813-2801',
 		country: 'rok',
+		sigungu: 'gyeonggido',
 		address: 'suwon',
 		street: 'seoburo',
 		postal_code: '16419',
@@ -73,7 +74,7 @@
 			>{familyInfo.inserted_at}</label
 		>
 		<HippoInput
-			value={family['inserted_at'].slice(0, 10)}
+			value={formatDateKr(family['inserted_at'])}
 			disabled={true}
 			border="border-0"
 			class="w-full"
@@ -84,7 +85,14 @@
 			>{familyInfo.address}</label
 		>
 		<HippoInput
-			value={family['street'] + ' ' + family['address'] + ' (' + family['postal_code'] + ')'}
+			value={family['sigungu'] +
+				' ' +
+				family['street'] +
+				' ' +
+				family['address'] +
+				' (' +
+				family['postal_code'] +
+				')'}
 			disabled={true}
 			border="border-0"
 			class="w-full"

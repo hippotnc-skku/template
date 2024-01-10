@@ -69,9 +69,6 @@
 					bind:value={pw}
 				/>
 
-				<HippoCheckBox name="rememberID" bind:checked={checkboxCheck}>아이디 기억하기</HippoCheckBox
-				>
-
 				{#if form?.status && form?.status !== 'success'}
 					<div class="text-red-600">잘못된 아이디 또는 비밀번호 입니다.</div>
 				{/if}
@@ -84,17 +81,6 @@
 					{/if}
 				</HippoNavyButton>
 			</form>
-
-			<div class="flex justify-between items-start mt-8">
-				<div class="text-[#afafaf] text-[13px]">아이디/비밀번호를 잊어버리셨나요?</div>
-
-				<div class="flex">
-					<HippoTextButton on:click={firstClick} class="text-[13px]">아이디</HippoTextButton>
-					<div class="mx-0.5 text-primary text-[13px]">/</div>
-					<HippoTextButton on:click={secondClick} class="text-[13px]">비밀번호 찾기</HippoTextButton
-					>
-				</div>
-			</div>
 		</div>
 	</HippoWhiteFrame>
 </div>

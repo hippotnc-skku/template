@@ -11,7 +11,7 @@
 		TableHeadCell
 	} from '$lib/components/helpers';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-	import InfoHead from '../../InfoHead.svelte';
+	import InfoHead from './InfoHead.svelte';
 
 	const tableHeader = [
 		{ name: '할인율', sort: false },
