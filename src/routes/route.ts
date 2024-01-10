@@ -99,7 +99,7 @@ export const routes: RouteItem[] = [
 			{
 				title: 'Area Chart',
 				link: '/chart/area',
-				icon: 'fa-regular fa-chart-simple'
+				icon: ' fa-solid fa-chart-mixed-up-circle-dollar'
 			}
 		]
 	}

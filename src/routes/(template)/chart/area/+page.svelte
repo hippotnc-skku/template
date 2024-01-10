@@ -5,10 +5,13 @@
 	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
 	import HippoButton from '$lib/components/hippocomponent/button/HippoButton.svelte';
 	import ChartArea from '$lib/components/charts/chart_area.svelte';
+	import Gist from '$lib/gist/Gist.svelte';
 	let titles;
 	let xaxis;
 	let isDataLabels = false;
 	let makeNewChart = false;
+
+	let asdf = '';
 
 	function updateOptions() {
 		makeNewChart = makeNewChart ? false : true;
@@ -134,3 +137,7 @@
 			></pre>
 	</div>
 </CodeBox>
+
+<Gist gistUrl="https://gist.github.com/Donggyu-Lee/3420b1d5bac1a2ffb12df89c2d5a8ee2.js" />
+
+<Gist gistUrl="https://gist.github.com/Donggyu-Lee/9ace823402b363c423f7344b0686d276.js" />
