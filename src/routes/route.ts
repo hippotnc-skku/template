@@ -92,6 +92,11 @@ export const routes: RouteItem[] = [
 		icon: 'fa-solid fa-chart-simple',
 		items: [
 			{
+				title: 'ApexChart Options',
+				link: '/chart/apexchart',
+				icon: 'fa-sharp fa-light fa-chart-user'
+			},
+			{
 				title: 'Line Chart',
 				link: '/chart/line',
 				icon: 'fa-solid fa-chart-line'
