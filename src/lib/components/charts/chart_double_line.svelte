@@ -125,7 +125,9 @@
 			shared: true,
 			intersect: false,
 			y: {
-				formatter: function (val) {
+				formatter: functio
+				
+				n (val) {
 					return val + ' <span class="fw-normal text-body-secondary">Products sold</span>';
 				}
 			}
