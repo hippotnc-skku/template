@@ -1,70 +1,129 @@
 <script lang="ts">
-	import HippoWhiteFrame from "$lib/components/hippocomponent/HippoWhiteFrame.svelte";
-  import {HippoButton} from "$lib/components/hippocomponent";
-	import { notifications } from "$lib/components/notification/notifications";
-  import CodeExampleFrame from "$lib/codeboxframe/CodeExampleFrame.svelte";
-	import SetupFrame from "$lib/codeboxframe/SetupFrame.svelte";
-  import CodeBox from "$lib/codeboxframe/CodeBox.svelte";
+	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
+	import { HippoButton } from '$lib/components/hippocomponent';
+	import { notifications } from '$lib/components/notification/notifications';
+	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
+	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
+	import Gist from '$lib/gist/Gist.svelte';
 
+	const buttonCode = [
+		['bg-[#1E2666]', 'white'],
+		['bg-[#205CC2]', 'white'],
+		['bg-[#DB0F26]', 'white'],
+		['bg-[#3561AC]', 'white'],
+		['bg-[#FF9114]', 'white'],
+		['bg-[#39C261]', 'white'],
+		['bg-[#F15D5D]', 'white'],
+		['bg-[#373838]', 'white'],
+		['bg-[#BCBCBC]', 'white'],
+		['bg-[#F8F8F8]', 'black'],
+		['bg-[#FFFFFF]', 'black'],
+		['bg-[#1D58BD]', 'white'],
+		['bg-[#4175CE]', 'white'],
+		['bg-[#1349A5]', 'white'],
+		['bg-[#D3DDEE]', 'black'],
+		['bg-[#FCDEDE]', 'black'],
+		['bg-[#7B7B7B]', 'white'],
+		['bg-[#303030]', 'white'],
+		['bg-[#DEDEDE]', 'black']
+	];
 
-  const buttonCode = [
-     ['bg-[#1E2666]', 'white'],
-     ['bg-[#205CC2]', 'white'],
-     ['bg-[#DB0F26]', 'white'],
-     ['bg-[#3561AC]', 'white'],
-     ['bg-[#FF9114]', 'white'],
-     ['bg-[#39C261]', 'white'],
-     ['bg-[#F15D5D]', 'white'],
-     ['bg-[#373838]', 'white'],
-     ['bg-[#BCBCBC]', 'white'],
-     ['bg-[#F8F8F8]', 'black'],
-     ['bg-[#FFFFFF]', 'black'],
-     ['bg-[#1D58BD]', 'white'],
-     ['bg-[#4175CE]', 'white'],
-     ['bg-[#1349A5]', 'white'],
-     ['bg-[#D3DDEE]', 'black'],
-     ['bg-[#FCDEDE]', 'black'],
-     ['bg-[#7B7B7B]', 'white'],
-     ['bg-[#303030]', 'white'],
-     ['bg-[#DEDEDE]', 'black']
-   ]
+	function clicked() {
+		notifications.success('클릭 됐습니다.', 500);
+	}
 
-  function clicked() {
-    notifications.success('클릭 됐습니다.', 500)
-  }
+	// const targetDiv = document.getElementById(containerId);
 
+	// const codeTag = targetDiv.querySelector("code");
+	// if (showCopy) {
+	// 	targetDiv.querySelector('.copy-btn').addEventListener('click', function (e) {
+	// 		e.preventDefault();
+	// 		e.cancelBubble = true;
+	// 		copyTextToClipboard(codeText);
+	// 	});
+	// }
+
+	// function copyTextToClipboard(text) {
+	// 	if (!navigator.clipboard) {
+	// 		fallbackCopyTextToClipboard(text);
+	// 		return;
+	// 	}
+	// 	navigator.clipboard.writeText(text);
+	// }
+
+	// function fallbackCopyTextToClipboard(text) {
+	// 	const textArea = document.createElement('textarea');
+	// 	textArea.value = text;
+	// 	textArea.style.position = 'fixed'; //avoid scrolling to bottom
+	// 	document.body.appendChild(textArea);
+	// 	textArea.focus();
+	// 	textArea.select();
+
+	// 	try {
+	// 		document.execCommand('copy');
+	// 	} catch (err) {
+	// 		console.error('fallbackCopyTextToClipboard: Oops, unable to copy', err);
+	// 	}
+	// 	document.body.removeChild(textArea);
+	// }
+
+	function copyCode() {
+		let myIFrame = document.getElementById('one');
+		console.log(myIFrame.contentWindow.document.getElementsByTagName('table')[0].innerText);
+		copyCode2(myIFrame.contentWindow.document.getElementsByTagName('table')[0].innerText);
+		// let content = myIFrame.contentWindow.document.body.innerHTML;
+	}
+
+	function copyCode2(text) {
+		window.navigator.clipboard.writeText(text).then(() => {
+			notifications.success('복사되었습니다.', 1000);
+		});
+	}
 </script>
 
 <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
-  <div class="text-lg font-bold">
-    크기 변환은 padding을 조절하시면 됩니다.
-  </div>
-  <div class="text-lg font-bold">
-    그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id="id")
-  </div>
+	<div class="text-lg font-bold">크기 변환은 padding을 조절하시면 됩니다.</div>
+	<div class="text-lg font-bold">
+		그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id="id")
+	</div>
 </HippoWhiteFrame>
 
+<button on:click={copyCode}>copy</button>
+
+<Gist id="one" gistUrl="https://gist.github.com/yoonheehan/24745ebedccbe111e323d5e196fa9533.js" />
+<Gist id="two" gistUrl="https://gist.github.com/yoonheehan/24745ebedccbe111e323d5e196fa9533.js" />
+
 <SetupFrame id="script">
-  <pre id="script"><code>&lt<span class="script">script</span>&gt</code>
-    <code><span class="import-from">import</span> &#123 HippoButton &#125 <span class="import-from">from</span> "$lib/components/hippocomponent";</code>
+	<pre id="script"><code>&lt<span class="script">script</span>&gt</code>
+    <code
+			><span class="import-from">import</span> &#123 HippoButton &#125 <span class="import-from"
+				>from</span
+			> "$lib/components/hippocomponent";</code
+		>
 <code>&lt/<span class="script">script</span>&gt</code></pre>
 </SetupFrame>
 
 <CodeExampleFrame name="Colors">
-  <HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
-    {#each buttonCode as bc, i}
-      <HippoButton style="background-color: {bc[0]}" class="{bc[0]} text-{bc[1]} px-3 py-2" on:click={clicked}>버튼 {i+1}</HippoButton>
-    {/each}
-  </HippoWhiteFrame>
+	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
+		{#each buttonCode as bc, i}
+			<HippoButton
+				style="background-color: {bc[0]}"
+				class="{bc[0]} text-{bc[1]} px-3 py-2"
+				on:click={clicked}>버튼 {i + 1}</HippoButton
+			>
+		{/each}
+	</HippoWhiteFrame>
 </CodeExampleFrame>
 
 <CodeBox id="buttons" class="mt-10">
-  <div id="buttons">
-    {#each buttonCode as bc, i}
-    <pre id="button{i+1}" class="mt-5"><code>&lt<span class="component">HippoButton</span> class="{bc[0]} text-{bc[1]} px-3 py-2"
-      <span class="function-event">on:click=&#123clicked&#125</span>&gt</code><code>버튼 {i+1}</code>
+	<div id="buttons">
+		{#each buttonCode as bc, i}
+			<pre id="button{i + 1}" class="mt-5"><code
+					>&lt<span class="component">HippoButton</span> class="{bc[0]} text-{bc[1]} px-3 py-2"
+      <span class="function-event">on:click=&#123clicked&#125</span>&gt</code
+				><code>버튼 {i + 1}</code>
 <code>&lt/<span class="component">HippoButton</span>&gt</code></pre>
-    {/each}
-  </div>
+		{/each}
+	</div>
 </CodeBox>
-
