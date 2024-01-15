@@ -1,11 +1,6 @@
 <script lang="ts">
 	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
-	import { HippoButton } from '$lib/components/hippocomponent';
-	import { notifications } from '$lib/components/notification/notifications';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
-	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
-	import Gist from '$lib/gist/Gist.svelte';
 	import { List, Li, Heading } from 'flowbite-svelte';
 	import ChartLine from '$lib/components/charts/template/chart_simple_line.svelte';
 
@@ -102,11 +97,13 @@
 		>
 		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
 			<Li>차트에 표시될 데이터</Li>
-			<Li
-				><Gist
-					gistUrl="https://gist.github.com/Donggyu-Lee/6ef2ca32ca179522c80b79d9dd3cc53b.js"
-				/></Li
-			>
+			<iframe
+				frameborder="0"
+				scrolling="no"
+				style="width:100%; height:166px;"
+				allow="clipboard-write"
+				src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fchart%2Fline%2F_temp2.svelte%3Fts%3D4&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&fetchFromJsDelivr=on"
+			></iframe>
 			<Li>name : string</Li>
 			<Li>data : list</Li>
 			<Li>여러 라인을 표시할 경우 series 리스트 안에 object 추가</Li>
