@@ -1,0 +1,131 @@
+<script lang="ts">
+	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
+	import { HippoButton } from '$lib/components/hippocomponent';
+	import { notifications } from '$lib/components/notification/notifications';
+	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
+	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
+	import Gist from '$lib/gist/Gist.svelte';
+	import { List, Li, Heading } from 'flowbite-svelte';
+	import ChartBar from '$lib/components/charts/template/chart_simple_bar.svelte';
+	import ChartCard from '$lib/components/charts/template/chart_card.svelte';
+
+	let cardOptions1 = {
+		icon: 'fa-solid fa-users',
+		title: '총 패밀리 수',
+		value: 123,
+		change: 3,
+		changeUnit: ''
+	};
+	let cardOptions2 = {
+		icon: 'fa-solid fa-chart-mixed-up-circle-dollar',
+		title: '월간 매출액',
+		value: 15000000,
+		unit: '원',
+		change: -20,
+		changeUnit: '%'
+	};
+	let cardOptions3 = {
+		icon: 'fa-solid fa-chart-pie-simple-circle-dollar',
+		title: '월간 매출 예상액',
+		value: 22340000,
+		unit: '원',
+		change: 10,
+		changeUnit: '%'
+	};
+	let cardOptions4 = {
+		icon: 'fa-solid fa-head-side-goggles',
+		title: '월간 플레이 수',
+		value: 234,
+		unit: '회'
+	};
+</script>
+
+<CodeExampleFrame name="Sample">
+	<div class="flex justify-between">
+		<ChartCard
+			icon={cardOptions1.icon}
+			title={cardOptions1.title}
+			value={cardOptions1.value}
+			change={cardOptions1.change}
+			changeUnit={cardOptions1.changeUnit}
+		/>
+		<ChartCard
+			icon={cardOptions2.icon}
+			title={cardOptions2.title}
+			value={cardOptions2.value}
+			unit={cardOptions2.unit}
+			change={cardOptions2.change}
+			changeUnit={cardOptions2.changeUnit}
+		/>
+		<ChartCard
+			icon={cardOptions3.icon}
+			title={cardOptions3.title}
+			value={cardOptions3.value}
+			unit={cardOptions3.unit}
+			change={cardOptions3.change}
+			changeUnit={cardOptions3.changeUnit}
+		/>
+		<ChartCard
+			icon={cardOptions4.icon}
+			title={cardOptions4.title}
+			value={cardOptions4.value}
+			unit={cardOptions4.unit}
+		/>
+	</div>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Source Code">
+	<script
+		src="https://coreultrasound.com/emgithub/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fchart%2Fcard%2F_temp.svelte&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></script>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Options">
+	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
+		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
+			>icon</Heading
+		>
+		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
+			<Li>type : string</Li>
+			<Li>Font Awesome Icon의 class 복사 후 붙여넣기</Li>
+		</List>
+		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
+			>title</Heading
+		>
+		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
+			<Li>type : string</Li>
+			<Li>Card의 Title</Li>
+		</List>
+		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
+			>value (필수)</Heading
+		>
+		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
+			<Li>type : any</Li>
+			<Li>Title 밑에 표시되는 value 값</Li>
+		</List>
+		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
+			>unit</Heading
+		>
+		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
+			<Li>type : string</Li>
+			<Li>value의 단위 표시</Li>
+		</List>
+		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
+			>change</Heading
+		>
+		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
+			<Li>type : number</Li>
+			<Li>value의 변동량</Li>
+			<Li>미기입 혹은 값이 0일 경우 미표시</Li>
+			<Li>양수일 경우 위로 화살표 및 초록색, 음수일 경우 아래로 화살표 및 빨간색 표시</Li>
+		</List>
+		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
+			>changeUnit</Heading
+		>
+		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
+			<Li>type : string</Li>
+			<Li>change의 단위</Li>
+		</List>
+	</HippoWhiteFrame>
+</CodeExampleFrame>

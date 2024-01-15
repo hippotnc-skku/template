@@ -7,7 +7,7 @@
 	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
 	import Gist from '$lib/gist/Gist.svelte';
 	import { List, Li, Heading } from 'flowbite-svelte';
-	import ChartLine from '$lib/components/charts/template/chart_simple_line.svelte';
+	import ChartBar from '$lib/components/charts/template/chart_simple_bar.svelte';
 
 	let series = [
 		{
@@ -47,20 +47,43 @@
 	let lineColors = ['#77B6EA'];
 </script>
 
-<SetupFrame id="script">
-	<pre id="script"><code
-			>&ltscript lang="ts"&gt
-	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
-	import &#123 HippoButton &#125 from '$lib/components/hippocomponent';
-	import &#123 notifications &#125 from '$lib/components/notification/notifications';
-	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
-	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
-	import Gist from '$lib/gist/Gist.svelte';
-	import &#123 List, Li, Heading &#125 from 'flowbite-svelte';
-	import ChartLine from '$lib/components/charts/template/chart_simple_line.svelte';
+<HippoWhiteFrame class="p-2 my-2">
+	<ChartBar
+		{series}
+		{chartHeight}
+		{dataLabels}
+		{strokeCurve}
+		{strokeWidth}
+		{titleText}
+		{titleAlign}
+		{titleFontSize}
+		{titleFontWeight}
+		{grid}
+		{gridColor}
+		{gridBorderColor}
+		{gridOpacity}
+		{xaxis}
+		{xaxisCategories}
+		{xaxisTitle}
+		{xaxisLablesRotate}
+		{yaxis}
+		{yaxisTitle}
+		{yaxisMin}
+		{yaxisMax}
+		{dropShadow}
+		{toolbar}
+		{markerSize}
+		{markerStrokeColors}
+		{markerStrokeWidth}
+		{markerStrokeOpacity}
+		{legend}
+		{legendPosition}
+		{legendHorizontalAlign}
+		{lineColors}
+	/>
+</HippoWhiteFrame>
 
-<HippoWhiteFrame class="p-2 my-2 h-[1800px]">
+<HippoWhiteFrame class="p-2 my-2 h-[1000px]">
 	<Gist gistUrl="https://gist.github.com/Donggyu-Lee/dca05155d7d8fae23658e9641c52a179.js" />
 </HippoWhiteFrame>
 
@@ -71,7 +94,11 @@
 		>
 		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
 			<Li>차트에 표시될 데이터</Li>
-			<Li>let series = [&#123 name : name, data : data &#125];</Li>
+			<Li
+				><Gist
+					gistUrl="https://gist.github.com/Donggyu-Lee/6ef2ca32ca179522c80b79d9dd3cc53b.js"
+				/></Li
+			>
 			<Li>name : string</Li>
 			<Li>data : list</Li>
 			<Li>여러 라인을 표시할 경우 series 리스트 안에 object 추가</Li>
