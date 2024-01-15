@@ -17,7 +17,7 @@
 			color = 'text-red-500';
 			arrow = '↓';
 		} else {
-			change = '-';
+			change = '';
 			arrow = '';
 		}
 	});
