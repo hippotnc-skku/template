@@ -19,7 +19,6 @@
 <CodeExampleFrame name="Colors">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
 		<HippoButton class="bg-[#1E2666] text-white px-3 py-2" on:click={clicked}>버튼 1</HippoButton>
-
 		<HippoButton class="bg-[#205CC2] text-white px-3 py-2" on:click={clicked}>버튼 2</HippoButton>
 		<HippoButton class="bg-[#DB0F26] text-white px-3 py-2" on:click={clicked}>버튼 3</HippoButton>
 		<HippoButton class="bg-[#3561AC] text-white px-3 py-2" on:click={clicked}>버튼 4</HippoButton>
