@@ -95,12 +95,14 @@
 		<option value={option.value}>{option.name}</option>
 	{/each}
 </HippoSelect>
+
 <HippoSelect class="w-48 border-[#BCBCBC] text-[#BCBCBC]" on:change={(e) => onChange(e)}>
 	<option disabled selected>숫자를 선택하세요.</option>
 	{#each options as option}
 		<option value={option.value}>{option.name}</option>
 	{/each}
 </HippoSelect>
+
 <HippoSelect class="w-48 border-[#1D58BD] text-[#1D58BD]" on:change={(e) => onChange(e)}>
 	<option disabled selected>숫자를 선택하세요.</option>
 	{#each options as option}
@@ -114,24 +116,28 @@
 		<option value={option.value}>{option.name}</option>
 	{/each}
 </HippoSelect>
+
 <HippoSelect class="w-48 border-[#1349A5] text-[#1349A5]" on:change={(e) => onChange(e)}>
 	<option disabled selected>숫자를 선택하세요.</option>
 	{#each options as option}
 		<option value={option.value}>{option.name}</option>
 	{/each}
 </HippoSelect>
+
 <HippoSelect class="w-48 border-[#7B7B7B] text-[#7B7B7B]" on:change={(e) => onChange(e)}>
 	<option disabled selected>숫자를 선택하세요.</option>
 	{#each options as option}
 		<option value={option.value}>{option.name}</option>
 	{/each}
 </HippoSelect>
+
 <HippoSelect class="w-48 border-[#303030] text-[#303030]" on:change={(e) => onChange(e)}>
 	<option disabled selected>숫자를 선택하세요.</option>
 	{#each options as option}
 		<option value={option.value}>{option.name}</option>
 	{/each}
 </HippoSelect>
+
 <HippoSelect class="w-48 border-[#DEDEDE] text-[#DEDEDE]" on:change={(e) => onChange(e)}>
 	<option disabled selected>숫자를 선택하세요.</option>
 	{#each options as option}

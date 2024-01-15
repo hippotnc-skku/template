@@ -29,6 +29,17 @@
 	</div>
 </HippoWhiteFrame>
 
+<CodeExampleFrame name="SetUp">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:460px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fselect%2F_temp.svelte%3Fts%3D4%23L1-L20&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame>
 	<HippoWhiteFrame class="p-5">
 		<div class="text-lg font-bold">길이가 긴 select</div>
@@ -55,6 +66,17 @@
 			{/each}
 		</HippoSelect>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame>
+	<iframe
+		title="default"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:460px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fselect%2F_temp.svelte%3Fts%3D4%23L22-L41&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
 
 <CodeExampleFrame name="Colors">
@@ -160,4 +182,15 @@
 			</HippoSelect>
 		</div>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Color">
+	<iframe
+		title="color"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:2098px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fselect%2F_temp.svelte%3Fts%3D4%23L43-L140&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
