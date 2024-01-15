@@ -5,7 +5,6 @@
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
 	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
-	import Gist from '$lib/gist/Gist.svelte';
 	import { List, Li, Heading } from 'flowbite-svelte';
 	import ChartBar from '$lib/components/charts/template/chart_simple_bar.svelte';
 
@@ -83,9 +82,7 @@
 	/>
 </HippoWhiteFrame>
 
-<HippoWhiteFrame class="p-2 my-2 h-[1000px]">
-	<Gist gistUrl="https://gist.github.com/Donggyu-Lee/dca05155d7d8fae23658e9641c52a179.js" />
-</HippoWhiteFrame>
+<HippoWhiteFrame class="p-2 my-2 h-[1000px]"></HippoWhiteFrame>
 
 <CodeExampleFrame name="Options">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
@@ -94,11 +91,7 @@
 		>
 		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
 			<Li>차트에 표시될 데이터</Li>
-			<Li
-				><Gist
-					gistUrl="https://gist.github.com/Donggyu-Lee/6ef2ca32ca179522c80b79d9dd3cc53b.js"
-				/></Li
-			>
+			<Li></Li>
 			<Li>name : string</Li>
 			<Li>data : list</Li>
 			<Li>여러 라인을 표시할 경우 series 리스트 안에 object 추가</Li>
