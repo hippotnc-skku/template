@@ -7,7 +7,7 @@
 	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
 	import Gist from '$lib/gist/Gist.svelte';
 	import { List, Li, Heading } from 'flowbite-svelte';
-	import ChartLine from '$lib/components/charts/template/chart_simple_line.svelte';
+	import ChartBar from '$lib/components/charts/template/chart_simple_bar.svelte';
 
 	let series = [
 		{
@@ -48,7 +48,7 @@
 </script>
 
 <HippoWhiteFrame class="p-2 my-2">
-	<ChartLine
+	<ChartBar
 		{series}
 		{chartHeight}
 		{dataLabels}
@@ -83,7 +83,7 @@
 	/>
 </HippoWhiteFrame>
 
-<HippoWhiteFrame class="p-2 my-2 h-[1800px]">
+<HippoWhiteFrame class="p-2 my-2 h-[1000px]">
 	<Gist gistUrl="https://gist.github.com/Donggyu-Lee/dca05155d7d8fae23658e9641c52a179.js" />
 </HippoWhiteFrame>
 

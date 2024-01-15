@@ -97,14 +97,34 @@ export const routes: RouteItem[] = [
 				icon: 'fa-sharp fa-light fa-chart-user'
 			},
 			{
+				title: 'Card',
+				link: '/chart/card',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
 				title: 'Line Chart',
 				link: '/chart/line',
 				icon: 'fa-solid fa-chart-line'
 			},
 			{
-				title: 'Area Chart',
-				link: '/chart/area',
-				icon: ' fa-solid fa-chart-mixed-up-circle-dollar'
+				title: 'Bar Chart',
+				link: '/chart/bar',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
+				title: 'Column Chart',
+				link: '/chart/column',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
+				title: 'Line-Column Chart',
+				link: '/chart/linecolumn',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
+				title: 'Multi Y-Axis Chart',
+				link: '/chart/multiyaxis',
+				icon: 'fa-solid fa-chart-line'
 			}
 		]
 	}
