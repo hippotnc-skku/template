@@ -47,6 +47,54 @@
 	let lineColors = ['#77B6EA'];
 </script>
 
+<CodeExampleFrame name="Sample">
+	<HippoWhiteFrame class="p-2 my-2">
+		<ChartLine
+			{series}
+			{chartHeight}
+			{dataLabels}
+			{strokeCurve}
+			{strokeWidth}
+			{titleText}
+			{titleAlign}
+			{titleFontSize}
+			{titleFontWeight}
+			{grid}
+			{gridColor}
+			{gridBorderColor}
+			{gridOpacity}
+			{xaxis}
+			{xaxisCategories}
+			{xaxisTitle}
+			{xaxisLablesRotate}
+			{yaxis}
+			{yaxisTitle}
+			{yaxisMin}
+			{yaxisMax}
+			{dropShadow}
+			{toolbar}
+			{markerSize}
+			{markerStrokeColors}
+			{markerStrokeWidth}
+			{markerStrokeOpacity}
+			{legend}
+			{legendPosition}
+			{legendHorizontalAlign}
+			{lineColors}
+		/>
+	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Code">
+	<iframe
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1657px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fchart%2Fline%2F_temp.svelte%3Fts%3D4&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&fetchFromJsDelivr=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame name="Options">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
 		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
@@ -54,7 +102,11 @@
 		>
 		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
 			<Li>차트에 표시될 데이터</Li>
-			<Li>let series = [&#123 name : name, data : data &#125];</Li>
+			<Li
+				><Gist
+					gistUrl="https://gist.github.com/Donggyu-Lee/6ef2ca32ca179522c80b79d9dd3cc53b.js"
+				/></Li
+			>
 			<Li>name : string</Li>
 			<Li>data : list</Li>
 			<Li>여러 라인을 표시할 경우 series 리스트 안에 object 추가</Li>
