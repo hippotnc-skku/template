@@ -1,6 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
-
 	export let icon = '';
 	export let title = '';
 	export let value;
@@ -9,18 +7,16 @@
 	export let changeUnit = '';
 	let arrow;
 	let color;
-	onMount(() => {
-		if (change > 0) {
-			color = 'text-green-500';
-			arrow = '↑';
-		} else if (change < 0) {
-			color = 'text-red-500';
-			arrow = '↓';
-		} else {
-			change = '';
-			arrow = '';
-		}
-	});
+	if (change > 0) {
+		color = 'text-green-500';
+		arrow = '↑';
+	} else if (change < 0) {
+		color = 'text-red-500';
+		arrow = '↓';
+	} else {
+		change = '';
+		arrow = '';
+	}
 </script>
 
 <div class="flex w-[370px] h-[90px] bg-white shadow-md rounded-lg">

@@ -1,13 +1,7 @@
 <script lang="ts">
 	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
-	import { HippoButton } from '$lib/components/hippocomponent';
-	import { notifications } from '$lib/components/notification/notifications';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
-	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
-	import Gist from '$lib/gist/Gist.svelte';
 	import { List, Li, Heading } from 'flowbite-svelte';
-	import ChartBar from '$lib/components/charts/template/chart_simple_bar.svelte';
 	import ChartCard from '$lib/components/charts/template/chart_card.svelte';
 
 	let cardOptions1 = {
@@ -76,9 +70,13 @@
 </CodeExampleFrame>
 
 <CodeExampleFrame name="Source Code">
-	<script
-		src="https://coreultrasound.com/emgithub/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fchart%2Fcard%2F_temp.svelte&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></script>
+	<iframe
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1405px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fchart%2Fcard%2F_temp.svelte%3Fts%3D4%23L1-L65&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&fetchFromJsDelivr=on"
+	></iframe>
 </CodeExampleFrame>
 
 <CodeExampleFrame name="Options">
