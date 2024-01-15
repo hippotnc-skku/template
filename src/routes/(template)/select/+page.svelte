@@ -3,7 +3,7 @@
 	import { notifications } from '$lib/components/notification/notifications';
 	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-
+	let a = 1;
 	function onChange(e) {
 		notifications.success(`선택한 값은 ${e.target.value}입니다.`, 500);
 	}
