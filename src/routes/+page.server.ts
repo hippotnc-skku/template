@@ -18,30 +18,8 @@ const cookieOptionsForRemember = {
 };
 
 // 로그인 페이지 불렀을 경우
-export const load = (async ({ cookies, fetch }) => {
-	const token = cookies.get('access_token');
-
-	// 토큰이 유효성 확인하여
-	const isCookie = await fetch(`${PUBLIC_URL}api/v2/users`, {
-		headers: {
-			'Content-Type': 'application/json',
-			Authorization: token
-		}
-	}).then(async (data) => await data.json());
-
-	// 토큰이 유효한 경우 메인 페이지로 이동
-	if (isCookie.data) {
-		throw redirect(302, '/button');
-	}
-
-	// 아이디 기억하기를 할 경우 아이디를 넘김
-	if (cookies.get('remember') && JSON.parse(cookies.get('remember'))) {
-		const uid = cookies.get('uid');
-		return {
-			uid: uid
-		};
-	}
-	return {};
+export const load = (async () => {
+	throw redirect(302, '/button');
 }) satisfies PageServerLoad;
 
 export const actions = {

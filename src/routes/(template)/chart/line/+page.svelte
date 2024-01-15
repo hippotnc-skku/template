@@ -47,23 +47,6 @@
 	let lineColors = ['#77B6EA'];
 </script>
 
-<SetupFrame id="script">
-	<pre id="script"><code
-			>&ltscript lang="ts"&gt
-	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
-	import &#123 HippoButton &#125 from '$lib/components/hippocomponent';
-	import &#123 notifications &#125 from '$lib/components/notification/notifications';
-	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
-	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
-	import Gist from '$lib/gist/Gist.svelte';
-	import &#123 List, Li, Heading &#125 from 'flowbite-svelte';
-	import ChartLine from '$lib/components/charts/template/chart_simple_line.svelte';
-
-<HippoWhiteFrame class="p-2 my-2 h-[1800px]">
-	<Gist gistUrl="https://gist.github.com/Donggyu-Lee/dca05155d7d8fae23658e9641c52a179.js" />
-</HippoWhiteFrame>
-
 <CodeExampleFrame name="Options">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
 		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
