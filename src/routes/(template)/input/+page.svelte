@@ -10,6 +10,17 @@
 	</div>
 </HippoWhiteFrame>
 
+<CodeExampleFrame name="SetUp">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:103px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Finput%2F_temp.svelte%3Fts%3D4%23L1-L3&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame>
 	<HippoWhiteFrame class="px-4 py-5 w-full">
 		<div class="text-lg font-bold">width 100%</div>
@@ -20,6 +31,17 @@
 	</HippoWhiteFrame>
 </CodeExampleFrame>
 
+<CodeExampleFrame>
+	<iframe
+		title="default"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:103px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Finput%2F_temp.svelte%3Fts%3D4%23L5-L7&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame name="높이 조절">
 	<HippoWhiteFrame class="px-4 py-5 w-full">
 		<div class="text-lg font-bold">height 50px</div>
@@ -28,6 +50,17 @@
 		<div class="text-lg font-bold mt-10">height 80px</div>
 		<HippoInput name="totalCount" placeholder="높이가 80px" class="w-full h-20" />
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="높이 조절">
+	<iframe
+		title="height"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:103px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Finput%2F_temp.svelte%3Fts%3D4%23L9-L11&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
 
 <CodeExampleFrame name="인풋 내 패딩 조절">
@@ -48,4 +81,15 @@
 			padding="px-20 py-8"
 		/>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="인풋 내 패딩 조절">
+	<iframe
+		title="padding"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:103px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Finput%2F_temp.svelte%3Fts%3D4%23L13-L15&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>

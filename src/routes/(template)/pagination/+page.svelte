@@ -31,27 +31,8 @@
 	</HippoWhiteFrame>
 </div>
 
-<SetupFrame id="script">
-	<pre id="script"><code>&lt<span class="script">script</span>&gt</code>
-  <code
-			><span class="import-from">import</span> &#123 HippoPagination &#125 <span class="import-from"
-				>from</span
-			> "$lib/components/hippocomponent";</code
-		>
-  <code>let totalCount = 30</code>
-  <code>let perPage = 5</code>
-<code>&lt/<span class="script">script</span>&gt</code></pre>
-</SetupFrame>
-
 <CodeExampleFrame>
 	<div class="flex justify-center bg-white p-2 rounded-xl">
 		<HippoPagination {totalCount} {perPage} />
 	</div>
 </CodeExampleFrame>
-
-<CodeBox id="pagination" class="mt-10">
-	<pre id="pagination"><code
-			>&lt<span class="component">HippoPagination</span
-			> &#123totalCount&#125 &#123perPage&#125 /&gt</code
-		></pre>
-</CodeBox>
