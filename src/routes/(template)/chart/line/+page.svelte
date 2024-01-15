@@ -47,45 +47,134 @@
 	let lineColors = ['#77B6EA'];
 </script>
 
-<HippoWhiteFrame class="p-2 my-2">
-	<ChartLine
-		{series}
-		{chartHeight}
-		{dataLabels}
-		{strokeCurve}
-		{strokeWidth}
-		{titleText}
-		{titleAlign}
-		{titleFontSize}
-		{titleFontWeight}
-		{grid}
-		{gridColor}
-		{gridBorderColor}
-		{gridOpacity}
-		{xaxis}
-		{xaxisCategories}
-		{xaxisTitle}
-		{xaxisLablesRotate}
-		{yaxis}
-		{yaxisTitle}
-		{yaxisMin}
-		{yaxisMax}
-		{dropShadow}
-		{toolbar}
-		{markerSize}
-		{markerStrokeColors}
-		{markerStrokeWidth}
-		{markerStrokeOpacity}
-		{legend}
-		{legendPosition}
-		{legendHorizontalAlign}
-		{lineColors}
-	/>
-</HippoWhiteFrame>
+<SetupFrame id="script">
+	<pre id="script"><code
+			>&ltscript lang="ts"&gt
+	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
+	import &#123 HippoButton &#125 from '$lib/components/hippocomponent';
+	import &#123 notifications &#125 from '$lib/components/notification/notifications';
+	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
+	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
+	import Gist from '$lib/gist/Gist.svelte';
+	import &#123 List, Li, Heading &#125 from 'flowbite-svelte';
+	import ChartLine from '$lib/components/charts/template/chart_simple_line.svelte';
 
-<HippoWhiteFrame class="p-2 my-2 h-[1000px]">
-	<Gist gistUrl="https://gist.github.com/Donggyu-Lee/dca05155d7d8fae23658e9641c52a179.js" />
-</HippoWhiteFrame>
+	let series = [
+		&#123
+			name: 'name',
+			data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+		&#125
+	];
+	let chartHeight = 350;
+	let dataLabels = false;
+	let strokeCurve = 'straight';
+	let strokeWidth = 5;
+	let titleText = 'title';
+	let titleAlign = 'left';
+	let titleFontSize = '20px';
+	let titleFontWeight = 'bold';
+	let grid = true;
+	let gridColor = '#f3f3f3';
+	let gridBorderColor = '#90A4AE';
+	let gridOpacity = 0.5;
+	let xaxis = true;
+	let xaxisCategories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
+	let xaxisTitle = 'xaxis title';
+	let xaxisLablesRotate = -45;
+	let yaxis = true;
+	let yaxisTitle = 'yaxis title';
+	let yaxisMin = 0;
+	let yaxisMax = 200;
+	let dropShadow = true;
+	let toolbar = true;
+	let markerSize = 1;
+	let markerStrokeColors = '#FFF';
+	let markerStrokeWidth = 2;
+	let markerStrokeOpacity = 0.9;
+	let legend = true;
+	let legendPosition = 'top';
+	let legendHorizontalAlign = 'center';
+	let lineColors = ['#77B6EA'];
+&lt/script&gt</code
+		></pre>
+</SetupFrame>
+
+<CodeExampleFrame>
+	<HippoWhiteFrame class="p-2 my-2">
+		<ChartLine
+			{series}
+			{chartHeight}
+			{dataLabels}
+			{strokeCurve}
+			{strokeWidth}
+			{titleText}
+			{titleAlign}
+			{titleFontSize}
+			{titleFontWeight}
+			{grid}
+			{gridColor}
+			{gridBorderColor}
+			{gridOpacity}
+			{xaxis}
+			{xaxisCategories}
+			{xaxisTitle}
+			{xaxisLablesRotate}
+			{yaxis}
+			{yaxisTitle}
+			{yaxisMin}
+			{yaxisMax}
+			{dropShadow}
+			{toolbar}
+			{markerSize}
+			{markerStrokeColors}
+			{markerStrokeWidth}
+			{markerStrokeOpacity}
+			{legend}
+			{legendPosition}
+			{legendHorizontalAlign}
+			{lineColors}
+		/>
+	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeBox class="mt-10" id="chart">
+	<pre id="chart"><code
+			>&ltChartLine
+	&#123series&#125
+	&#123chartHeight&#125
+	&#123dataLabels&#125
+	&#123strokeCurve&#125
+	&#123strokeWidth&#125
+	&#123titleText&#125
+	&#123titleAlign&#125
+	&#123titleFontSize&#125
+	&#123titleFontWeight&#125
+	&#123grid&#125
+	&#123gridColor&#125
+	&#123gridBorderColor&#125
+	&#123gridOpacity&#125
+	&#123xaxis&#125
+	&#123xaxisCategories&#125
+	&#123xaxisTitle&#125
+	&#123xaxisLablesRotate&#125
+	&#123yaxis&#125
+	&#123yaxisTitle&#125
+	&#123yaxisMin&#125
+	&#123yaxisMax&#125
+	&#123dropShadow&#125
+	&#123toolbar&#125
+	&#123markerSize&#125
+	&#123markerStrokeColors&#125
+	&#123markerStrokeWidth&#125
+	&#123markerStrokeOpacity&#125
+	&#123legend&#125
+	&#123legendPosition&#125
+	&#123legendHorizontalAlign&#125
+	&#123lineColors&#125
+/&gt</code
+		></pre>
+</CodeBox>
 
 <CodeExampleFrame name="Options">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
@@ -94,11 +183,7 @@
 		>
 		<List tag="ul" class="w-full space-y-1 text-gray-500 dark:text-gray-400">
 			<Li>차트에 표시될 데이터</Li>
-			<Li
-				><Gist
-					gistUrl="https://gist.github.com/Donggyu-Lee/6ef2ca32ca179522c80b79d9dd3cc53b.js"
-				/></Li
-			>
+			<Li>let series = [&#123 name : name, data : data &#125];</Li>
 			<Li>name : string</Li>
 			<Li>data : list</Li>
 			<Li>여러 라인을 표시할 경우 series 리스트 안에 object 추가</Li>

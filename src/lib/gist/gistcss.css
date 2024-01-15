@@ -1,5 +1,3 @@
 .gist .gist-meta {
-	display: hidden;
-	visibility: hidden;
-	background-color: black;
+	display: none !important;
 }

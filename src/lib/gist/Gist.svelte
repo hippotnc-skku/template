@@ -10,7 +10,16 @@
 
 	onMount(() => {
 		frame.srcdoc = `<script src='${gistUrl}'><${''}/script>`;
+		resizeIframe();
 	});
+
+	function resizeIframe() {
+		let iframe = document.getElementById(id);
+		console.log(iframe.contentWindow.document.body.scrollHeight);
+		var height = iframe.contentWindow.document;
+		console.log(height);
+		iframe.style.height = height + 'px';
+	}
 
 	function calcHeight() {
 		let the_height = document.getElementById(id).contentWindow.document.body.scrollHeight;
@@ -24,7 +33,7 @@
 	}
 </script>
 
-<iframe {id} on:load={calcHeight} src="about:blank" bind:this={frame} title="Gist"></iframe>
+<iframe {id} src="about:blank" bind:this={frame} title="Gist"></iframe>
 
 <style>
 	iframe {

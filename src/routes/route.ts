@@ -62,6 +62,11 @@ export const routes: RouteItem[] = [
 		icon: 'fa-solid fa-screwdriver-wrench'
 	},
 	{
+		title: '비밀번호 초기화 폼',
+		link: '/resetpasswordform',
+		icon: 'fa-solid fa-screwdriver-wrench'
+	},
+	{
 		title: '게시판',
 		icon: 'fa-solid fa-screwdriver-wrench',
 		items: [
@@ -78,6 +83,11 @@ export const routes: RouteItem[] = [
 			{
 				title: '상세 조회 게시판 1',
 				link: '/cru/detail-readone',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: '상세 조회 게시판 2',
+				link: '/cru/detail-readtwo',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{

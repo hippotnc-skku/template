@@ -1,6 +1,6 @@
 <script>
 	import { formatDateKr } from '$lib/api/function.js';
-	import { HippoInput } from '$lib/components/hippocomponent';
+	import { HippoInput, HippoButton } from '$lib/components/hippocomponent';
 
 	const family = {
 		id: 1,
@@ -29,6 +29,10 @@
 		inserted_at: '등록일',
 		registration_name: '사업자명'
 	};
+
+	function firstClick() {
+		console.log('첫번째');
+	}
 </script>
 
 <div class="flex items-baseline mb-4 pb-2 border-b-2 justify-between">
@@ -117,10 +121,10 @@
 	</div>
 </div>
 
-<!-- <div class="flex justify-end">
+<div class="flex justify-end">
 	<div class="pl-1 mt-5 space-x-3">
 		<HippoButton class="bg-[#39C261] text-white px-3 py-2" on:click={firstClick}
 			>패밀리 정보 수정
 		</HippoButton>
 	</div>
-</div> -->
+</div>

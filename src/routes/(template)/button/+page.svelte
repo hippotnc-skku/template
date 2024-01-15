@@ -5,7 +5,6 @@
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
 	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
-	import Gist from '$lib/gist/Gist.svelte';
 
 	const buttonCode = [
 		['bg-[#1E2666]', 'white'],
@@ -32,54 +31,6 @@
 	function clicked() {
 		notifications.success('클릭 됐습니다.', 500);
 	}
-
-	// const targetDiv = document.getElementById(containerId);
-
-	// const codeTag = targetDiv.querySelector("code");
-	// if (showCopy) {
-	// 	targetDiv.querySelector('.copy-btn').addEventListener('click', function (e) {
-	// 		e.preventDefault();
-	// 		e.cancelBubble = true;
-	// 		copyTextToClipboard(codeText);
-	// 	});
-	// }
-
-	// function copyTextToClipboard(text) {
-	// 	if (!navigator.clipboard) {
-	// 		fallbackCopyTextToClipboard(text);
-	// 		return;
-	// 	}
-	// 	navigator.clipboard.writeText(text);
-	// }
-
-	// function fallbackCopyTextToClipboard(text) {
-	// 	const textArea = document.createElement('textarea');
-	// 	textArea.value = text;
-	// 	textArea.style.position = 'fixed'; //avoid scrolling to bottom
-	// 	document.body.appendChild(textArea);
-	// 	textArea.focus();
-	// 	textArea.select();
-
-	// 	try {
-	// 		document.execCommand('copy');
-	// 	} catch (err) {
-	// 		console.error('fallbackCopyTextToClipboard: Oops, unable to copy', err);
-	// 	}
-	// 	document.body.removeChild(textArea);
-	// }
-
-	function copyCode() {
-		let myIFrame = document.getElementById('one');
-		console.log(myIFrame.contentWindow.document.getElementsByTagName('table')[0].innerText);
-		copyCode2(myIFrame.contentWindow.document.getElementsByTagName('table')[0].innerText);
-		// let content = myIFrame.contentWindow.document.body.innerHTML;
-	}
-
-	function copyCode2(text) {
-		window.navigator.clipboard.writeText(text).then(() => {
-			notifications.success('복사되었습니다.', 1000);
-		});
-	}
 </script>
 
 <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
@@ -88,11 +39,6 @@
 		그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id="id")
 	</div>
 </HippoWhiteFrame>
-
-<button on:click={copyCode}>copy</button>
-
-<Gist id="one" gistUrl="https://gist.github.com/yoonheehan/24745ebedccbe111e323d5e196fa9533.js" />
-<Gist id="two" gistUrl="https://gist.github.com/yoonheehan/24745ebedccbe111e323d5e196fa9533.js" />
 
 <SetupFrame id="script">
 	<pre id="script"><code>&lt<span class="script">script</span>&gt</code>
