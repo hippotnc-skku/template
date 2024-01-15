@@ -5,7 +5,6 @@
 		icon: 'fa-solid fa-users',
 		title: '총 패밀리 수',
 		value: 123,
-		unit: '패밀리',
 		change: 3,
 		changeUnit: ''
 	};
@@ -29,9 +28,7 @@
 		icon: 'fa-solid fa-head-side-goggles',
 		title: '월간 플레이 수',
 		value: 234,
-		unit: '회',
-		change: 15,
-		changeUnit: ''
+		unit: '회'
 	};
 </script>
 
@@ -40,7 +37,6 @@
 		icon={cardOptions1.icon}
 		title={cardOptions1.title}
 		value={cardOptions1.value}
-		unit={cardOptions1.unit}
 		change={cardOptions1.change}
 		changeUnit={cardOptions1.changeUnit}
 	/>
@@ -65,7 +61,5 @@
 		title={cardOptions4.title}
 		value={cardOptions4.value}
 		unit={cardOptions4.unit}
-		change={cardOptions4.change}
-		changeUnit={cardOptions4.changeUnit}
 	/>
 </div>

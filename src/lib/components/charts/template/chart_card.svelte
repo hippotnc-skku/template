@@ -2,10 +2,10 @@
 	import { onMount } from 'svelte';
 
 	export let icon = '';
-	export let title;
+	export let title = '';
 	export let value;
-	export let unit;
-	export let change;
+	export let unit = '';
+	export let change = 0;
 	export let changeUnit = '';
 	let arrow;
 	let color;

@@ -14,7 +14,6 @@
 		icon: 'fa-solid fa-users',
 		title: '총 패밀리 수',
 		value: 123,
-		unit: '패밀리',
 		change: 3,
 		changeUnit: ''
 	};
@@ -38,9 +37,7 @@
 		icon: 'fa-solid fa-head-side-goggles',
 		title: '월간 플레이 수',
 		value: 234,
-		unit: '회',
-		change: 15,
-		changeUnit: ''
+		unit: '회'
 	};
 </script>
 
@@ -49,7 +46,6 @@
 		icon={cardOptions1.icon}
 		title={cardOptions1.title}
 		value={cardOptions1.value}
-		unit={cardOptions1.unit}
 		change={cardOptions1.change}
 		changeUnit={cardOptions1.changeUnit}
 	/>
@@ -74,14 +70,14 @@
 		title={cardOptions4.title}
 		value={cardOptions4.value}
 		unit={cardOptions4.unit}
-		change={cardOptions4.change}
-		changeUnit={cardOptions4.changeUnit}
 	/>
 </div>
 
-<HippoWhiteFrame class="p-2 my-2 h-[1000px]">
-	<Gist gistUrl="https://gist.github.com/Donggyu-Lee/dca05155d7d8fae23658e9641c52a179.js" />
-</HippoWhiteFrame>
+<CodeExampleFrame name="Source Code">
+	<script
+		src="https://coreultrasound.com/emgithub/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fchart%2Fcard%2F_temp.svelte%23L1-L71&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></script>
+</CodeExampleFrame>
 
 <CodeExampleFrame name="Options">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
