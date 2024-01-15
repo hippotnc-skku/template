@@ -10,14 +10,74 @@
 	import ChartBar from '$lib/components/charts/template/chart_simple_bar.svelte';
 	import ChartCard from '$lib/components/charts/template/chart_card.svelte';
 
-	let title = '총 패밀리 수';
-	let value = 3600000000;
-	let unit = '원';
-	let change = 100;
-	let changeUnit = '%';
+	let cardOptions1 = {
+		icon: 'fa-solid fa-users',
+		title: '총 패밀리 수',
+		value: 123,
+		unit: '패밀리',
+		change: 3,
+		changeUnit: ''
+	};
+	let cardOptions2 = {
+		icon: 'fa-solid fa-chart-mixed-up-circle-dollar',
+		title: '월간 매출액',
+		value: 15000000,
+		unit: '원',
+		change: -20,
+		changeUnit: '%'
+	};
+	let cardOptions3 = {
+		icon: 'fa-solid fa-chart-pie-simple-circle-dollar',
+		title: '월간 매출 예상액',
+		value: 22340000,
+		unit: '원',
+		change: 10,
+		changeUnit: '%'
+	};
+	let cardOptions4 = {
+		icon: 'fa-solid fa-head-side-goggles',
+		title: '월간 플레이 수',
+		value: 234,
+		unit: '회',
+		change: 15,
+		changeUnit: ''
+	};
 </script>
 
-<ChartCard {title} {value} {unit} {change} {changeUnit} />
+<div class="flex justify-between">
+	<ChartCard
+		icon={cardOptions1.icon}
+		title={cardOptions1.title}
+		value={cardOptions1.value}
+		unit={cardOptions1.unit}
+		change={cardOptions1.change}
+		changeUnit={cardOptions1.changeUnit}
+	/>
+	<ChartCard
+		icon={cardOptions2.icon}
+		title={cardOptions2.title}
+		value={cardOptions2.value}
+		unit={cardOptions2.unit}
+		change={cardOptions2.change}
+		changeUnit={cardOptions2.changeUnit}
+	/>
+	<ChartCard
+		icon={cardOptions3.icon}
+		title={cardOptions3.title}
+		value={cardOptions3.value}
+		unit={cardOptions3.unit}
+		change={cardOptions3.change}
+		changeUnit={cardOptions3.changeUnit}
+	/>
+	<ChartCard
+		icon={cardOptions4.icon}
+		title={cardOptions4.title}
+		value={cardOptions4.value}
+		unit={cardOptions4.unit}
+		change={cardOptions4.change}
+		changeUnit={cardOptions4.changeUnit}
+	/>
+</div>
 
 <HippoWhiteFrame class="p-2 my-2 h-[1000px]">
 	<Gist gistUrl="https://gist.github.com/Donggyu-Lee/dca05155d7d8fae23658e9641c52a179.js" />
@@ -73,11 +133,11 @@
 			<Li>series가 여러개일 경우 리스트로 각 line의 두께를 다르게 할 수 있음</Li>
 		</List>
 		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"
-			>titleText</Heading
+			>titext</Heading
 		>
 		<List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400">
 			<Li>차트의 타이틀</Li>
-			<Li>titleText : string ( default : '' )</Li>
+			<Li>titext : string ( default : '' )</Li>
 			<Li>미입력 시 타이틀 숨김</Li>
 		</List>
 		<Heading tag="h2" customSize="text-lg font-semibold" class="text-lg font-semibold text-gray-900"

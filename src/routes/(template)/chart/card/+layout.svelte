@@ -1,6 +1,5 @@
-<script>
-</script>
-
-<div class="max-w-[900px] w-full mx-auto flex flex-col">
-	<slot />
+<div class="flex justify-center">
+	<div class="max-w-[1600px] w-full">
+		<slot />
+	</div>
 </div>
