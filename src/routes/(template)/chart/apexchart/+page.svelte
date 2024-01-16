@@ -1,5 +1,5 @@
 <script>
-	import Gist from '$lib/gist/Gist.svelte';
+	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 
 	let series = [
 		{

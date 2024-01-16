@@ -5,7 +5,6 @@
 	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
 	import HippoButton from '$lib/components/hippocomponent/button/HippoButton.svelte';
 	import ChartArea from '$lib/components/charts/chart_area.svelte';
-	import Gist from '$lib/gist/Gist.svelte';
 	let titles;
 	let xaxis;
 	let isDataLabels = false;
