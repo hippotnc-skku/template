@@ -13,4 +13,4 @@
 	};
 </script>
 
-<button use:setType={type} class="{$$restProps.class} rounded-lg" on:click><slot /> </button>
+<button {...$$restProps} use:setType={type} class="{$$restProps.class} rounded-lg" on:click><slot /> </button>

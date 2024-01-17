@@ -2,13 +2,11 @@
 	import classNames from 'classnames';
 	import { getContext } from 'svelte';
 
-	export let externalCss: string = '';
-	export let tdClass: string =
-		'px-6 py-4 whitespace-nowrap font-medium p-2 align-middle bg-transparent';
+	export let tdClass: string = 'p-4 whitespace-nowrap font-medium p-2 align-middle bg-transparent';
 
 	export let color = 'text-black';
 	let tdClassfinal: string;
-	$: tdClassfinal = classNames(tdClass, color, $$props.class, externalCss);
+	$: tdClassfinal = classNames(tdClass, color, $$props.class);
 	export let lead = false;
 </script>
 

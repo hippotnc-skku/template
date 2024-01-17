@@ -1,33 +1,42 @@
 <script lang="ts">
-	import Popper from '../utils/Popper.svelte';
-	import classNames from 'classnames';
+  import type { ComponentProps } from 'svelte';
+  import Popper from '../utils/Popper.svelte';
+  import { twMerge } from 'tailwind-merge';
 
-	export let style: 'dark' | 'light' | 'auto' | 'custom' = 'light';
-	export let defaultClass: string = 'py-2 px-3 text-sm font-medium';
+  // propagate props type from underlying Frame
+  interface $$Props extends ComponentProps<Popper> {
+    type?: 'dark' | 'light' | 'auto' | 'custom';
+    defaultClass?: string;
+  }
 
-	const styles = {
-		dark: 'bg-gray-900 text-white dark:bg-gray-700',
-		light: 'border border-gray-200 bg-white text-gray-900',
-		auto: ' bg-white text-gray-900 dark:bg-gray-700 dark:text-white border border-gray-200 dark:border-0',
-		custom: ''
-	};
+  export let type: 'dark' | 'light' | 'auto' | 'custom' = 'dark';
+  export let defaultClass: string = 'py-2 px-3 text-sm font-medium';
 
-	let toolTipClass: string;
-	$: {
-		if ($$restProps.color) style = 'custom';
-		else $$restProps.color = 'none';
-		toolTipClass = classNames('tooltip', defaultClass, styles[style], $$props.class);
-	}
+  const types = {
+    dark: 'bg-gray-900 text-white dark:bg-gray-700',
+    light: 'border-gray-200 bg-white text-gray-900',
+    auto: ' bg-white text-gray-900 dark:bg-gray-700 dark:text-white border-gray-200 dark:border-gray-700',
+    custom: ''
+  };
+
+  let toolTipClass: string;
+  $: {
+    if ($$restProps.color) type = 'custom';
+    else $$restProps.color = 'none';
+
+    if (['light', 'auto'].includes(type)) $$restProps.border = true;
+    toolTipClass = twMerge('tooltip', defaultClass, types[type], $$props.class);
+  }
 </script>
 
-<Popper
-	placement="bottom"
-	data-tooltip
-	rounded
-	shadow
-	{...$$restProps}
-	class={toolTipClass}
-	on:show
->
-	<slot />
+<Popper rounded shadow {...$$restProps} class={toolTipClass} on:show>
+  <slot />
 </Popper>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte.com/)
+## Props
+@prop export let type: 'dark' | 'light' | 'auto' | 'custom' = 'dark';
+@prop export let defaultClass: string = 'py-2 px-3 text-sm font-medium';
+-->

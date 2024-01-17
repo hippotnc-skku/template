@@ -6,7 +6,7 @@
 		getContext('color');
 
 	const colors = {
-		default: 'bg-white dark:bg-gray-800 dark:border-gray-700',
+		default: 'bg-white',
 		blue: 'bg-blue-500 border-blue-400',
 		green: 'bg-green-500 border-green-400',
 		red: 'bg-red-500 border-red-400',
@@ -22,7 +22,7 @@
 		red: 'hover:bg-red-400',
 		yellow: 'hover:bg-yellow-400',
 		purple: 'hover:bg-purple-400',
-		custom: ''
+		custom: 'hover:bg-[#F5F5F5]'
 	};
 
 	const stripColors = {

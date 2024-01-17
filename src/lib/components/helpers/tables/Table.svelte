@@ -8,7 +8,6 @@
 	export let noborder: boolean = false;
 	export let shadow: boolean = false;
 	export let outBorder: string = '';
-	export let BottomBorder: string = 'border-b border-solid';
 	export let color:
 		| 'blue'
 		| 'green'
@@ -43,7 +42,7 @@
 		<table
 			{...$$restProps}
 			class={classNames(
-				`w-full text-left text-sm text-gray-500 items-center mb-0 align-top ${BottomBorder}`,
+				`w-full text-left text-sm text-gray-500 items-center mb-0 align-top`,
 				colors[color],
 				$$props.class
 			)}

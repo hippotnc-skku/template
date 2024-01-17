@@ -1,7 +1,7 @@
 <script lang="ts">
 	import classNames from 'classnames';
 	export let textClass: string = 'text-black';
-	export let padding: string = 'px-4 py-3';
+	export let padding: string = 'p-4';
 </script>
 
 <th
