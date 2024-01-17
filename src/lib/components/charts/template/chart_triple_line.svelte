@@ -8,6 +8,7 @@
 	import { HippoButton } from '$lib/components/hippocomponent';
 
 	let chart;
+	let duration = 0;
 
 	function getRandomInt(min, max) {
 		min = Math.ceil(min);
@@ -139,7 +140,7 @@
 	let optionsActiveUsers;
 	$: {
 		optionsActiveUsers = {
-			series: series,
+			series: series[duration],
 			chart: {
 				height: 310,
 				type: 'line',
@@ -188,7 +189,7 @@
 			},
 			xaxis: {
 				type: 'category',
-				categories: labels,
+				categories: labels[duration],
 				axisTicks: {
 					show: true
 				},
