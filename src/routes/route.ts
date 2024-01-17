@@ -102,38 +102,23 @@ export const routes: RouteItem[] = [
 		icon: 'fa-solid fa-chart-simple',
 		items: [
 			{
-				title: 'ApexChart Options',
-				link: '/chart/apexchart',
-				icon: 'fa-sharp fa-light fa-chart-user'
-			},
-			{
 				title: 'Card',
 				link: '/chart/card',
 				icon: 'fa-solid fa-chart-line'
 			},
 			{
-				title: 'Line Chart',
+				title: 'Line Chart(Hand Made)',
 				link: '/chart/line',
 				icon: 'fa-solid fa-chart-line'
 			},
 			{
-				title: 'Bar Chart',
-				link: '/chart/bar',
+				title: 'Triple Line Chart',
+				link: '/chart/tripleline',
 				icon: 'fa-solid fa-chart-line'
 			},
 			{
-				title: 'Column Chart',
-				link: '/chart/column',
-				icon: 'fa-solid fa-chart-line'
-			},
-			{
-				title: 'Line-Column Chart',
-				link: '/chart/linecolumn',
-				icon: 'fa-solid fa-chart-line'
-			},
-			{
-				title: 'Multi Y-Axis Chart',
-				link: '/chart/multiyaxis',
+				title: 'Sparkline Chart',
+				link: '/chart/sparkline',
 				icon: 'fa-solid fa-chart-line'
 			}
 		]
