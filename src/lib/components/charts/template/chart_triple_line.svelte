@@ -3,7 +3,7 @@
 		getSevenDaysFromToday,
 		getSevenWeeksFromToday,
 		getSevenMonthFromToday
-	} from '$lib/api/function.';
+	} from '$lib/api/function.js';
 	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
 	import { HippoButton } from '$lib/components/hippocomponent';
 
