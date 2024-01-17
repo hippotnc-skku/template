@@ -1,17 +1,19 @@
-<script>
-	import { onMount } from 'svelte';
+<script lang="ts">
+	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
 	// @ts-ignore
-	export let series = [
+	export let datas = [
 		{
-			name: 'Sales',
+			name: '예시',
 			data: [44, 32, 37, 42, 28, 39, 35]
 		}
 	];
-	export let titles = '제목';
-	export let labels = ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'];
+	export let titles = '';
+	export let tooltipSuffix = '';
+
+	let chart;
 	var optionsSparkLineArea = {
 		colors: ['#10b981'],
-		series: series,
+		series: datas,
 		chart: {
 			fontFamily: 'inherit',
 			type: 'area',
@@ -38,7 +40,6 @@
 			strokeOpacity: 1,
 			strokeColors: ['#10b981']
 		},
-		labels: labels,
 		xaxis: {
 			type: 'category'
 		},
@@ -58,19 +59,36 @@
 			y: {
 				// @ts-ignore
 				formatter: function (val) {
-					return val + 'K <span class="fw-normal text-body-secondary"> Sales</span>';
+					return (
+						val.toLocaleString('ko-KR') +
+						'<span class="fw-normal text-body-secondary">' +
+						tooltipSuffix +
+						'</span>'
+					);
 				}
 			}
 		}
 	};
+	function initChart(node: HTMLElement, options) {
+		async function asyncInitChart() {
+			const ApexCharts = (await import('apexcharts')).default;
+			chart = new ApexCharts(node, options);
+			chart.render();
+		}
 
-	onMount(async () => {
-		const ApexCharts = (await import('apexcharts')).default;
-		// @ts-ignore
-		let chart = new ApexCharts(id, optionsSparkLineArea);
-		chart.render();
-	});
-	let id;
+		asyncInitChart();
+
+		return {
+			update(options) {
+				chart && chart.updateOptions(options);
+			},
+			destroy() {
+				chart && chart.destroy();
+			}
+		};
+	}
 </script>
 
-<div bind:this={id} class="rounded-b-4 m-1" />
+<HippoWhiteFrame class="p-2 my-2">
+	<div use:initChart={optionsSparkLineArea} class="rounbded-b-4" />
+</HippoWhiteFrame>

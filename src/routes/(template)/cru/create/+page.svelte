@@ -4,6 +4,8 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { notifications } from '$lib/components/notification/notifications.js';
+	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+
 	import { Modal, Button, Select } from '$lib/components/helpers';
 	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
 	import { HippoSelect, HippoInput, HippoButton } from '$lib/components/hippocomponent';
@@ -118,54 +120,55 @@
 		<Button color="alternative" on:click={() => (addManagerModal = false)}>닫기</Button>
 	</svelte:fragment>
 </Modal>
+<CodeExampleFrame name="Sample">
+	<div class="mx-auto max-w-[600px]">
+		<HippoWhiteFrame class="px-8 py-6 mt-10">
+			<h5 class="mb-0 font-bold text-2xl">매니저 생성</h5>
 
-<div class="mx-auto max-w-[600px]">
-	<HippoWhiteFrame class="px-8 py-6 mt-10">
-		<h5 class="mb-0 font-bold text-2xl">매니저 생성</h5>
-
-		<div class="mt-4">
-			{#each Object.entries(managerInfo) as [key, value]}
-				{#if ['service_id'].includes(key)}
-					<div class="w-full max-w-full flex-0 mt-3">
-						<label class="mb-1 font-bold text-sm text-slate-700" for="service_id"
-							>{value?.title}</label
-						>
-						<HippoSelect name={key} class="border-[#3561AC] focus:border-[#3561AC] w-full">
-							<option selected>서비스를 선택해주세요.</option>
-							{#each services as service}
-								<option value={service?.id}>{service.service_name}-{service.service_type}</option>
-							{/each}
-						</HippoSelect>
-					</div>
-				{:else}
-					<div class="w-full max-w-full flex-0 mt-3">
-						<label class="mb-1 font-bold text-sm text-slate-700" for="First Name"
-							>{value?.title}</label
-						>
-						<HippoInput
-							type={value?.type}
-							name={key}
-							placeholder={value?.placeholder}
-							bind:value={manager[key]}
-							class="w-full border-[#3561AC]"
-						/>
-					</div>
-				{/if}
-			{/each}
-		</div>
-		<div class="mt-12 flex justify-between">
-			<HippoButton
-				class="bg-[#39C261] text-white px-4 py-4"
-				on:click={() => (addManagerModal = true)}
-			>
-				매니저 가입
-			</HippoButton>
-			<HippoButton
-				class="bg-[#1349A5] text-white px-4 py-4"
-				on:click={() => goto(`/family/${$page.params.id}`)}
-			>
-				돌아가기
-			</HippoButton>
-		</div>
-	</HippoWhiteFrame>
-</div>
+			<div class="mt-4">
+				{#each Object.entries(managerInfo) as [key, value]}
+					{#if ['service_id'].includes(key)}
+						<div class="w-full max-w-full flex-0 mt-3">
+							<label class="mb-1 font-bold text-sm text-slate-700" for="service_id"
+								>{value?.title}</label
+							>
+							<HippoSelect name={key} class="border-[#3561AC] focus:border-[#3561AC] w-full">
+								<option selected>서비스를 선택해주세요.</option>
+								{#each services as service}
+									<option value={service?.id}>{service.service_name}-{service.service_type}</option>
+								{/each}
+							</HippoSelect>
+						</div>
+					{:else}
+						<div class="w-full max-w-full flex-0 mt-3">
+							<label class="mb-1 font-bold text-sm text-slate-700" for="First Name"
+								>{value?.title}</label
+							>
+							<HippoInput
+								type={value?.type}
+								name={key}
+								placeholder={value?.placeholder}
+								bind:value={manager[key]}
+								class="w-full border-[#3561AC]"
+							/>
+						</div>
+					{/if}
+				{/each}
+			</div>
+			<div class="mt-12 flex justify-between">
+				<HippoButton
+					class="bg-[#39C261] text-white px-4 py-4"
+					on:click={() => (addManagerModal = true)}
+				>
+					매니저 가입
+				</HippoButton>
+				<HippoButton
+					class="bg-[#1349A5] text-white px-4 py-4"
+					on:click={() => goto(`/family/${$page.params.id}`)}
+				>
+					돌아가기
+				</HippoButton>
+			</div>
+		</HippoWhiteFrame>
+	</div>
+</CodeExampleFrame>

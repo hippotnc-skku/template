@@ -1,15 +1,17 @@
-<script>
-	import { onMount } from 'svelte';
-	export let titles = '제목';
-	export let series = [
+<script lang="ts">
+	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
+	export let tooltipSuffix = '';
+	export let titles = '';
+	export let datas = [
 		{
-			name: 'Earnings',
+			name: '예시',
 			data: [23, 21, 24, 25, 22, 16, 12]
 		}
 	];
+	let chart;
 	var optionsSparkLineLine = {
 		colors: ['#10b981'],
-		series: series,
+		series: datas,
 		chart: {
 			fontFamily: 'inherit',
 			type: 'line',
@@ -50,19 +52,38 @@
 			shared: true,
 			intersect: false,
 			y: {
-				formatter: function (/** @type {string} */ val) {
-					return '$' + val + 'K <span class="fw-normal text-body-secondary"> Thousands</span>';
+				formatter: function (val) {
+					return (
+						val.toLocaleString('ko-KR') +
+						'<span class="fw-normal text-body-secondary">' +
+						tooltipSuffix +
+						'</span>'
+					);
 				}
 			}
 		}
 	};
 
-	onMount(async () => {
-		const ApexCharts = (await import('apexcharts')).default;
-		let chart = new ApexCharts(id, optionsSparkLineLine);
-		chart.render();
-	});
-	let id;
+	function initChart(node: HTMLElement, options) {
+		async function asyncInitChart() {
+			const ApexCharts = (await import('apexcharts')).default;
+			chart = new ApexCharts(node, options);
+			chart.render();
+		}
+
+		asyncInitChart();
+
+		return {
+			update(options) {
+				chart && chart.updateOptions(options);
+			},
+			destroy() {
+				chart && chart.destroy();
+			}
+		};
+	}
 </script>
 
-<div bind:this={id} class="rounded-b-4 m-1" />
+<HippoWhiteFrame class="p-2 my-2">
+	<div use:initChart={optionsSparkLineLine} class="rounbded-b-4" />
+</HippoWhiteFrame>

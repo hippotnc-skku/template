@@ -1,16 +1,11 @@
-<script>
-	import { onMount } from 'svelte';
-	export let datas = [54, 62, 68, 63, 59, 32, 24];
-	export let labels = ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'];
-	export let titles = '제목';
+<script lang="ts">
+	export let datas = [{ name: '예시', data: [55, 22, 11, 30, 43, 27, 51] }];
+	export let titles = '';
+	export let tooltipSuffix = '';
+
 	var optionsSparkLineBar = {
 		colors: ['#10b981'],
-		series: [
-			{
-				name: 'Conversion',
-				data: datas
-			}
-		],
+		series: datas,
 		chart: {
 			fontFamily: 'inherit',
 			type: 'bar',
@@ -41,7 +36,6 @@
 		title: {
 			text: titles
 		},
-		labels: labels,
 		xaxis: {
 			type: 'category'
 		},
@@ -54,18 +48,14 @@
 			y: {
 				// @ts-ignore
 				formatter: function (val) {
-					return val + '%';
+					return (
+						val.toLocaleString('ko-KR') +
+						'<span class="fw-normal text-body-secondary">' +
+						tooltipSuffix +
+						'</span>'
+					);
 				}
 			}
 		}
 	};
-
-	onMount(async () => {
-		const ApexCharts = (await import('apexcharts')).default;
-		let chart = new ApexCharts(id, optionsSparkLineBar);
-		chart.render();
-	});
-	let id;
 </script>
-
-<div bind:this={id} class="rounded-b-4 m-1" />
