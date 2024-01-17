@@ -115,6 +115,11 @@ export const routes: RouteItem[] = [
 				title: 'Triple Line Chart',
 				link: '/chart/tripleline',
 				icon: 'fa-solid fa-chart-line'
+			},
+			{
+				title: 'Sparkline Chart',
+				link: '/chart/sparkline',
+				icon: 'fa-solid fa-chart-line'
 			}
 		]
 	}
