@@ -10,13 +10,15 @@
 </script>
 
 <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
-	<div class="text-lg font-bold">크기 변환은 padding을 조절하시면 됩니다.</div>
+	<div class="text-lg font-bold">color='green' | 'orange' | 'gray' | 'blue' | 'red'</div>
+	<div class="text-lg font-bold">size='sm' | 'md' | 'lg'</div>
+	<div class="text-lg font-bold">default value : color='gray', size='md'</div>
 	<div class="text-lg font-bold">
 		그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id="id")
 	</div>
 </HippoWhiteFrame>
 
-<CodeExampleFrame name="Colors">
+<CodeExampleFrame name="Color">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
 		<HippoButton color="green" on:click={clicked}>생성/수정</HippoButton>
 		<HippoButton color="orange" on:click={clicked}>삭제</HippoButton>
@@ -31,8 +33,22 @@
 		title="button"
 		frameborder="0"
 		scrolling="no"
-		style="width:100%; height:1027px;"
+		style="width:100%; height:418px;"
 		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp.svelte%3Fts%3D4%23L1-L65&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp.svelte%3Fts%3D4&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&fetchFromJsDelivr=on"
 	></iframe>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Size">
+	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
+		<div>
+			<HippoButton color="green" size="sm" on:click={clicked}>Small</HippoButton>
+		</div>
+		<div>
+			<HippoButton color="green" size="md" on:click={clicked}>Medium</HippoButton>
+		</div>
+		<div>
+			<HippoButton color="green" size="lg" on:click={clicked}>Large</HippoButton>
+		</div>
+	</HippoWhiteFrame>
 </CodeExampleFrame>
