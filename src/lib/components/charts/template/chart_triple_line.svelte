@@ -268,13 +268,13 @@
 	<div class="p-2 flex justify-between">
 		<h1 class="text-2xl">{title}</h1>
 		<div>
-			<HippoButton class="bg-[#3561AC] text-white px-3 py-2" on:click={() => (duration = 0)}
+			<HippoButton color={duration === 0 ? 'blue' : 'gray'} on:click={() => (duration = 0)}
 				>일간</HippoButton
 			>
-			<HippoButton class="bg-[#3561AC] text-white px-3 py-2" on:click={() => (duration = 1)}
+			<HippoButton color={duration === 1 ? 'blue' : 'gray'} on:click={() => (duration = 1)}
 				>주간</HippoButton
 			>
-			<HippoButton class="bg-[#3561AC] text-white px-3 py-2" on:click={() => (duration = 2)}
+			<HippoButton color={duration === 2 ? 'blue' : 'gray'} on:click={() => (duration = 2)}
 				>월간</HippoButton
 			>
 		</div>

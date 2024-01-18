@@ -120,6 +120,11 @@ export const routes: RouteItem[] = [
 				title: 'Sparkline Chart',
 				link: '/chart/sparkline',
 				icon: 'fa-solid fa-chart-line'
+			},
+			{
+				title: 'Play Log',
+				link: '/chart/playlog',
+				icon: 'fa-solid fa-chart-line'
 			}
 		]
 	}
