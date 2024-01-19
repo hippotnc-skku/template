@@ -8,7 +8,7 @@
 
 	let title = 'CogMoTest 플레이 로그';
 
-	const logs = [
+	let logs = [
 		{
 			family_id: 1,
 			manager_id: 2,
@@ -17,7 +17,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '101',
-			log_message: '미션 도중 게임 종료'
+			log_message: '미션 도중 게임 종료',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -27,27 +28,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '202',
-			log_message: '중간에 종료된 미션 다시 시작'
-		},
-		{
-			family_id: 1,
-			manager_id: 2,
-			service_type: 7960,
-			user_id: 100,
-			job_id: 'qwe12e-12r12f',
-			status: '1003',
-			log_code: '101',
-			log_message: '미션 도중 게임 종료'
-		},
-		{
-			family_id: 1,
-			manager_id: 2,
-			service_type: 7960,
-			user_id: 100,
-			job_id: 'qwe12e-12r12f',
-			status: '1003',
-			log_code: '202',
-			log_message: '중간에 종료된 미션 다시 시작'
+			log_message: '중간에 종료된 미션 다시 시작',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -57,7 +39,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '101',
-			log_message: '미션 도중 게임 종료'
+			log_message: '미션 도중 게임 종료',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -67,17 +50,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '202',
-			log_message: '중간에 종료된 미션 다시 시작'
-		},
-		{
-			family_id: 1,
-			manager_id: 2,
-			service_type: 7960,
-			user_id: 100,
-			job_id: 'qwe12e-12r12f',
-			status: '1003',
-			log_code: '202',
-			log_message: '중간에 종료된 미션 다시 시작'
+			log_message: '중간에 종료된 미션 다시 시작',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -87,7 +61,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '101',
-			log_message: '미션 도중 게임 종료'
+			log_message: '미션 도중 게임 종료',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -97,7 +72,19 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '202',
-			log_message: '중간에 종료된 미션 다시 시작'
+			log_message: '중간에 종료된 미션 다시 시작',
+			inserted_at: '2024-01-10 11:57'
+		},
+		{
+			family_id: 1,
+			manager_id: 2,
+			service_type: 7960,
+			user_id: 100,
+			job_id: 'qwe12e-12r12f',
+			status: '1003',
+			log_code: '202',
+			log_message: '중간에 종료된 미션 다시 시작',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -107,7 +94,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '101',
-			log_message: '미션 도중 게임 종료'
+			log_message: '미션 도중 게임 종료',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -117,7 +105,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '202',
-			log_message: '중간에 종료된 미션 다시 시작'
+			log_message: '중간에 종료된 미션 다시 시작',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -127,7 +116,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '101',
-			log_message: '미션 도중 게임 종료'
+			log_message: '미션 도중 게임 종료',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -137,7 +127,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '202',
-			log_message: '중간에 종료된 미션 다시 시작'
+			log_message: '중간에 종료된 미션 다시 시작',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -147,7 +138,8 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '101',
-			log_message: '미션 도중 게임 종료'
+			log_message: '미션 도중 게임 종료',
+			inserted_at: '2024-01-10 11:57'
 		},
 		{
 			family_id: 1,
@@ -157,9 +149,32 @@
 			job_id: 'qwe12e-12r12f',
 			status: '1003',
 			log_code: '202',
-			log_message: '중간에 종료된 미션 다시 시작'
+			log_message: '중간에 종료된 미션 다시 시작',
+			inserted_at: '2024-01-10 11:57'
+		},
+		{
+			family_id: 1,
+			manager_id: 2,
+			service_type: 7960,
+			user_id: 100,
+			job_id: 'qwe12e-12r12f',
+			status: '1003',
+			log_code: '101',
+			log_message: '미션 도중 게임 종료',
+			inserted_at: '2024-01-10 11:57'
+		},
+		{
+			family_id: 1,
+			manager_id: 2,
+			service_type: 7960,
+			user_id: 100,
+			job_id: 'qwe12e-12r12f',
+			status: '1003',
+			log_code: '202',
+			log_message: '중간에 종료된 미션 다시 시작',
+			inserted_at: '2024-01-10 11:57'
 		}
 	];
 </script>
 
-<ChartPlaylog {title} />
+<ChartPlaylog {title} {logs} />

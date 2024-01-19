@@ -28,16 +28,15 @@
 	</HippoWhiteFrame>
 </CodeExampleFrame>
 
-<CodeExampleFrame name="Source Code">
-	<iframe
-		title="button"
+<CodeExampleFrame name="Source Code"
+	><iframe
 		frameborder="0"
 		scrolling="no"
 		style="width:100%; height:418px;"
 		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp.svelte%3Fts%3D4&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&fetchFromJsDelivr=on"
-	></iframe>
-</CodeExampleFrame>
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp.svelte%3Fts%3D4%23L1-L18&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on&fetchFromJsDelivr=on"
+	></iframe></CodeExampleFrame
+>
 
 <CodeExampleFrame name="Size">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
@@ -51,4 +50,14 @@
 			<HippoButton color="green" size="lg" on:click={clicked}>Large</HippoButton>
 		</div>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Source Code">
+	<iframe
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:145px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp.svelte%3Fts%3D4%23L20-L24&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>

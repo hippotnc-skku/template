@@ -112,6 +112,11 @@ export const routes: RouteItem[] = [
 				icon: 'fa-solid fa-chart-line'
 			},
 			{
+				title: 'Double Line Chart',
+				link: '/chart/doubleline',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
 				title: 'Triple Line Chart',
 				link: '/chart/tripleline',
 				icon: 'fa-solid fa-chart-line'
