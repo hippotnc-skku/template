@@ -10,7 +10,10 @@
 		orange: 'bg-[#FF9114] text-white hover:bg-[#854b0b]',
 		gray: 'bg-[#373838] text-white hover:bg-[#202121]',
 		blue: 'bg-[#4175CE] text-white hover:bg-[#244275]',
-		red: 'bg-[#F15D5D] text-white hover:bg-[#8f3636]'
+		red: 'bg-[#F15D5D] text-white hover:bg-[#8f3636]',
+		transparent: 'bg-none text-slate-800',
+		white:
+			'bg-white border-slate-800 text-slate-800 border-opacity-80 border-[1.2px] hover:bg-[#e8e8e8]'
 	};
 
 	const buttonSize = {
@@ -32,7 +35,7 @@
 <button
 	{...$$restProps}
 	use:setType={type}
-	class="{buttonColor[color]} {buttonSize[size]} {$$restProps.class} rounded-lg"
+	class="{buttonColor[color]} {buttonSize[size]} {$$restProps.class} rounded-lg border-slate"
 	on:click
 	><slot />
 </button>
