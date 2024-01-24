@@ -122,8 +122,18 @@ export const routes: RouteItem[] = [
 				icon: 'fa-solid fa-chart-line'
 			},
 			{
-				title: 'Sparkline Chart',
-				link: '/chart/sparkline',
+				title: 'Sparkline-Line Chart',
+				link: '/chart/sparkline-line',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
+				title: 'Sparkline-Area Chart',
+				link: '/chart/sparkline-area',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
+				title: 'Sparkline-Bar Chart',
+				link: '/chart/sparkline-bar',
 				icon: 'fa-solid fa-chart-line'
 			},
 			{
