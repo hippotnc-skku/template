@@ -177,4 +177,6 @@
 	];
 </script>
 
-<ChartPlaylog {title} {logs} />
+<div class=" overflow-auto">
+	<ChartPlaylog {title} {logs} />
+</div>

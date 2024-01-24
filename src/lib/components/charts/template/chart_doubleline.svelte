@@ -142,7 +142,7 @@
 			},
 			legend: {
 				show: true,
-				position: 'top',
+				position: 'bottom',
 				horizontalAlign: 'center'
 			}
 		};
@@ -186,11 +186,10 @@
 	}
 </script>
 
-<HippoWhiteFrame class="flex p-2">
-	<div use:initChart={optionsActiveUsers} class="rounbded-b-4 w-full" />
-
-	<div class="flex items-center">
-		<div>
+<HippoWhiteFrame class="p-2">
+	<div class="p-2 flex justify-between">
+		<h1 class="text-2xl">{title}</h1>
+		<div class="flex gap-2">
 			<div class="flex items-center ml-3">
 				<div>
 					<div class="text-sm">{title}</div>
@@ -223,4 +222,5 @@
 			</div>
 		</div>
 	</div>
+	<div use:initChart={optionsActiveUsers} class="rounbded-b-4 w-full" />
 </HippoWhiteFrame>

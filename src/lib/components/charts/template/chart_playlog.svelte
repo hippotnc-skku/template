@@ -5,7 +5,7 @@
 	export let logs = [];
 </script>
 
-<HippoWhiteFrame class="w-[350px] h-[800px] overflow-auto p-2">
+<HippoWhiteFrame class="w-[350px] overflow-auto p-2">
 	<div class="flex justify-between items-center p-2 mx-2">
 		<h6 class="text-md">{title}</h6>
 		<div class="flex items-center gap-3">
