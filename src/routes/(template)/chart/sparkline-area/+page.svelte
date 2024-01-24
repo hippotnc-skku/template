@@ -2,15 +2,15 @@
 	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 	import { List, Li, Heading } from 'flowbite-svelte';
-	import SparkLineLine from '$lib/components/charts/chart_sparkline_line.svelte';
+	import SparkLineArea from '$lib/components/charts/template/chart_sparkline_area.svelte';
 </script>
 
 <CodeExampleFrame name="Sample">
-	<HippoWhiteFrame><SparkLineLine /></HippoWhiteFrame>
+	<HippoWhiteFrame><SparkLineArea /></HippoWhiteFrame>
 </CodeExampleFrame>
 
 <CodeExampleFrame name="Source Code">
-	<iframe frameborder="0" scrolling="no" style="width:100%; height:166px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fchart%2Fsparkline-line%2F_temp.svelte%3Fts%3D4%23L1C1-L6C68&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></iframe>
+	<iframe frameborder="0" scrolling="no" style="width:100%; height:166px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fchart%2Fsparkline-line%2F_temp.svelte%3Fts%3D4%23L1-L6&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></iframe>
 </CodeExampleFrame>
 
 <CodeExampleFrame name="Options">
