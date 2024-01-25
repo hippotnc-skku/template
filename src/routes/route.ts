@@ -2,79 +2,97 @@ import type { RouteItem } from '$lib/interface/templateInterface';
 
 export const routes: RouteItem[] = [
 	{
-		title: '버튼',
-		link: '/button',
-		icon: 'fa-solid fa-screwdriver-wrench'
+		title: 'Components',
+		icon: 'fa-solid fa-screwdriver-wrench',
+		items: [
+			{
+				title: 'Button',
+				link: '/button',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Select',
+				link: '/select',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Pagination',
+				link: '/pagination',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Component Frame',
+				link: '/component_frame',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Table',
+				link: '/table',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Search Header',
+				link: '/searchheader',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Tab',
+				link: '/tabs',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Modal',
+				link: '/modal',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			}
+		]
 	},
 	{
-		title: '셀렉트',
-		link: '/select',
-		icon: 'fa-solid fa-screwdriver-wrench'
+		title: 'Inputs/Forms',
+		icon: 'fa-solid fa-screwdriver-wrench',
+		items: [
+			{
+				title: 'Input',
+				link: '/input',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Checkbox',
+				link: '/checkbox',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Login Form',
+				link: '/loginform',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'ID Search Form',
+				link: '/findIdform',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'PW Init Form',
+				link: '/resetpasswordform',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			}
+		]
 	},
 	{
-		title: '인풋',
-		link: '/input',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '체크박스',
-		link: '/checkbox',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '페이지네이션',
-		link: '/pagination',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '컴포넌트프레임',
-		link: '/component_frame',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '테이블',
-		link: '/table',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '검색헤더',
-		link: '/searchheader',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '탭',
-		link: '/tabs',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '모달',
-		link: '/modal',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '캘린더',
-		link: '/calendar',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '날짜고르기창',
-		link: '/datepicker',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '로그인폼',
-		link: '/loginform',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '아이디 찾기 폼',
-		link: '/findIdform',
-		icon: 'fa-solid fa-screwdriver-wrench'
-	},
-	{
-		title: '비밀번호 초기화 폼',
-		link: '/resetpasswordform',
-		icon: 'fa-solid fa-screwdriver-wrench'
+		title: 'Calendar',
+		icon: 'fa-solid fa-screwdriver-wrench',
+		items: [
+			{
+				title: 'Calendar',
+				link: '/calendar',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: 'Date Picker',
+				link: '/datepicker',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			}
+		]
 	},
 	{
 		title: '게시판',
