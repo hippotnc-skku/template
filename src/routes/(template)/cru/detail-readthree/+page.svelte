@@ -1,6 +1,6 @@
 <script>
 	import { AccordionItem, Accordion } from 'flowbite-svelte';
-	import {HippoWhiteFrame} from '$lib/components/hippocomponent';
+	import { HippoWhiteFrame } from '$lib/components/hippocomponent';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 
 	let must = {
@@ -82,4 +82,14 @@
 			</Accordion>
 		</div>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Code">
+	<iframe
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1783px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readthree%2F_temp.svelte%3Fts%3D4%23L1-L83&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
