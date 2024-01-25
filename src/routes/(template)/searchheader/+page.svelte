@@ -32,8 +32,9 @@
 			<div>onFirst: function (첫번째 버튼 이벤트 함수설정)</div>
 			<div>onSecond: function (두번째 버튼 이벤트 함수설정)</div>
 			<div>onThird: function (세번째 버튼 이벤트 함수설정)</div>
-			<div>secondColor: "bg-[#303030] text-white" (두번째 버튼 색선정)</div>
-			<div>thirdColor: "bg-[#303030] text-white" (세번째 버튼 색선정)</div>
+			<div>firstColor: HippoButton의 color 사용 (default : green)</div>
+			<div>secondColor: HippoButton의 color 사용 (default : green)</div>
+			<div>thirdColor: HippoButton의 color 사용 (default : green)</div>
 			<div>placeholder: "검색..." (placeholder 선정)</div>
 		</div>
 	</div>

@@ -14,3 +14,7 @@
 <HippoTabs {items} {tab} on:tabChange={(e) => (selected = options[e.detail.tab])}>
 	<svelte:component this={selected.component} />
 </HippoTabs>
+
+<HippoTabs {items} {tab} style="full" on:tabChange={(e) => (selected = options[e.detail.tab])}>
+	<svelte:component this={selected.component} />
+</HippoTabs>
