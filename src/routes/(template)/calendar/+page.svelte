@@ -70,8 +70,30 @@
 	>
 </HippoWhiteFrame>
 
+<CodeExampleFrame name="Setup">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1363px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcalendar%2F_temp.svelte%3Fts%3D4%23L1-L63&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame>
 	<HippoWhiteFrame class="px-8 py-10">
 		<div class="h-full" data-toggle="calendar" id="calendar" bind:this={cal} />
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame>
+	<iframe
+		title="calendar"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:61px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcalendar%2F_temp.svelte%3Fts%3D4%23L75&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
