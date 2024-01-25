@@ -43,185 +43,183 @@
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </svelte:head>
 
-<CodeExampleFrame name="Sample">
-	<HippoWhiteFrame class="p-5">
-		<h5 class="mb-0 font-semibold px-3 text-xl">제목</h5>
-		<div class="grid grid-cols-3 gap-2 mt-5">
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>패밀리 명<span class="text-sm text-blue-600">*</span></label
+<HippoWhiteFrame class="p-5">
+	<h5 class="mb-0 font-semibold px-3 text-xl">제목</h5>
+	<div class="grid grid-cols-3 gap-2 mt-5">
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>패밀리 명<span class="text-sm text-blue-600">*</span></label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.name}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>상호 명(사업자등록증)<span class="text-sm text-blue-600">*</span></label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.registration_name}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>사업자등록번호<span class="text-sm text-blue-600">*</span></label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.registration_number}
+				border="border-1 border-gray-300"
+				class="w-full"
+				placeholder="-를 반드시 포함하여 입력해주세요"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>전화번호<span class="text-sm text-blue-600">*</span></label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.phonenum}
+				border="border-1 border-gray-300"
+				class="w-full"
+				placeholder="-를 반드시 포함하여 입력해주세요"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>휴대폰번호<span class="text-sm text-blue-600">*</span></label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.mobile}
+				border="border-1 border-gray-300"
+				class="w-full"
+				placeholder="-를 반드시 포함하여 입력해주세요"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>팩스번호</label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.fax}
+				border="border-1 border-gray-300"
+				class="w-full"
+				placeholder="-를 반드시 포함하여 입력해주세요"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2 col-span-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>패밀리 주소<span class="text-sm text-blue-600">*</span></label
+			>
+			<div class="flex">
+				<HippoButton class="mr-3 w-24" color="blue" on:click={() => execDaumPostcode()}
+					>주소 검색</HippoButton
 				>
 				<HippoInput
 					disabled={true}
-					bind:value={family.name}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>상호 명(사업자등록증)<span class="text-sm text-blue-600">*</span></label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.registration_name}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>사업자등록번호<span class="text-sm text-blue-600">*</span></label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.registration_number}
-					border="border-1 border-gray-300"
-					class="w-full"
-					placeholder="-를 반드시 포함하여 입력해주세요"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>전화번호<span class="text-sm text-blue-600">*</span></label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.phonenum}
-					border="border-1 border-gray-300"
-					class="w-full"
-					placeholder="-를 반드시 포함하여 입력해주세요"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>휴대폰번호<span class="text-sm text-blue-600">*</span></label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.mobile}
-					border="border-1 border-gray-300"
-					class="w-full"
-					placeholder="-를 반드시 포함하여 입력해주세요"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>팩스번호</label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.fax}
-					border="border-1 border-gray-300"
-					class="w-full"
-					placeholder="-를 반드시 포함하여 입력해주세요"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2 col-span-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>패밀리 주소<span class="text-sm text-blue-600">*</span></label
-				>
-				<div class="flex">
-					<HippoButton class="mr-3 w-24" color="blue" on:click={() => execDaumPostcode()}
-						>주소 검색</HippoButton
-					>
-					<HippoInput
-						disabled={true}
-						value={family.street ? '(' + family.postal_code + ') ' + family.street : ''}
-						placeholder="주소 입력은 왼쪽의 검색 버튼을 이용해주세요"
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
-				</div>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>상세주소<span class="text-sm text-blue-600">*</span></label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.address}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>업태<span class="text-sm text-blue-600">*</span></label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.business_type}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>종목<span class="text-sm text-blue-600">*</span></label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.business_item}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>지사코드</label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.branch_code}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>사원코드</label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.employee_code}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>지역코드</label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.area_code}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>상품코드</label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.product_code}
-					border="border-1 border-gray-300"
-					class="w-full"
-				/>
-			</div>
-			<div class="w-full max-w-full px-3 flex-0 mt-2 col-span-3">
-				<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-					>패밀리 설명</label
-				>
-				<HippoInput
-					disabled={true}
-					bind:value={family.description}
+					value={family.street ? '(' + family.postal_code + ') ' + family.street : ''}
+					placeholder="주소 입력은 왼쪽의 검색 버튼을 이용해주세요"
 					border="border-1 border-gray-300"
 					class="w-full"
 				/>
 			</div>
 		</div>
-	</HippoWhiteFrame>
-</CodeExampleFrame>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>상세주소<span class="text-sm text-blue-600">*</span></label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.address}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>업태<span class="text-sm text-blue-600">*</span></label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.business_type}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>종목<span class="text-sm text-blue-600">*</span></label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.business_item}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>지사코드</label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.branch_code}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>사원코드</label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.employee_code}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>지역코드</label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.area_code}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>상품코드</label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.product_code}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+		<div class="w-full max-w-full px-3 flex-0 mt-2 col-span-3">
+			<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
+				>패밀리 설명</label
+			>
+			<HippoInput
+				disabled={true}
+				bind:value={family.description}
+				border="border-1 border-gray-300"
+				class="w-full"
+			/>
+		</div>
+	</div>
+</HippoWhiteFrame>

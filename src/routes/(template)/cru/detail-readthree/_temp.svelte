@@ -1,6 +1,6 @@
 <script>
 	import { AccordionItem, Accordion } from 'flowbite-svelte';
-	import {HippoWhiteFrame} from '$lib/components/hippocomponent';
+	import { HippoWhiteFrame } from '$lib/components/hippocomponent';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 
 	let must = {
@@ -53,33 +53,31 @@
 	};
 </script>
 
-<CodeExampleFrame name="Sample">
-	<HippoWhiteFrame class="px-7 py-6">
-		<div class="container">
-			<Accordion flush>
-				<AccordionItem open>
-					<span slot="header">필수</span>
-					<div class="mt-2 w-full space-y-4 grid gap-6 mb-6 md:grid-cols-2">
-						{#each Object.entries(must) as [key, value]}
-							<div class="space-y-0.5">
-								<div class="text-md font-bold">{value}</div>
-								<span class="inline-block font-semibold text-hippNavy">{info[key]}</span>
-							</div>
-						{/each}
-					</div>
-				</AccordionItem>
-				<AccordionItem>
-					<span slot="header">선택</span>
-					<div class="mt-2 w-full space-y-4 grid gap-6 mb-6 md:grid-cols-2">
-						{#each Object.entries(optional) as [key, value]}
-							<div class="space-y-0.5">
-								<div class="text-md font-bold">{value}</div>
-								<span class="inline-block font-semibold text-hippNavy">{info[key]}</span>
-							</div>
-						{/each}
-					</div>
-				</AccordionItem>
-			</Accordion>
-		</div>
-	</HippoWhiteFrame>
-</CodeExampleFrame>
+<HippoWhiteFrame class="px-7 py-6">
+	<div class="container">
+		<Accordion flush>
+			<AccordionItem open>
+				<span slot="header">필수</span>
+				<div class="mt-2 w-full space-y-4 grid gap-6 mb-6 md:grid-cols-2">
+					{#each Object.entries(must) as [key, value]}
+						<div class="space-y-0.5">
+							<div class="text-md font-bold">{value}</div>
+							<span class="inline-block font-semibold text-hippNavy">{info[key]}</span>
+						</div>
+					{/each}
+				</div>
+			</AccordionItem>
+			<AccordionItem>
+				<span slot="header">선택</span>
+				<div class="mt-2 w-full space-y-4 grid gap-6 mb-6 md:grid-cols-2">
+					{#each Object.entries(optional) as [key, value]}
+						<div class="space-y-0.5">
+							<div class="text-md font-bold">{value}</div>
+							<span class="inline-block font-semibold text-hippNavy">{info[key]}</span>
+						</div>
+					{/each}
+				</div>
+			</AccordionItem>
+		</Accordion>
+	</div>
+</HippoWhiteFrame>
