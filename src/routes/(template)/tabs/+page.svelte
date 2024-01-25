@@ -15,6 +15,8 @@
 <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
 	<div class="text-lg font-bold">One, Two, Three는 Component이며</div>
 	<div class="text-lg font-bold">Component는 따로 import하셔야 합니다.</div>
+	<div class="text-lg font-bold">Tab style : 'fixed' , 'full'</div>
+	<div class="text-lg font-bold">Tab style default는 fixed 입니다.</div>
 </HippoWhiteFrame>
 
 <CodeExampleFrame name="Setup">
@@ -46,3 +48,13 @@
 		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Ftabs%2F_temp.svelte%3Fts%3D4%23L14-L16&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
 	></iframe>
 </CodeExampleFrame>
+
+<CodeExampleFrame name="full">
+	<HippoWhiteFrame class="px-8 py-5">
+		<HippoTabs {items} {tab} style="full" on:tabChange={(e) => (selected = options[e.detail.tab])}>
+			<svelte:component this={selected.component} />
+		</HippoTabs>
+	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="full"></CodeExampleFrame>
