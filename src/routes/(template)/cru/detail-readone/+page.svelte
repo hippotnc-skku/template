@@ -60,7 +60,16 @@
 	}
 </script>
 
-<CodeExampleFrame name="Setup"></CodeExampleFrame>
+<CodeExampleFrame name="Setup">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:796px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readone%2F_temp2.svelte%3Fts%3D4%23L1-L36&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
 
 <CodeExampleFrame name="Header에 정보를 넣을 경우">
 	<HippoWhiteFrame class="px-7 py-6">
@@ -68,9 +77,27 @@
 	</HippoWhiteFrame>
 </CodeExampleFrame>
 
-<CodeExampleFrame></CodeExampleFrame>
+<CodeExampleFrame name="Header에 정보를 넣을 경우">
+	<iframe
+		title="default"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1909px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readone%2F_temp2.svelte%3Fts%3D4%23L38-L126&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
 
-<CodeExampleFrame name="Setup"></CodeExampleFrame>
+<CodeExampleFrame name="Setup">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1300px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readone%2F_temp.svelte%3Fts%3D4%23L1-L60&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
 
 <CodeExampleFrame name="양옆으로 나눈 경우">
 	<div class="flex flex-col space-y-4 2xl:space-y-0 2xl:flex-row 2xl:justify-between mt-4 gap-x-3">
@@ -143,4 +170,13 @@
 	</div>
 </CodeExampleFrame>
 
-<CodeExampleFrame></CodeExampleFrame>
+<CodeExampleFrame name="양옆으로 나눈 경우">
+	<iframe
+		title="default"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1468px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readone%2F_temp.svelte%3Fts%3D4%23L66-L133&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
