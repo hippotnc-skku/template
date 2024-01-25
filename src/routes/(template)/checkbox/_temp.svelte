@@ -1,9 +1,8 @@
 <script>
 	import { HippoCheckBox } from '$lib/components/hippocomponent';
-	import { notifications } from '$lib/components/notification/notifications';
 
 	function onChange() {
-		notifications.success('체크 변화 감지', 500);
+		console.log('변화 감지');
 	}
 </script>
 
