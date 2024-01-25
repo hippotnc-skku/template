@@ -4,7 +4,9 @@
 	import { fixLength } from '$lib/api/function.js';
 	import { onMount } from 'svelte';
 	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
+	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
 
 	let today = new Date().getFullYear().toString() + '-' + fixLength(new Date().getMonth() + 1);
 	let calendar;
@@ -70,8 +72,4 @@
 	>
 </HippoWhiteFrame>
 
-<CodeExampleFrame>
-	<HippoWhiteFrame class="px-8 py-10">
-		<div class="h-full" data-toggle="calendar" id="calendar" bind:this={cal} />
-	</HippoWhiteFrame>
-</CodeExampleFrame>
+<div class="h-full" data-toggle="calendar" id="calendar" bind:this={cal} />

@@ -21,9 +21,9 @@
 		title="setup"
 		frameborder="0"
 		scrolling="no"
-		style="width:100%; height:208px;"
+		style="width:100%; height:187px;"
 		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcheckbox%2F_temp.svelte%3Fts%3D4%23L1-L8&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcheckbox%2F_temp.svelte%3Fts%3D4%23L1-L7&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
 	></iframe>
 </CodeExampleFrame>
 
@@ -62,6 +62,17 @@
 			</HippoCheckBox>
 		</div>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame>
+	<iframe
+		title="default"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:418px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcheckbox%2F_temp.svelte%3Fts%3D4%23L9-L26&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
 
 <CodeExampleFrame name="Colors">
@@ -229,4 +240,15 @@
 			><span class="font-bold">체크박스 2</span>
 		</HippoCheckBox>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Color">
+	<iframe
+		title="color"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:3442px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcheckbox%2F_temp.svelte%3Fts%3D4%23L28-L189&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
