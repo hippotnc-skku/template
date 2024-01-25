@@ -39,10 +39,32 @@
 	</div>
 </HippoWhiteFrame>
 
+<CodeExampleFrame name="Setup">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:355px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fsearchheader%2F_temp.svelte%3Fts%3D4%23L1-L15&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame>
 	<HippoWhiteFrame class="px-8 py-6 mt-10">
 		<HippoSearchHeader on:onFirst={firstFunction} />
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame>
+	<iframe
+		title="default"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:103px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fsearchheader%2F_temp.svelte%3Fts%3D4%23L17-L19&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
 
 <CodeExampleFrame name="버튼 2개일 경우">
@@ -55,6 +77,17 @@
 			on:onSecond={secondFunction}
 		/>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="버튼 2개일 경우">
+	<iframe
+		title="twobutton"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:229px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fsearchheader%2F_temp.svelte%3Fts%3D4%23L21-L29&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
 
 <CodeExampleFrame name="버튼 3개일 경우">
@@ -72,8 +105,30 @@
 	</HippoWhiteFrame>
 </CodeExampleFrame>
 
+<CodeExampleFrame name="버튼 3개일 경우">
+	<iframe
+		title="threebutton"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:292px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fsearchheader%2F_temp.svelte%3Fts%3D4%23L31-L42&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame name="버튼이 없는 경우">
 	<HippoWhiteFrame class="px-8 py-6 mt-10">
 		<HippoSearchHeader needButtons={false} />
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="버튼이 없는 경우">
+	<iframe
+		title="nobutton"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:103px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fsearchheader%2F_temp.svelte%3Fts%3D4%23L44-L46&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
