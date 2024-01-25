@@ -81,8 +81,13 @@ export const routes: RouteItem[] = [
 		icon: 'fa-solid fa-screwdriver-wrench',
 		items: [
 			{
-				title: '생성 게시판',
+				title: '생성 게시판1',
 				link: '/cru/create',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: '생성 게시판2',
+				link: '/cru/create-two',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
@@ -98,6 +103,16 @@ export const routes: RouteItem[] = [
 			{
 				title: '상세 조회 게시판 2',
 				link: '/cru/detail-readtwo',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: '상세 조회 게시판 3',
+				link: '/cru/detail-readthree',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
+				title: '상세 조회 게시판 4',
+				link: '/cru/detail-readfour',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{

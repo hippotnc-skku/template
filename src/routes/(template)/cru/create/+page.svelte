@@ -6,9 +6,9 @@
 	import { notifications } from '$lib/components/notification/notifications.js';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 
-	import { Modal, Button, Select } from '$lib/components/helpers';
-	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
+	import { Modal, Button } from '$lib/components/helpers';
 	import {
+		HippoWhiteFrame,
 		HippoSelect,
 		HippoInput,
 		HippoButton,
@@ -125,9 +125,11 @@
 			{#each Object.entries(managerInfo) as [key, value]}
 				<input type="hidden" name={key} bind:value={manager[key]} />
 			{/each}
-			<Button type="submit">저장</Button>
+			<HippoButton color="green" on:click={() => notifications.success('저장', 500)}
+				>저장</HippoButton
+			>
 		</form>
-		<Button color="alternative" on:click={() => (addManagerModal = false)}>닫기</Button>
+		<HippoButton on:click={() => (addManagerModal = false)}>닫기</HippoButton>
 	</svelte:fragment>
 </Modal>
 <CodeExampleFrame name="Sample">
@@ -198,11 +200,23 @@
 				</HippoButton>
 				<HippoButton
 					class="bg-[#1349A5] text-white px-4 py-4"
-					on:click={() => goto(`/family/${$page.params.id}`)}
+					on:click={() => {
+						notifications.success('클릭', 500);
+					}}
 				>
 					돌아가기
 				</HippoButton>
 			</div>
 		</HippoWhiteFrame>
 	</div>
+</CodeExampleFrame>
+
+<CodeExampleFrame name="Code">
+	<iframe
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:4387px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fcreate%2F_temp.svelte%3Fts%3D4%23L2-L208&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>

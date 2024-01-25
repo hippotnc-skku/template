@@ -23,7 +23,9 @@
 	{placeholder}
 	{name}
 	{disabled}
-	class="focus:shadow-soft-primary-outline text-sm leading-5.6 ease-soft block appearance-none rounded-lg bg-white bg-clip-padding {padding} {border} font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none {$$restProps.class}"
+	class="focus:shadow-soft-primary-outline text-sm leading-5.6 ease-soft block appearance-none rounded-lg {disabled
+		? 'bg-gray-100'
+		: 'bg-white'} bg-clip-padding {padding} {border} font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none {$$restProps.class}"
 	bind:value
 	on:keypress
 />

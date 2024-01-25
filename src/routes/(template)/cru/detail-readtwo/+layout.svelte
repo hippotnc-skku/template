@@ -1,6 +1,3 @@
-<script>
-</script>
-
-<div class="max-w-[2000px] mx-auto">
+<div class="max-w-[900px] w-full mx-auto flex flex-col">
 	<slot />
 </div>
