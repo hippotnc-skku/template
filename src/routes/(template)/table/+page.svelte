@@ -40,6 +40,17 @@
 	</div>
 </HippoWhiteFrame>
 
+<CodeExampleFrame name="Setup">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:565px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Ftable%2F_temp.svelte%3Fts%3D4%23L1-L25&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame>
 	<HippoWhiteFrame class="px-6 py-10">
 		<Table hoverable={true}>
@@ -81,4 +92,15 @@
 			</TableBody>
 		</Table>
 	</HippoWhiteFrame>
+</CodeExampleFrame>
+
+<CodeExampleFrame>
+	<iframe
+		title="table"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:796px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Ftable%2F_temp.svelte%3Fts%3D4%23L27-L62&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
 </CodeExampleFrame>
