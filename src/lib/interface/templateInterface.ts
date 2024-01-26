@@ -1,5 +1,6 @@
 export interface DropDownItem {
 	title: string;
+	icon?: string;
 	link: string;
 }
 
