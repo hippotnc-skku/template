@@ -32,8 +32,8 @@
 	});
 </script>
 
-<HippoWhiteFrame class="w-[350px] h-full p-2">
-	<div class="flex justify-between items-center p-2 pb-0">
+<HippoWhiteFrame class="w-[350px] h-full">
+	<div class="flex justify-between items-center p-3 pr-1 pb-0">
 		<h6 class="text-md ml-2">{title}</h6>
 		<div class="flex items-center">
 			<ButtonTooltip
@@ -72,7 +72,7 @@
 			/>
 		</div>
 	{/if}
-	<div class=" h-[89%] overflow-auto p-4 pl-2">
+	<div class="{dateSelect ? 'h-[78%]' : 'h-[88%]'} overflow-auto p-4 pl-2">
 		{#if logs.length == 0}
 			<div class="text-center">{start_date}에 로그가 없습니다</div>
 		{:else}
@@ -95,7 +95,7 @@
 								: 'bg-green-500'}"
 						/>
 					</span>
-					<div class="ml-12 pt-1.4 lg:max-w-120 relative -top-1.5 w-auto">
+					<div class="ml-10 pt-1.4 lg:max-w-120 relative -top-1.5 w-auto">
 						<div class="flex justify-between">
 							<h6 class="mb-0 leading-normal text-sm text-slate-800">
 								{log.service_type}-{log.log_code}
