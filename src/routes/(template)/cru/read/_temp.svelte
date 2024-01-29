@@ -45,12 +45,10 @@
 		<HippoSearchHeader
 			firstName="히포"
 			secondName="티앤"
-			thirdName="씨이"
 			hasSecondButton={true}
 			on:onFirst={firstFunction}
 			on:onSecond={secondFunction}
-			>버튼
-		</HippoSearchHeader>
+		></HippoSearchHeader>
 	</div>
 	<Table hoverable="true">
 		<TableHead>
