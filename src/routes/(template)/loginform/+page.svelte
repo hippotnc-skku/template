@@ -50,6 +50,17 @@
 	}
 </script>
 
+<CodeExampleFrame name="Setup">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1111px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Floginform%2F_temp.svelte%3Fts%3D4%23L1-L51&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
+
 <CodeExampleFrame>
 	<div class="flex justify-center items-center h-full w-full background min-h-screen">
 		<HippoWhiteFrame class="px-10 pt-10 pb-14">
