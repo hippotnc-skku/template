@@ -12,8 +12,6 @@
 	} from '$lib/components/hippocomponent';
 	import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-	import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
-	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
 
 	export let form;
 	export let data;
@@ -52,70 +50,16 @@
 	}
 </script>
 
-<SetupFrame id="script">
-	<pre id="script">
-		<code>
-	&lt<span class="script">script</span>&gt
-		import &#123 enhance, applyAction &#125 from '$app/forms';
-		import &#123 goto &#125 from '$app/navigation';
-
-		import Spinner from '$lib/components/helpers/spinners/Spinner.svelte';
-		import Logo from '$images/hippo_logo copy.png';
-		import &#123
-			HippoInput,
-			HippoCheckBox,
-			HippoNavyButton,
-			HippoTextButton
-		&#125 from '$lib/components/hippocomponent';
-		import HippoWhiteFrame from '$lib/components/hippocomponent/HippoWhiteFrame.svelte';
-		import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-		import SetupFrame from '$lib/codeboxframe/SetupFrame.svelte';
-
-		export let form;
-		export let data;
-
-		let id = '';
-		let pw = '';
-		let load = false;
-		let checkboxCheck = false;
-
-		function remainIDPWIFFailedLog() &#123
-			load = true
-			return async (&#123 result &#125) =&gt &#123
-				await applyAction(result)
-				if (result?.data?.status === 'success') &#123goto('/customer')&#125
-				load = false
-			&#125
-		&#125
-
-		if (data?.uid) &#123
-			id = data.uid
-			checkboxCheck = true
-		&#125 else &#123
-			checkboxCheck = false
-		&#125
-
-		function firstClick() &#123
-			console.log('firstClick')
-		&#125
-
-		function secondClick() &#123
-			console.log('firstClick')
-		&#125
-	&lt/<span class="script">script</span>&gt
-		</code>
-<code>
-	&lt<span class="script">style</span>&gt
-		.background &#123
-			background-image: url('src/lib/images/loginImg.png');
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-size: contain;
-		&#125
-	&lt/<span class="script">style</span>&gt
-</code>
-	</pre>
-</SetupFrame>
+<CodeExampleFrame name="Setup">
+	<iframe
+		title="setup"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1111px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Floginform%2F_temp.svelte%3Fts%3D4%23L1-L51&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
 
 <CodeExampleFrame>
 	<div class="flex justify-center items-center h-full w-full background min-h-screen">
@@ -172,60 +116,16 @@
 	</div>
 </CodeExampleFrame>
 
-<CodeBox class="mt-10" id="body">
-	<pre id="body">
-		<code>
-&ltdiv class="flex justify-center items-center h-full w-full background"&gt
-	&ltHippoWhiteFrame class="px-10 pt-10 pb-14"&gt
-		&ltdiv class="w-[350px]"&gt
-			&ltdiv class="flex justify-center"&gt
-			&ltimg src=&#123Logo&#125 alt="logo" class="w-[200px] mb-5" /&gt
-			&lt/div&gt
-			&ltdiv class="text-[26px] font-bold mb-4"&gt로그인&lt/div&gt
-		
-			&ltdiv class="text-[15px] mb-4"&gt아이디와 비밀번호를 입력해주세요.&lt/div&gt
-		
-			&ltform method="POST" action="/?/login" use:enhance=&#123remainIDPWIFFailedLog&#125&gt
-				&ltHippoInput class="mb-3 w-full" name="uid" placeholder="ID" bind:value=&#123id&#125 /&gt
-			
-				&ltHippoInput
-					class="mb-4 w-full"
-					type="password"
-					name="password"
-					placeholder="password"
-					bind:value=&#123pw&#125
-				/&gt
-			
-				&ltHippoCheckBox name="rememberID" bind:checked=&#123checkboxCheck&#125&gt아이디 기억하기&lt/HippoCheckBox&gt
-
-				&#123#if form?.status && form?.status !== 'success'&#125
-					&ltdiv class="text-red-600"&gt잘못된 아이디 또는 비밀번호 입니다.&lt/div&gt
-				&#123/if&#125
-
-				&ltHippoNavyButton class="w-full h-[46px] mt-4" type="submit"&gt
-					&#123#if load&#125
-						&ltSpinner /&gt
-					&#123:else&#125
-						로그인
-					&#123/if&#125
-				&lt/HippoNavyButton&gt
-			&lt/form&gt
-
-			&ltdiv class="flex justify-between items-start mt-8"&gt
-			&ltdiv class="text-[#afafaf] text-[13px]"&gt아이디/비밀번호를 잊어버리셨나요?&lt/div&gt
-
-			&ltdiv class="flex"&gt
-				&ltHippoTextButton on:click=&#123firstClick&#125 class="text-[13px]"&gt아이디&lt/HippoTextButton&gt
-					&ltdiv class="mx-0.5 text-primary text-[13px]"&gt/&lt/div&gt
-				&ltHippoTextButton on:click=&#123secondClick&#125 class="text-[13px]"&gt비밀번호 찾기&lt/HippoTextButton&gt
-			&lt/div&gt
-			&lt/div&gt
-		&lt/div&gt
-	&lt/HippoWhiteFrame&gt
-&lt/div&gt
-		</code>
-	</pre>
-</CodeBox>
+<CodeExampleFrame>
+	<iframe
+		title="default"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:1300px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Floginform%2F_temp.svelte%3Fts%3D4%23L52-L110&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
 
 <style>
 	.background {
