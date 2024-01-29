@@ -180,6 +180,11 @@ export const routes: RouteItem[] = [
 				icon: 'fa-solid fa-chart-line'
 			},
 			{
+				title: 'HighChart RadarChart',
+				link: '/chart/highchart-radarchart',
+				icon: 'fa-solid fa-chart-line'
+			},
+			{
 				title: 'Play Log',
 				link: '/chart/playlog',
 				icon: 'fa-solid fa-chart-line'
