@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { HippoWhiteFrame, HippoButton } from '$lib/components/hippocomponent';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+	import { applyAction, enhance } from '$app/forms';
 	import { List, Li, Heading } from 'flowbite-svelte';
 	import { Modal } from '$lib/components/helpers';
 	import { notifications } from '$lib/components/notification/notifications';
+
+	export let form;
 
 	let editFamilyModal = false;
 	let confirmBillModal = false;
@@ -105,6 +108,7 @@
 
 <CodeExampleFrame name="Code1">
 	<iframe
+		title="Code1"
 		frameborder="0"
 		scrolling="no"
 		style="width:100%; height:1342px;"
@@ -126,6 +130,7 @@
 
 <CodeExampleFrame name="Code2">
 	<iframe
+		title="Code2"
 		frameborder="0"
 		scrolling="no"
 		style="width:100%; height:397px;"

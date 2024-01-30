@@ -1,8 +1,5 @@
 <script>
 	import { formatDateKr } from '$lib/api/function';
-	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
-	import { Breadcrumb, BreadcrumbItem } from '$lib/components/helpers';
 	import { HippoWhiteFrame } from '$lib/components/hippocomponent';
 
 	export let data;
