@@ -1,7 +1,6 @@
 <script>
 	import { AccordionItem, Accordion } from 'flowbite-svelte';
 	import { HippoWhiteFrame } from '$lib/components/hippocomponent';
-	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 
 	let must = {
 		name: '이름',

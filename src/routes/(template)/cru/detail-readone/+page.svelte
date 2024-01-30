@@ -60,7 +60,7 @@
 	}
 </script>
 
-<CodeExampleFrame name="Setup">
+<CodeExampleFrame name="Header Setup">
 	<iframe
 		title="setup"
 		frameborder="0"
@@ -88,7 +88,7 @@
 	></iframe>
 </CodeExampleFrame>
 
-<CodeExampleFrame name="Setup">
+<CodeExampleFrame name="양옆 Setup">
 	<iframe
 		title="setup"
 		frameborder="0"
