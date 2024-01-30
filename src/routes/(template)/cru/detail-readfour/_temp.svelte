@@ -1,7 +1,6 @@
 <!-- 센터/패밀리 추가 -->
 <script>
 	import { HippoWhiteFrame, HippoButton, HippoInput } from '$lib/components/hippocomponent';
-	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
 
 	let family = {
 		name: '예시',
