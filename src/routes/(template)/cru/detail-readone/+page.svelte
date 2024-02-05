@@ -1,182 +1,130 @@
 <script>
-	import { HippoWhiteFrame, HippoButton } from '$lib/components/hippocomponent';
+	import { HippoWhiteFrame, HippoButton, HippoInput } from '$lib/components/hippocomponent';
 	import { formatDateKr } from '$lib/api/function.js';
-	import { HippoSort } from '$lib/components/hippocomponent';
-	import {
-		Table,
-		TableBody,
-		TableBodyCell,
-		TableBodyRow,
-		TableHead,
-		TableHeadCell
-	} from '$lib/components/helpers';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
-	import InfoHead from './InfoHead.svelte';
-
-	const tableHeader = [
-		{ name: '할인율', sort: false },
-		{ name: '할인 이름', sort: false },
-		{ name: '할인 조건', sort: false }
-	];
 
 	export let data;
 
-	const service = {
+	const family = {
 		id: 1,
-		addr: 'http://127.0.0.1:4007',
-		service_name: 'HippBrainUp',
-		service_type: 7970,
-		app_key: 'ab4ed8b0-8159-4f7f-9ee4-6240db76f4e0',
-		description: '힙브레인은 아동에게 효과적인 VR치료 서비스입니다.',
-		fare: 5000,
+		name: '수원 SKKU 정신건강센터',
+		registration_name: '(주)SKKU',
+		registration_number: '300-10-11011',
+		registration_code: 1101,
+		phonenum: '032-813-2801',
+		country: 'rok',
+		sigungu: 'gyeonggido',
+		address: 'suwon',
+		street: 'seoburo',
+		postal_code: '16419',
+		description: '대학내 멘탈케어센터',
 		inserted_at: '2024-01-01',
-		updated_at: '2024-01-01',
-		discounts: [
-			{
-				percent: 50,
-				name: '테스트',
-				condition: ''
-			}
-		]
+		updated_at: '2024-01-01'
 	};
 
-	const serviceInfo = {
-		id: '서비스 ID',
-		service_type: '서비스 타입',
-		description: '서비스 설명',
-		app_key: 'App_Key',
-		fare: '요금(원)',
-		inserted_at: '생성일',
-		updated_at: '최근 수정일',
-		addr: '서비스 주소'
+	let familyInfo = {
+		id: '패밀리 ID',
+		name: '패밀리명',
+		phonenum: '전화번호',
+		mobile: '핸드폰번호',
+		address: '주소(우편번호)',
+		registration_number: '사업자등록번호',
+		inserted_at: '등록일',
+		registration_name: '사업자명'
 	};
 
 	function firstClick() {
 		console.log('첫번째');
 	}
-
-	function secondClick() {
-		console.log('두번째');
-	}
 </script>
-
-<CodeExampleFrame name="Header Setup">
-	<iframe
-		title="setup"
-		frameborder="0"
-		scrolling="no"
-		style="width:100%; height:796px;"
-		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readone%2F_temp2.svelte%3Fts%3D4%23L1-L36&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></iframe>
-</CodeExampleFrame>
 
 <CodeExampleFrame name="Header에 정보를 넣을 경우">
 	<HippoWhiteFrame class="px-7 py-6">
-		<InfoHead />
+		<div class="flex items-baseline mb-4 pb-2 border-b-2 justify-between">
+			<div class="flex items-center">
+				<h5 class="mb-0 font-bold px-3 items-baseline text-xl">{family.name}</h5>
+				<label class="font-bold text-md text-slate-700" for="First Name">{familyInfo.id}</label>
+				<span class="mx-2">{family['id']}</span>
+			</div>
+			<HippoButton class="px-3 py-2" color="green" on:click={firstClick}
+				>패밀리 정보 수정</HippoButton
+			>
+		</div>
+		<div class="grid lg:grid-cols-3 2xl:grid-cols-4 gap-4 p-3">
+			<div>
+				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
+					>{familyInfo.name}</label
+				>
+				<HippoInput value={family['name']} disabled={true} border="border-0" class="w-full" />
+			</div>
+			<div>
+				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
+					>{familyInfo.registration_name}</label
+				>
+				<HippoInput
+					value={family['registration_name']}
+					disabled={true}
+					border="border-0"
+					class="w-full"
+				/>
+			</div>
+			<div>
+				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
+					>{familyInfo.registration_number}</label
+				>
+				<HippoInput
+					value={family['registration_number']}
+					disabled={true}
+					border="border-0"
+					class="w-full"
+				/>
+			</div>
+			<div>
+				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
+					>{familyInfo.inserted_at}</label
+				>
+				<HippoInput
+					value={formatDateKr(family['inserted_at'])}
+					disabled={true}
+					border="border-0"
+					class="w-full"
+				/>
+			</div>
+			<div class="md:col-span-2">
+				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
+					>{familyInfo.address}</label
+				>
+				<HippoInput
+					value={family['sigungu'] +
+						' ' +
+						family['street'] +
+						' ' +
+						family['address'] +
+						' (' +
+						family['postal_code'] +
+						')'}
+					disabled={true}
+					border="border-0"
+					class="w-full"
+				/>
+			</div>
+			<div>
+				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
+					>{familyInfo.phonenum}</label
+				>
+				<HippoInput value={family['phonenum']} disabled={true} border="border-0" class="w-full" />
+			</div>
+			<div>
+				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name">
+					{familyInfo.mobile}</label
+				>
+				<HippoInput
+					value={!family['mobile'] ? '미등록' : family['mobile']}
+					disabled={true}
+					border="border-0"
+					class="w-full"
+				/>
+			</div>
+		</div>
 	</HippoWhiteFrame>
-</CodeExampleFrame>
-
-<CodeExampleFrame name="Header에 정보를 넣을 경우">
-	<iframe
-		title="default"
-		frameborder="0"
-		scrolling="no"
-		style="width:100%; height:1909px;"
-		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readone%2F_temp2.svelte%3Fts%3D4%23L38-L126&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></iframe>
-</CodeExampleFrame>
-
-<CodeExampleFrame name="양옆 Setup">
-	<iframe
-		title="setup"
-		frameborder="0"
-		scrolling="no"
-		style="width:100%; height:1300px;"
-		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readone%2F_temp.svelte%3Fts%3D4%23L1-L60&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></iframe>
-</CodeExampleFrame>
-
-<CodeExampleFrame name="양옆으로 나눈 경우">
-	<div class="flex flex-col space-y-4 2xl:space-y-0 2xl:flex-row 2xl:justify-between mt-4 gap-x-3">
-		<HippoWhiteFrame class="py-5 px-8 w-full 2xl:w-1/2">
-			<div class="pb-2 font-bold text-xl border-b-2">
-				{service.service_name}
-			</div>
-			<div class="mt-5 w-full space-y-5">
-				{#each Object.entries(serviceInfo) as [key, value]}
-					{#if ['inserted_at', 'updated_at'].includes(key)}
-						<div class="space-y-0.5">
-							<div class="text-md font-bold">{value}</div>
-							<span class="inline-block font-semibold text-hippNavy"
-								>{formatDateKr(service[key])}</span
-							>
-						</div>
-					{:else}
-						<div class="space-y-0.5">
-							<div class="text-md font-bold">{value}</div>
-							<span class="inline-block font-semibold text-hippNavy">{service[key]}</span>
-						</div>
-					{/if}
-				{/each}
-			</div>
-		</HippoWhiteFrame>
-
-		<HippoWhiteFrame class="py-5 px-8 w-full 2xl:w-1/2">
-			<div class="font-bold text-xl pb-2 border-b-2">할인 목록</div>
-			<Table hoverable="true">
-				<TableHead>
-					{#each tableHeader as th}
-						{#if th.sort}
-							<TableHeadCell textClass="text-[#303030] text-[13px] text-start">
-								<HippoSort {data} key={th.key} title={th.name} />
-							</TableHeadCell>
-						{:else}
-							<TableHeadCell textClass="text-[#303030] text-[13px] text-start"
-								>{th.name}</TableHeadCell
-							>
-						{/if}
-					{/each}
-				</TableHead>
-				<TableBody tableBodyClass="divide-y">
-					<col width="40%" />
-					<col width="30%" />
-					<col width="30%" />
-					{#each service?.discounts as discount}
-						<TableBodyRow color="custom" class="cursor-default">
-							<TableBodyCell>{discount.percent}%</TableBodyCell>
-							<TableBodyCell>{discount.name}</TableBodyCell>
-							<TableBodyCell>{discount.condition ? discount.condition : '없음'}</TableBodyCell>
-						</TableBodyRow>
-					{:else}
-						<tr>
-							<td colspan="12" class="text-center text-lg h-[50px]">적용된 할인이 없습니다.</td>
-						</tr>
-					{/each}
-				</TableBody>
-			</Table>
-		</HippoWhiteFrame>
-	</div>
-
-	<div class="p-3 m-2 flex justify-center">
-		<HippoButton class="bg-[#39C261] text-white px-5 py-3 mx-2" on:click={firstClick}
-			>첫번째</HippoButton
-		>
-		<HippoButton class="bg-[#373838] text-white px-5 py-3 mx-2" on:click={secondClick}
-			>두번째</HippoButton
-		>
-	</div>
-</CodeExampleFrame>
-
-<CodeExampleFrame name="양옆으로 나눈 경우">
-	<iframe
-		title="default"
-		frameborder="0"
-		scrolling="no"
-		style="width:100%; height:1468px;"
-		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fdetail-readone%2F_temp.svelte%3Fts%3D4%23L66-L133&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></iframe>
 </CodeExampleFrame>

@@ -123,11 +123,11 @@ export const routes: RouteItem[] = [
 				link: '/cru/detail-readtwo',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
-			{
-				title: '상세 조회 게시판 3',
-				link: '/cru/detail-readthree',
-				icon: 'fa-solid fa-screwdriver-wrench'
-			},
+			// {
+			// 	title: '상세 조회 게시판 3',
+			// 	link: '/cru/detail-readthree',
+			// 	icon: 'fa-solid fa-screwdriver-wrench'
+			// },
 			{
 				title: '상세 조회 게시판 4',
 				link: '/cru/detail-readfour',
