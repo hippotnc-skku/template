@@ -11,7 +11,9 @@
 
 <HippoButton color="orange" on:click={clicked}>삭제</HippoButton>
 
-<HippoButton color="gray" on:click={clicked}>그 외</HippoButton>
+<HippoButton color="gray" on:click={clicked}>회색</HippoButton>
+
+<HippoButton color="lightgray" on:click={clicked}>연한회색</HippoButton>
 
 <HippoButton color="blue" on:click={clicked}>파랑</HippoButton>
 

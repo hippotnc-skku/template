@@ -11,7 +11,7 @@
 
 <HippoWhiteFrame class="text-center py-5 w-full space-y-1">
 	<div class="text-lg font-bold">
-		color='green' | 'orange' | 'gray' | 'blue' | 'red' | 'trasparent' | 'white'
+		color='green' | 'orange' | 'gray' | 'lightgray' | 'blue' | 'red' | 'trasparent' | 'white'
 	</div>
 	<div class="text-lg font-bold">size='sm' | 'md' | 'lg' | 'custom'</div>
 	<div class="text-lg font-bold">default value : color='gray', size='md'</div>
@@ -24,7 +24,8 @@
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
 		<HippoButton color="green" on:click={clicked}>생성/수정</HippoButton>
 		<HippoButton color="orange" on:click={clicked}>삭제</HippoButton>
-		<HippoButton color="gray" on:click={clicked}>그 외</HippoButton>
+		<HippoButton color="gray" on:click={clicked}>회색</HippoButton>
+		<HippoButton color="lightgray" on:click={clicked}>연한회색</HippoButton>
 		<HippoButton color="blue" on:click={clicked}>파랑</HippoButton>
 		<HippoButton color="red" on:click={clicked}>빨강</HippoButton>
 		<HippoButton color="transparent" on:click={clicked}>투명</HippoButton>
