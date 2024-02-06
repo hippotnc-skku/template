@@ -26,3 +26,7 @@
 <HippoButton color="green" size="md" on:click={clicked}>Medium</HippoButton>
 
 <HippoButton color="green" size="lg" on:click={clicked}>Large</HippoButton>
+
+<HippoButton color="green" size="custom" class="px-8 py-2 text-md" on:click={clicked}
+	>Custom</HippoButton
+>

@@ -13,7 +13,7 @@
 	<div class="text-lg font-bold">
 		color='green' | 'orange' | 'gray' | 'blue' | 'red' | 'trasparent' | 'white'
 	</div>
-	<div class="text-lg font-bold">size='sm' | 'md' | 'lg'</div>
+	<div class="text-lg font-bold">size='sm' | 'md' | 'lg' | 'custom'</div>
 	<div class="text-lg font-bold">default value : color='gray', size='md'</div>
 	<div class="text-lg font-bold">
 		그 이외에 id나 type를 넣으시면 적용이됩니다.(ex: type = "submit", id="id")
@@ -53,6 +53,11 @@
 		</div>
 		<div>
 			<HippoButton color="green" size="lg" on:click={clicked}>Large</HippoButton>
+		</div>
+		<div>
+			<HippoButton color="green" size="custom" class="px-8 py-2" on:click={clicked}
+				>Custom</HippoButton
+			>
 		</div>
 	</HippoWhiteFrame>
 </CodeExampleFrame>
