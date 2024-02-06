@@ -33,17 +33,6 @@
 	</HippoWhiteFrame>
 </CodeExampleFrame>
 
-<CodeExampleFrame name="Source Code"
-	><iframe
-		title="button color"
-		frameborder="0"
-		scrolling="no"
-		style="width:100%; height:502px;"
-		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp.svelte%3Fts%3D4%23L1-L22&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></iframe></CodeExampleFrame
->
-
 <CodeExampleFrame name="Size">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
 		<div>
@@ -61,15 +50,4 @@
 			>
 		</div>
 	</HippoWhiteFrame>
-</CodeExampleFrame>
-
-<CodeExampleFrame name="Source Code">
-	<iframe
-		title="button size"
-		frameborder="0"
-		scrolling="no"
-		style="width:100%; height:145px;"
-		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp.svelte%3Fts%3D4%23L24-L28&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></iframe>
 </CodeExampleFrame>
