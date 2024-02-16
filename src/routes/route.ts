@@ -99,6 +99,11 @@ export const routes: RouteItem[] = [
 		icon: 'fa-solid fa-screwdriver-wrench',
 		items: [
 			{
+				title: '게시판 개요',
+				link: '/cru/info',
+				icon: 'fa-solid fa-screwdriver-wrench'
+			},
+			{
 				title: '생성 게시판1',
 				link: '/cru/create',
 				icon: 'fa-solid fa-screwdriver-wrench'
