@@ -14,6 +14,8 @@
 		HippoButton,
 		HippoCheckBox
 	} from '$lib/components/hippocomponent';
+
+	import { Breadcrumb, BreadcrumbItem } from '$lib/components/helpers';
 </script>
 
 <HippoWhiteFrame class="p-5">
@@ -32,3 +34,28 @@
 		</li>
 	</ul>
 </HippoWhiteFrame>
+
+<CodeExampleFrame name="이전버튼 없는 경우"></CodeExampleFrame>
+
+<div class="flex justify-between mb-2">
+	<Breadcrumb aria-label="Default breadcrumb example" class="flex items-center">
+		<BreadcrumbItem href="#" home>홈</BreadcrumbItem>
+		<BreadcrumbItem>패밀리 목록</BreadcrumbItem>
+	</Breadcrumb>
+
+	<HippoButton color="transparent" disabled={true} size="md" class=" text-transparent"
+		>'</HippoButton
+	>
+</div>
+
+<CodeExampleFrame name="이전버튼 있는 경우"></CodeExampleFrame>
+
+<div class="flex justify-between mb-2">
+	<Breadcrumb aria-label="Default breadcrumb example" class="flex items-center">
+		<BreadcrumbItem href="/#" home>홈</BreadcrumbItem>
+		<BreadcrumbItem href="/#">패밀리 목록</BreadcrumbItem>
+		<BreadcrumbItem>히포티앤씨</BreadcrumbItem>
+	</Breadcrumb>
+
+	<HippoButton color="transparent" size="md" on:click={() => goto('/family')}>이전</HippoButton>
+</div>
