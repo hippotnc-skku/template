@@ -7,9 +7,9 @@
 	import type { TransitionTypes, TransitionParamTypes } from '../types';
 
 	export let btnClass: string =
-		'flex ease-soft-in-out text-sm  w-full py-2 active my-0 flex items-center font-medium text-slate-500 shadow-none transition-colors px-4 rounded-xl';
+		'flex ease-soft-in-out text-sm  w-full py-2 active my-0 flex items-center font-medium text-slate-500 shadow-none transition-colors px-4 rounded-full';
 	export let activeBtnClass: string =
-		'flex ease-soft-in-out  text-sm  w-full py-2 bg-white shadow-soft-sm active my-0 flex items-center font-medium text-slate-700 shadow-none transition-colors px-3 rounded-xl ';
+		'flex ease-soft-in-out  text-sm  w-full py-2 bg-white shadow-soft-sm active my-0 flex items-center font-medium text-slate-700 shadow-none transition-colors px-3 rounded-full';
 
 	export let label: string = '';
 	export let spanClass: string = 'ml-3 flex-1 text-left whitespace-nowrap text-slate-700';
@@ -48,7 +48,7 @@
 		<div
 			class={classNames(
 				active ? ' bg-gradient-to-tl from-[#868686] to-[#868686]  text-white' : '',
-				'stroke-none shadow-soft-sm mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current px-3 py-2 text-center'
+				'stroke-none shadow-soft-sm mr-2 -ml-1 flex h-9 w-9 items-center justify-center rounded-full bg-white bg-center fill-current px-3 py-2 text-center'
 			)}
 		>
 			<slot name="icon" />

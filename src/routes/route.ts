@@ -123,18 +123,18 @@ export const routes: RouteItem[] = [
 				link: '/cru/detail-readone',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
-			{
-				title: '상세 조회 게시판 2',
-				link: '/cru/detail-readtwo',
-				icon: 'fa-solid fa-screwdriver-wrench'
-			},
+			// {
+			// 	title: '상세 조회 게시판 2',
+			// 	link: '/cru/detail-readtwo',
+			// 	icon: 'fa-solid fa-screwdriver-wrench'
+			// },
 			// {
 			// 	title: '상세 조회 게시판 3',
 			// 	link: '/cru/detail-readthree',
 			// 	icon: 'fa-solid fa-screwdriver-wrench'
 			// },
 			{
-				title: '상세 조회 게시판 4',
+				title: '상세 조회 게시판 2',
 				link: '/cru/detail-readfour',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},

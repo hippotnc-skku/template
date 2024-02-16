@@ -30,8 +30,8 @@
 		{#if isIcon}
 			<div
 				class={classNames(
-					active ? ' bg-gradient-to-tl from-icon-200 to-icon-300' : '',
-					'stroke-none mr-2 flex items-center justify-center rounded-lg bg-white bg-center fill-current px-3 py-2 text-center w-8 h-8 shadow-soft-2xl'
+					active ? 'bg-gradient-to-tl from-icon-200 to-icon-300' : '',
+					'stroke-none mr-2 -ml-1 flex items-center justify-center rounded-full bg-white bg-center fill-current px-3 py-2 text-center w-9 h-9 shadow-soft-2xl'
 				)}
 			>
 				<slot name="icon" />

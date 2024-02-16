@@ -46,7 +46,9 @@
 									<i
 										class={classNames(
 											item.icon,
-											item.link === $page.url.pathname ? 'text-white' : 'text-icon-gray'
+											item.link === $page.url.pathname
+												? 'text-white rounded-full'
+												: 'text-icon-gray rounded-full'
 										)}
 									/>
 								</svelte:fragment>
