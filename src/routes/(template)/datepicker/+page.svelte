@@ -13,6 +13,10 @@
 	}
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</svelte:head>
+
 <CodeExampleFrame name="DatePicker-Day Sample">
 	<HippoWhiteFrame class="p-2 my-2">
 		<div class="col-span-11">
@@ -40,6 +44,7 @@
 
 <CodeExampleFrame name="DatePicker-Day Code">
 	<iframe
+		title="code"
 		frameborder="0"
 		scrolling="no"
 		style="width:100%; height:628px;"
@@ -67,6 +72,7 @@
 
 <CodeExampleFrame name="DatePicker-Month Code">
 	<iframe
+		title="code"
 		frameborder="0"
 		scrolling="no"
 		style="width:100%; height:582px;"

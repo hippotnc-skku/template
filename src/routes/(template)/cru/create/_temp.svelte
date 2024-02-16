@@ -1,10 +1,12 @@
+<!-- 센터/패밀리 추가 -->
 <script>
 	import { applyAction, enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { notifications } from '$lib/components/notification/notifications.js';
+	import { autoAddHyphen } from '$lib/api/function.js';
 
-	import { Modal } from '$lib/components/helpers';
+	import { Modal, Button } from '$lib/components/helpers';
 	import {
 		HippoWhiteFrame,
 		HippoSelect,
@@ -41,7 +43,7 @@
 		},
 		phonenum: {
 			title: '연락처',
-			placeholder: '000-0000-0000(하이픈 추가해서 입력 부탁드립니다.)',
+			placeholder: '000-0000-0000',
 			type: 'text'
 		},
 		service_id: {
@@ -130,64 +132,115 @@
 		<HippoButton on:click={() => (addManagerModal = false)}>닫기</HippoButton>
 	</svelte:fragment>
 </Modal>
+
 <div class="mx-auto max-w-[600px]">
 	<HippoWhiteFrame class="px-8 py-6 mt-10">
 		<h5 class="mb-0 font-bold text-2xl">예시</h5>
 
 		<div class="mt-4">
-			{#each Object.entries(managerInfo) as [key, value]}
-				{#if ['service_id'].includes(key)}
-					<div class="w-full max-w-full flex-0 mt-3">
-						<label class="mb-1 font-bold text-sm text-slate-700" for="service_id"
-							>{value?.title}</label
-						>
+			<div class="w-full max-w-full flex-0 mt-3">
+				<label class="mb-1 font-bold text-sm text-slate-700" for="First Name"
+					>{managerInfo?.name?.title}</label
+				>
+				<HippoInput
+					type={managerInfo?.name?.type}
+					name="name"
+					placeholder={managerInfo?.name?.placeholder}
+					bind:value={manager['name']}
+					class="w-full border-[#3561AC]"
+				/>
+			</div>
+			<div class="w-full max-w-full flex-0 mt-3">
+				<label class="mb-1 font-bold text-sm text-slate-700" for="First Name"
+					>{managerInfo?.uid?.title}</label
+				>
+				<HippoInput
+					type={managerInfo?.uid?.type}
+					name="uid"
+					placeholder={managerInfo?.uid?.placeholder}
+					bind:value={manager['uid']}
+					class="w-full border-[#3561AC]"
+				/>
+			</div>
+			<div class="w-full max-w-full flex-0 mt-3">
+				<label class="mb-1 font-bold text-sm text-slate-700" for="First Name"
+					>{managerInfo?.password?.title}</label
+				>
+				<HippoInput
+					type={managerInfo?.password?.type}
+					name="password"
+					placeholder={managerInfo?.password?.placeholder}
+					bind:value={manager['password']}
+					class="w-full border-[#3561AC]"
+				/>
+			</div>
+			<div class="w-full max-w-full flex-0 mt-3">
+				<label class="mb-1 font-bold text-sm text-slate-700" for="First Name"
+					>{managerInfo?.password_confirmation?.title}</label
+				>
+				<HippoInput
+					type={managerInfo?.password_confirmation?.type}
+					name="password_confirmation"
+					placeholder={managerInfo?.password_confirmation?.placeholder}
+					bind:value={manager['password_confirmation']}
+					class="w-full border-[#3561AC]"
+				/>
+			</div>
 
-						<div class="col-span-11">
-							<div class="grid grid-cols-3">
-								{#each services as service}
-									<HippoCheckBox
-										id={service.service_name}
-										class=" text-gray-700"
-										name={key}
-										value={service.service_type}
-										size="w-6 h-6"
-										on:change={() => {
-											console.log();
-										}}
-										>{service.service_name}-{service.service_type}
-									</HippoCheckBox>
-								{/each}
-							</div>
-						</div>
+			<div class="w-full max-w-full flex-0 mt-3">
+				<label class="mb-1 font-bold text-sm text-slate-700" for="service_id"
+					>{managerInfo?.country?.title}</label
+				>
+				<HippoSelect name="country" class="border-[#3561AC] focus:border-[#3561AC] w-full">
+					<option selected>국가를 선택해주세요.</option>
+					{#each countries as country}
+						<option value={country}>{country}</option>
+					{/each}
+				</HippoSelect>
+			</div>
+
+			<div class="w-full max-w-full flex-0 mt-3">
+				<label class="mb-1 font-bold text-sm text-slate-700" for="service_id"
+					>{managerInfo?.service_id?.title}</label
+				>
+
+				<div class="col-span-11">
+					<div class="grid grid-cols-3 gap-y-1">
+						{#each services as service}
+							<HippoCheckBox
+								id={service.service_name}
+								class=" text-gray-700"
+								name="service_id"
+								value={service.service_type}
+								size="w-6 h-6"
+								on:change={() => {
+									console.log();
+								}}
+								>{service.service_name}-{service.service_type}
+							</HippoCheckBox>
+						{/each}
 					</div>
-				{:else if ['country'].includes(key)}
-					<div class="w-full max-w-full flex-0 mt-3">
-						<label class="mb-1 font-bold text-sm text-slate-700" for="service_id"
-							>{value?.title}</label
-						>
-						<HippoSelect name={key} class="border-[#3561AC] focus:border-[#3561AC] w-full">
-							<option selected>국가를 선택해주세요.</option>
-							{#each countries as country}
-								<option value={country}>{country}</option>
-							{/each}
-						</HippoSelect>
-					</div>
-				{:else}
-					<div class="w-full max-w-full flex-0 mt-3">
-						<label class="mb-1 font-bold text-sm text-slate-700" for="First Name"
-							>{value?.title}</label
-						>
-						<HippoInput
-							type={value?.type}
-							name={key}
-							placeholder={value?.placeholder}
-							bind:value={manager[key]}
-							class="w-full border-[#3561AC]"
-						/>
-					</div>
-				{/if}
-			{/each}
+				</div>
+			</div>
 		</div>
+
+		<div class="w-full max-w-full flex-0 mt-3">
+			<label class="mb-1 font-bold text-sm text-slate-700" for="First Name"
+				>{managerInfo?.phonenum?.title}</label
+			>
+			<HippoInput
+				on:input={(e) => {
+					manager['phonenum'] = autoAddHyphen(e);
+					console.log(manager['phonenum']);
+				}}
+				type={managerInfo?.phonenum?.type}
+				name="password_confirmation"
+				placeholder={managerInfo?.phonenum?.placeholder}
+				bind:value={manager['phonenum']}
+				class="w-full border-[#3561AC]"
+			/>
+		</div>
+
 		<div class="mt-12 flex justify-between">
 			<HippoButton
 				class="bg-[#39C261] text-white px-4 py-4"

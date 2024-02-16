@@ -87,6 +87,28 @@ export function getAge(birthDate) {
 	return moment().diff(birthMoment, 'years');
 }
 
+export function autoAddHyphen(event) {
+	const input = event.target;
+	let value = input.value;
+
+	if (value.length > 13) {
+		value = value.substring(0, 13);
+	}
+	const numbers = value.replace(/[^0-9]/g, '');
+	const formattedValue =
+		numbers.length === 9
+			? numbers.replace(/(\d{2})(\d{3})(\d{4})/g, '$1-$2-$3')
+			: numbers.length === 10 && numbers[0] === '0' && numbers[1] === '2'
+			? numbers.replace(/(\d{2})(\d{4})(\d{4})/g, '$1-$2-$3')
+			: numbers.length === 10
+			? numbers.replace(/(\d{3})(\d{3})(\d{4})/g, '$1-$2-$3')
+			: numbers.length === 11
+			? numbers.replace(/(\d{3})(\d{4})(\d{4})/g, '$1-$2-$3')
+			: numbers;
+
+	return formattedValue;
+}
+
 export function inputPhoneNumber(phone) {
 	let number = phone.replace(/[^0-9]/g, '');
 	let tel = '';

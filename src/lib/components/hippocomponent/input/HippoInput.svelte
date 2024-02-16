@@ -28,4 +28,5 @@
 		: 'bg-white'} bg-clip-padding {padding} {border} font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none {$$restProps.class}"
 	bind:value
 	on:keypress
+	on:input
 />
