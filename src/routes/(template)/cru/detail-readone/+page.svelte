@@ -55,40 +55,25 @@
 				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
 					>{familyInfo.name}</label
 				>
-				<HippoInput value={family['name']} disabled={true} border="border-0" class="w-full" />
+				<HippoInput value={family['name']} disabled={true} class="w-full" />
 			</div>
 			<div>
 				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
 					>{familyInfo.registration_name}</label
 				>
-				<HippoInput
-					value={family['registration_name']}
-					disabled={true}
-					border="border-0"
-					class="w-full"
-				/>
+				<HippoInput value={family['registration_name']} disabled={true} class="w-full" />
 			</div>
 			<div>
 				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
 					>{familyInfo.registration_number}</label
 				>
-				<HippoInput
-					value={family['registration_number']}
-					disabled={true}
-					border="border-0"
-					class="w-full"
-				/>
+				<HippoInput value={family['registration_number']} disabled={true} class="w-full" />
 			</div>
 			<div>
 				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
 					>{familyInfo.inserted_at}</label
 				>
-				<HippoInput
-					value={formatDateKr(family['inserted_at'])}
-					disabled={true}
-					border="border-0"
-					class="w-full"
-				/>
+				<HippoInput value={formatDateKr(family['inserted_at'])} disabled={true} class="w-full" />
 			</div>
 			<div class="md:col-span-2">
 				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
@@ -104,7 +89,6 @@
 						family['postal_code'] +
 						')'}
 					disabled={true}
-					border="border-0"
 					class="w-full"
 				/>
 			</div>
@@ -112,7 +96,7 @@
 				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name"
 					>{familyInfo.phonenum}</label
 				>
-				<HippoInput value={family['phonenum']} disabled={true} border="border-0" class="w-full" />
+				<HippoInput value={family['phonenum']} disabled={true} class="w-full" />
 			</div>
 			<div>
 				<label class="mb-1 font-bold text-md text-slate-700 ml-3" for="First Name">
@@ -121,7 +105,6 @@
 				<HippoInput
 					value={!family['mobile'] ? '미등록' : family['mobile']}
 					disabled={true}
-					border="border-0"
 					class="w-full"
 				/>
 			</div>

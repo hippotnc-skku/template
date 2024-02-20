@@ -79,17 +79,6 @@
 	}
 </script>
 
-<CodeExampleFrame name="Setup">
-	<iframe
-		title="setup"
-		frameborder="0"
-		scrolling="no"
-		style="width:100%; height:1699px;"
-		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fresetpasswordform%2F_temp.svelte%3Fts%3D4%23L1-L79&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></iframe>
-</CodeExampleFrame>
-
 <CodeExampleFrame>
 	<div class="w-full min-h-screen flex items-center justify-center background">
 		<HippoWhiteFrame>
@@ -193,12 +182,12 @@
 
 <CodeExampleFrame>
 	<iframe
-		title="default"
+		title="code"
 		frameborder="0"
 		scrolling="no"
-		style="width:100%; height:2287px;"
+		style="width:100%; height:3967px;"
 		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fresetpasswordform%2F_temp.svelte%3Fts%3D4%23L81-L187&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fresetpasswordform%2F_temp.svelte%3Fts%3D4%23L1-L187&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
 	></iframe>
 </CodeExampleFrame>
 

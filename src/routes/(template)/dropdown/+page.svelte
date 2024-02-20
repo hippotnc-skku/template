@@ -48,7 +48,7 @@
 
 <CodeExampleFrame>
 	<HippoWhiteFrame class="flex justify-center py-8">
-		<HippoButton class="dropdown bg-hippNavy px-3 py-2 text-white">드롭다운 버튼</HippoButton>
+		<HippoButton class="dropdown px-3 py-2 text-white" color="blue">드롭다운 버튼</HippoButton>
 		<Dropdown triggeredBy=".dropdown">
 			{#each items as i}
 				<DropdownItem

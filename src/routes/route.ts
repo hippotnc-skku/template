@@ -104,22 +104,22 @@ export const routes: RouteItem[] = [
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
-				title: '생성 게시판1',
+				title: '생성 게시판',
 				link: '/cru/create',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
-			{
-				title: '생성 게시판2',
-				link: '/cru/create-two',
-				icon: 'fa-solid fa-screwdriver-wrench'
-			},
+			// {
+			// 	title: '생성 게시판2',
+			// 	link: '/cru/create-two',
+			// 	icon: 'fa-solid fa-screwdriver-wrench'
+			// },
 			{
 				title: '목록 게시판',
 				link: '/cru/read',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
 			{
-				title: '상세 조회 게시판 1',
+				title: '상세 조회 게시판',
 				link: '/cru/detail-readone',
 				icon: 'fa-solid fa-screwdriver-wrench'
 			},
@@ -133,11 +133,11 @@ export const routes: RouteItem[] = [
 			// 	link: '/cru/detail-readthree',
 			// 	icon: 'fa-solid fa-screwdriver-wrench'
 			// },
-			{
-				title: '상세 조회 게시판 2',
-				link: '/cru/detail-readfour',
-				icon: 'fa-solid fa-screwdriver-wrench'
-			},
+			// {
+			// 	title: '상세 조회 게시판 2',
+			// 	link: '/cru/detail-readfour',
+			// 	icon: 'fa-solid fa-screwdriver-wrench'
+			// },
 			{
 				title: '갱신 게시판',
 				link: '/cru/update',

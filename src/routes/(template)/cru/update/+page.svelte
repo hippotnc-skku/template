@@ -7,6 +7,7 @@
 	import { applyAction, enhance } from '$app/forms';
 	import { HippoWhiteFrame, HippoButton, HippoInput } from '$lib/components/hippocomponent';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+	import { autoAddHyphen } from '$lib/api/function';
 
 	let editFamilyModal = false;
 	let family = {
@@ -101,12 +102,7 @@
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
 						>패밀리 명<span class="text-sm text-blue-600">*</span></label
 					>
-					<HippoInput
-						name="name"
-						bind:value={family.name}
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
+					<HippoInput name="name" bind:value={family.name} class="w-full" />
 				</div>
 				<div class="w-full max-w-full px-3 flex-0 mt-2">
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
@@ -115,7 +111,6 @@
 					<HippoInput
 						name="registration_name"
 						bind:value={family.registration_name}
-						border="border-1 border-gray-300"
 						class="w-full"
 					/>
 				</div>
@@ -126,7 +121,6 @@
 					<HippoInput
 						name="registration_number"
 						bind:value={family.registration_number}
-						border="border-1 border-gray-300"
 						class="w-full"
 						placeholder="-를 반드시 포함하여 입력해주세요"
 					/>
@@ -136,9 +130,11 @@
 						>전화번호<span class="text-sm text-blue-600">*</span></label
 					>
 					<HippoInput
+						on:input={(e) => {
+							family.phonenum = autoAddHyphen(e);
+						}}
 						name="phonenum"
 						bind:value={family.phonenum}
-						border="border-1 border-gray-300"
 						class="w-full"
 						placeholder="-를 반드시 포함하여 입력해주세요"
 					/>
@@ -148,9 +144,11 @@
 						>휴대폰번호<span class="text-sm text-blue-600">*</span></label
 					>
 					<HippoInput
+						on:input={(e) => {
+							family.mobile = autoAddHyphen(e);
+						}}
 						name="mobile"
 						bind:value={family.mobile}
-						border="border-1 border-gray-300"
 						class="w-full"
 						placeholder="-를 반드시 포함하여 입력해주세요"
 					/>
@@ -162,116 +160,51 @@
 					<HippoInput
 						name="fax"
 						bind:value={family.fax}
-						border="border-1 border-gray-300"
 						class="w-full"
 						placeholder="-를 반드시 포함하여 입력해주세요"
-					/>
-				</div>
-				<div class="w-full max-w-full px-3 flex-0 mt-2 col-span-2">
-					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-						>패밀리 주소<span class="text-sm text-blue-600">*</span></label
-					>
-					<div class="flex">
-						<HippoButton class="mr-3 w-24" color="blue" on:click={() => execDaumPostcode()}
-							>주소 검색</HippoButton
-						>
-						<HippoInput
-							name="sigungu"
-							value={family.street ? '(' + family.postal_code + ') ' + family.street : ''}
-							placeholder="주소 입력은 왼쪽의 검색 버튼을 이용해주세요"
-							disabled={true}
-							border="border-1 border-gray-300"
-							class="w-full"
-						/>
-					</div>
-				</div>
-				<div class="w-full max-w-full px-3 flex-0 mt-2">
-					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
-						>상세주소<span class="text-sm text-blue-600">*</span></label
-					>
-					<HippoInput
-						name="address"
-						bind:value={family.address}
-						border="border-1 border-gray-300"
-						class="w-full"
 					/>
 				</div>
 				<div class="w-full max-w-full px-3 flex-0 mt-2">
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
 						>업태<span class="text-sm text-blue-600">*</span></label
 					>
-					<HippoInput
-						name="business_type"
-						bind:value={family.business_type}
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
+					<HippoInput name="business_type" bind:value={family.business_type} class="w-full" />
 				</div>
 				<div class="w-full max-w-full px-3 flex-0 mt-2">
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
 						>종목<span class="text-sm text-blue-600">*</span></label
 					>
-					<HippoInput
-						name="business_item"
-						bind:value={family.business_item}
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
+					<HippoInput name="business_item" bind:value={family.business_item} class="w-full" />
 				</div>
 				<div class="w-full max-w-full px-3 flex-0 mt-2">
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
 						>지사코드</label
 					>
-					<HippoInput
-						name="branch_code"
-						bind:value={family.branch_code}
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
+					<HippoInput name="branch_code" bind:value={family.branch_code} class="w-full" />
 				</div>
 				<div class="w-full max-w-full px-3 flex-0 mt-2">
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
 						>사원코드</label
 					>
-					<HippoInput
-						name="employee_code"
-						bind:value={family.employee_code}
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
+					<HippoInput name="employee_code" bind:value={family.employee_code} class="w-full" />
 				</div>
 				<div class="w-full max-w-full px-3 flex-0 mt-2">
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
 						>지역코드</label
 					>
-					<HippoInput
-						name="area_code"
-						bind:value={family.area_code}
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
+					<HippoInput name="area_code" bind:value={family.area_code} class="w-full" />
 				</div>
 				<div class="w-full max-w-full px-3 flex-0 mt-2">
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
 						>상품코드</label
 					>
-					<HippoInput
-						name="product_code"
-						bind:value={family.product_code}
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
+					<HippoInput name="product_code" bind:value={family.product_code} class="w-full" />
 				</div>
 				<div class="w-full max-w-full px-3 flex-0 mt-2 col-span-3">
 					<label class="mb-1 font-semibold text-md text-slate-700 ml-2" for="First Name my-1"
 						>패밀리 설명</label
 					>
-					<HippoInput
-						name="description"
-						bind:value={family.description}
-						border="border-1 border-gray-300"
-						class="w-full"
-					/>
+					<HippoInput name="description" bind:value={family.description} class="w-full" />
 				</div>
 			</div>
 			<div class="flex justify-center gap-5 mt-8 mb-4">

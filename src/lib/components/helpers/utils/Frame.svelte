@@ -28,7 +28,7 @@
 		| 'form'
 		| 'none' = 'default';
 	export let rounded: boolean = false;
-	export let border: boolean = false;
+	export let border: boolean = true;
 	export let shadow: boolean = false;
 
 	type TransitionFunc = (node: HTMLElement, params: any) => TransitionConfig;

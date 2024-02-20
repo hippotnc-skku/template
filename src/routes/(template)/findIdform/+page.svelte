@@ -84,17 +84,6 @@
 	}
 </script>
 
-<CodeExampleFrame name="Setup">
-	<iframe
-		title="setup"
-		frameborder="0"
-		scrolling="no"
-		style="width:100%; height:1804px;"
-		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2FfindIdform%2F_temp.svelte%3Fts%3D4%23L1-L84&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-	></iframe>
-</CodeExampleFrame>
-
 <CodeExampleFrame>
 	<div class="w-full min-h-screen flex flex-col items-center justify-center background">
 		<HippoWhiteFrame>
@@ -211,12 +200,12 @@
 
 <CodeExampleFrame>
 	<iframe
-		title="default"
+		title="code"
 		frameborder="0"
 		scrolling="no"
-		style="width:100%; height:2560px;"
+		style="width:100%; height:4345px;"
 		allow="clipboard-write"
-		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2FfindIdform%2F_temp.svelte%3Fts%3D4%23L86-L205&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2FfindIdform%2F_temp.svelte%3Fts%3D4%23L1-L205&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
 	></iframe>
 </CodeExampleFrame>
 
