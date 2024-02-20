@@ -3,6 +3,7 @@
 	import { HippoButton } from '$lib/components/hippocomponent';
 	import { notifications } from '$lib/components/notification/notifications';
 	import CodeExampleFrame from '$lib/codeboxframe/CodeExampleFrame.svelte';
+	import CodeBox from '$lib/codeboxframe/CodeBox.svelte';
 
 	function clicked() {
 		notifications.success('클릭 됐습니다.', 500);
@@ -33,13 +34,16 @@
 	</HippoWhiteFrame>
 </CodeExampleFrame>
 
-<iframe
-	frameborder="0"
-	scrolling="no"
-	style="width:100%; height:544px;"
-	allow="clipboard-write"
-	src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp2.svelte%3Fts%3D4%23L1-L24&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-></iframe>
+<CodeExampleFrame>
+	<iframe
+		title="code"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:544px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp2.svelte%3Fts%3D4%23L1-L24&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
 
 <CodeExampleFrame name="Size">
 	<HippoWhiteFrame class="p-5 flex flex-wrap gap-5">
@@ -60,10 +64,13 @@
 	</HippoWhiteFrame>
 </CodeExampleFrame>
 
-<iframe
-	frameborder="0"
-	scrolling="no"
-	style="width:100%; height:229px;"
-	allow="clipboard-write"
-	src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp2.svelte%3Fts%3D4%23L26-L34&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
-></iframe>
+<CodeExampleFrame>
+	<iframe
+		title="code"
+		frameborder="0"
+		scrolling="no"
+		style="width:100%; height:229px;"
+		allow="clipboard-write"
+		src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fbutton%2F_temp2.svelte%3Fts%3D4%23L26-L34&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+	></iframe>
+</CodeExampleFrame>
