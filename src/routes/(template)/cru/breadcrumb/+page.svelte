@@ -18,22 +18,14 @@
 	import { Breadcrumb, BreadcrumbItem } from '$lib/components/helpers';
 </script>
 
-<HippoWhiteFrame class="p-5">
-	<div class="text-lg font-semibold border-b-2 border-gray-300">게시판의 구성</div>
-	<div class="mt-5"></div>
-
-	<ul class="space-y-4 text-gray-800 list-disc list-inside">
-		<li>Breadcrumb</li>
-		<li>
-			Content
-			<ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
-				<li>목록조회(검색헤더 + 테이블 + 페이지네이션)</li>
-				<li>상세조회</li>
-				<li>상세조회 + 정보탭</li>
-			</ul>
-		</li>
-	</ul>
-</HippoWhiteFrame>
+<CodeExampleFrame name="Setup"></CodeExampleFrame>
+<iframe
+	frameborder="0"
+	scrolling="no"
+	style="width:100%; height:124px;"
+	allow="clipboard-write"
+	src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fbreadcrumb%2F_temp.svelte%3Fts%3D4%23L1-L4&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+></iframe>
 
 <CodeExampleFrame name="이전버튼 없는 경우"></CodeExampleFrame>
 
@@ -48,6 +40,14 @@
 	>
 </div>
 
+<iframe
+	frameborder="0"
+	scrolling="no"
+	style="width:100%; height:250px;"
+	allow="clipboard-write"
+	src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fbreadcrumb%2F_temp.svelte%3Fts%3D4%23L6-L15&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+></iframe>
+
 <CodeExampleFrame name="이전버튼 있는 경우"></CodeExampleFrame>
 
 <div class="flex justify-between mb-2">
@@ -59,3 +59,11 @@
 
 	<HippoButton color="transparent" size="md" on:click={() => goto('/family')}>이전</HippoButton>
 </div>
+
+<iframe
+	frameborder="0"
+	scrolling="no"
+	style="width:100%; height:229px;"
+	allow="clipboard-write"
+	src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fhippotnc-skku%2Ftemplate%2Fblob%2Fcomponent%2Fsrc%2Froutes%2F%28template%29%2Fcru%2Fbreadcrumb%2F_temp.svelte%3Fts%3D4%23L17-L25&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"
+></iframe>
